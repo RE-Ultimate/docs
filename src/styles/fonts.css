@@ -1,0 +1,3 @@
+/* Self-hosted fonts. Archivo carries a width axis: normal width for reading, expanded width for headings. */
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/jetbrains-mono/wght.css';

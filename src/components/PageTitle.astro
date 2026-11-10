@@ -1,0 +1,192 @@
+---
+// Page heading for every docs page: breadcrumbs, the H1, and for block pages the metadata table.
+// Starlight requires the H1 to keep the `_top` ID so the table of contents can link to it.
+import { Image } from 'astro:assets';
+import { findBlock } from '../lib/blocks';
+import { withBase } from '../lib/paths';
+
+type SidebarEntry = (typeof Astro.locals.starlightRoute.sidebar)[number];
+type Crumb = { label: string; href?: string };
+
+const route = Astro.locals.starlightRoute;
+const { entry } = route;
+const block = await findBlock(entry.id);
+
+/** Group labels that lead to the current sidebar link. */
+const trail = (entries: SidebarEntry[], parents: string[] = []): string[] | undefined => {
+	for (const item of entries) {
+		if (item.type === 'link' && item.isCurrent) return parents;
+		if (item.type === 'group') {
+			const found = trail(item.entries, [...parents, item.label]);
+			if (found) return found;
+		}
+	}
+	return undefined;
+};
+
+const isHome = route.id === '';
+const crumbs: Crumb[] = isHome ? [] : [{ label: 'Docs', href: withBase('') }];
+if (block) {
+	crumbs.push({ label: 'Block reference', href: withBase('blocks/') });
+	crumbs.push({ label: block.mod.name, href: withBase(`blocks/?mod=${block.mod.id}`) });
+} else if (!isHome) {
+	for (const label of trail(route.sidebar) ?? []) crumbs.push({ label });
+}
+---
+
+{
+	crumbs.length > 0 && (
+		<nav class="ru-crumbs" aria-label="Breadcrumb">
+			<ol>
+				{crumbs.map((crumb) => (
+					<li>{crumb.href ? <a href={crumb.href}>{crumb.label}</a> : <span>{crumb.label}</span>}</li>
+				))}
+			</ol>
+		</nav>
+	)
+}
+
+<h1 id="_top">{entry.data.title}</h1>
+
+{
+	block && (
+		<div class="ru-block-head">
+			{block.description && <p class="ru-lead">{block.description}</p>}
+			<dl class="ru-spec">
+				<div>
+					<dt>Mod</dt>
+					<dd>
+						<a href={withBase(`blocks/?mod=${block.mod.id}`)}>{block.mod.name}</a>
+					</dd>
+				</div>
+				<div>
+					<dt>Category</dt>
+					<dd>
+						<a href={withBase(`blocks/?category=${block.category.id}`)}>{block.category.label}</a>
+					</dd>
+				</div>
+				<div>
+					<dt>ID</dt>
+					<dd>{block.registryId ? <code>{block.registryId}</code> : <span class="ru-muted">Not recorded</span>}</dd>
+				</div>
+				{block.tags.length > 0 && (
+					<div>
+						<dt>Tags</dt>
+						<dd>{block.tags.join(', ')}</dd>
+					</div>
+				)}
+			</dl>
+			{block.image && (
+				<figure class:list={['ru-block-figure', { 'is-icon': block.image.src.width <= 64 }]}>
+					<Image src={block.image.src} alt={block.image.alt} />
+				</figure>
+			)}
+		</div>
+	)
+}
+
+<style>
+	.ru-crumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: var(--sl-text-sm);
+		line-height: 1.4;
+	}
+	.ru-crumbs li {
+		display: flex;
+		align-items: baseline;
+		color: var(--ru-text-2);
+	}
+	.ru-crumbs li + li::before {
+		content: '/';
+		padding-inline: 0.5rem;
+		color: var(--ru-text-3);
+	}
+	.ru-crumbs a {
+		color: var(--ru-text);
+		text-decoration: none;
+	}
+	.ru-crumbs a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--ru-accent);
+		text-underline-offset: 0.2em;
+	}
+
+	h1 {
+		margin-top: 0.75rem;
+		font-size: var(--sl-text-h1);
+		font-weight: 780;
+		font-stretch: 118%;
+		line-height: 1.05;
+		letter-spacing: -0.03em;
+		color: var(--ru-text);
+		text-wrap: balance;
+		overflow-wrap: anywhere;
+	}
+	.ru-crumbs + h1 {
+		margin-top: 1rem;
+	}
+
+	.ru-block-head {
+		margin-top: 1.25rem;
+	}
+	.ru-lead {
+		max-width: 60ch;
+		font-size: var(--sl-text-lg);
+		line-height: 1.55;
+		color: var(--ru-text);
+	}
+	.ru-spec {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		margin: 1.25rem 0 0;
+		border-top: 1px solid var(--ru-rule-strong);
+		border-bottom: 1px solid var(--ru-rule);
+	}
+	.ru-spec > div {
+		padding: 0.625rem 1rem 0.75rem 0;
+		min-width: 0;
+	}
+	.ru-spec dt {
+		font-size: var(--sl-text-xs);
+		color: var(--ru-text-2);
+	}
+	.ru-spec dd {
+		margin: 0.125rem 0 0;
+		font-weight: 600;
+		overflow-wrap: anywhere;
+	}
+	.ru-spec a {
+		color: var(--ru-text);
+		text-decoration-color: var(--ru-rule-strong);
+		text-underline-offset: 0.2em;
+	}
+	.ru-spec a:hover {
+		text-decoration-color: var(--ru-accent);
+	}
+	.ru-spec code {
+		font-family: var(--__sl-font-mono);
+		font-size: 0.9375em;
+		font-weight: 500;
+	}
+	.ru-muted {
+		font-weight: 400;
+		color: var(--ru-text-2);
+	}
+	.ru-block-figure {
+		margin: 1.25rem 0 0;
+	}
+	.ru-block-figure :global(img) {
+		max-width: 100%;
+		height: auto;
+	}
+	/* Small textures and icons are pixel art: scale them up without smoothing. */
+	.ru-block-figure.is-icon :global(img) {
+		width: 6rem;
+		image-rendering: pixelated;
+	}
+</style>

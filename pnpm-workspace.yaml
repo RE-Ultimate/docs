@@ -1,0 +1,4 @@
+# @astrojs/check loads a WASM build through @napi-rs/wasm-runtime. Its optional peer resolved to a
+# 2.0 beta of @emnapi/runtime, which does not match @emnapi/core 1.x and crashes `astro check`.
+overrides:
+  '@emnapi/runtime': 1.11.3

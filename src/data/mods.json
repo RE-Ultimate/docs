@@ -1,0 +1,234 @@
+[
+	{
+		"id": "minecraft",
+		"name": "Minecraft"
+	},
+	{
+		"id": "advanced-machines",
+		"name": "Advanced Machines"
+	},
+	{
+		"id": "advanced-solar-panel",
+		"name": "Advanced Solar Panel"
+	},
+	{
+		"id": "applied-energistics",
+		"name": "Applied Energistics"
+	},
+	{
+		"id": "auto-third-person",
+		"name": "Auto Third Person"
+	},
+	{
+		"id": "bibliocraft",
+		"name": "BiblioCraft"
+	},
+	{
+		"id": "block-helper",
+		"name": "Block Helper"
+	},
+	{
+		"id": "buildcraft",
+		"name": "BuildCraft"
+	},
+	{
+		"id": "chargepads",
+		"name": "ChargePads"
+	},
+	{
+		"id": "chickenchunks",
+		"name": "ChickenChunks"
+	},
+	{
+		"id": "chisel-retro",
+		"name": "Chisel Retro"
+	},
+	{
+		"id": "cofhcore",
+		"name": "CoFHCore"
+	},
+	{
+		"id": "computercraft",
+		"name": "ComputerCraft"
+	},
+	{
+		"id": "dartcraft",
+		"name": "DartCraft"
+	},
+	{
+		"id": "ee3",
+		"name": "EE3"
+	},
+	{
+		"id": "ender-storage",
+		"name": "Ender Storage"
+	},
+	{
+		"id": "extrabees",
+		"name": "ExtraBees"
+	},
+	{
+		"id": "extrabiomesxl",
+		"name": "ExtraBiomesXL"
+	},
+	{
+		"id": "factorization",
+		"name": "Factorization"
+	},
+	{
+		"id": "flamingo",
+		"name": "Flamingo"
+	},
+	{
+		"id": "forestry",
+		"name": "Forestry"
+	},
+	{
+		"id": "gravisuite",
+		"name": "GraviSuite"
+	},
+	{
+		"id": "gravity-gun",
+		"name": "Gravity Gun"
+	},
+	{
+		"id": "gregtech",
+		"name": "GregTech"
+	},
+	{
+		"id": "ic2",
+		"name": "IC2"
+	},
+	{
+		"id": "ic2-nuclear-control",
+		"name": "IC2 Nuclear Control"
+	},
+	{
+		"id": "immibiscore",
+		"name": "ImmibisCore"
+	},
+	{
+		"id": "invtweaks",
+		"name": "InvTweaks"
+	},
+	{
+		"id": "ironchests",
+		"name": "IronChests"
+	},
+	{
+		"id": "legacycustompublish",
+		"name": "LegacyCustomPublish"
+	},
+	{
+		"id": "logisticspipes",
+		"name": "LogisticsPipes"
+	},
+	{
+		"id": "minefactory-reloaded",
+		"name": "MineFactory Reloaded"
+	},
+	{
+		"id": "modular-force-field-system",
+		"name": "Modular Force Field System"
+	},
+	{
+		"id": "modular-powersuits",
+		"name": "Modular Powersuits"
+	},
+	{
+		"id": "mystcraft",
+		"name": "Mystcraft"
+	},
+	{
+		"id": "neiplugins",
+		"name": "NEIPlugins"
+	},
+	{
+		"id": "neipluginsredpower",
+		"name": "NEIPluginsRedPower"
+	},
+	{
+		"id": "netherores",
+		"name": "NetherOres"
+	},
+	{
+		"id": "obsidiplates",
+		"name": "ObsidiPlates"
+	},
+	{
+		"id": "omnitools",
+		"name": "OmniTools"
+	},
+	{
+		"id": "petrogen",
+		"name": "PetroGen"
+	},
+	{
+		"id": "portalgun",
+		"name": "PortalGun"
+	},
+	{
+		"id": "powerconverters",
+		"name": "PowerConverters"
+	},
+	{
+		"id": "railcraft",
+		"name": "Railcraft"
+	},
+	{
+		"id": "redpower2",
+		"name": "RedPower2"
+	},
+	{
+		"id": "reis-minimap",
+		"name": "Rei's Minimap"
+	},
+	{
+		"id": "rpcdrive",
+		"name": "rpcDrive"
+	},
+	{
+		"id": "secretroomsmod",
+		"name": "SecretRoomsMod"
+	},
+	{
+		"id": "soul-shards",
+		"name": "Soul Shards"
+	},
+	{
+		"id": "stevescarts",
+		"name": "StevesCarts"
+	},
+	{
+		"id": "thaumcraft",
+		"name": "Thaumcraft"
+	},
+	{
+		"id": "thaumicbees",
+		"name": "ThaumicBees"
+	},
+	{
+		"id": "thermal-expansion",
+		"name": "Thermal Expansion"
+	},
+	{
+		"id": "twilight-forest",
+		"name": "Twilight Forest"
+	},
+	{
+		"id": "tubestuff",
+		"name": "TubeStuff"
+	},
+	{
+		"id": "wr-cbe",
+		"name": "WR-CBE"
+	},
+	{
+		"id": "xenos-reliquary",
+		"name": "Xeno's Reliquary"
+	},
+	{
+		"id": "xycraft",
+		"name": "XyCraft"
+	}
+]

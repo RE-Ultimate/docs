@@ -1,0 +1,393 @@
+---
+// The block reference table. It lists every page in src/content/docs/blocks/ with no manual index.
+// Without JavaScript, all rows show. With JavaScript, the filter form narrows rows and keeps its state in
+// the URL (?q=, ?mod=, ?category=) so filtered views can be linked.
+import { getBlockFacets, getBlocks } from '../lib/blocks';
+import { blocksFolderUrl, withBase } from '../lib/paths';
+
+const blocks = await getBlocks();
+const facets = getBlockFacets(blocks);
+const total = blocks.length;
+const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`;
+---
+
+<div class="ru-catalog not-content" data-catalog data-total={total}>
+	{
+		total > 0 && (
+			<form class="ru-filters" role="search" aria-label="Filter blocks" data-filters hidden>
+				<label class="ru-field ru-field-q">
+					<span>Filter</span>
+					<input type="search" name="q" placeholder="Name, ID, or tag" autocomplete="off" spellcheck="false" />
+				</label>
+				<label class="ru-field">
+					<span>Mod</span>
+					<select name="mod">
+						<option value="">All mods</option>
+						{facets.mods.map((mod) => (
+							<option value={mod.id}>{mod.label}</option>
+						))}
+					</select>
+				</label>
+				<label class="ru-field">
+					<span>Category</span>
+					<select name="category">
+						<option value="">All categories</option>
+						{facets.categories.map((category) => (
+							<option value={category.id}>{category.label}</option>
+						))}
+					</select>
+				</label>
+			</form>
+		)
+	}
+
+	{
+		total > 0 && (
+			<p class="ru-count" aria-live="polite" data-count>
+				{plural(total)}
+			</p>
+		)
+	}
+
+	<table class="ru-ledger" data-pagefind-ignore>
+		<caption class="sr-only">Block reference pages</caption>
+		<thead>
+			<tr>
+				<th scope="col">Block</th>
+				<th scope="col">Mod</th>
+				<th scope="col">Category</th>
+				<th scope="col" class="ru-col-id">ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				blocks.map((block) => (
+					<tr
+						data-mod={block.mod.id}
+						data-category={block.category.id}
+						data-search={[block.title, block.description, block.mod.name, block.registryId, ...block.tags]
+							.filter(Boolean)
+							.join(' ')
+							.toLowerCase()}
+					>
+						<th scope="row" class="ru-col-name">
+							<a href={block.href}>{block.title}</a>
+							{block.description && <span class="ru-desc">{block.description}</span>}
+						</th>
+						<td class="ru-col-mod">{block.mod.name}</td>
+						<td class="ru-col-cat">{block.category.label}</td>
+						<td class="ru-col-id">{block.registryId ? <code>{block.registryId}</code> : <span aria-label="No ID recorded">–</span>}</td>
+					</tr>
+				))
+			}
+			{
+				total === 0 && (
+					<tr class="ru-empty-row">
+						<td colspan="4">No block pages yet.</td>
+					</tr>
+				)
+			}
+		</tbody>
+	</table>
+
+	{
+		total === 0 ? (
+			<div class="ru-empty">
+				<p>
+					Block pages will appear here as the reference grows. You can help add one with the authoring guide.
+				</p>
+				<ul>
+					<li>
+						<a href={withBase('contribute/authoring/#add-a-block-page')}>Add a block page</a>
+					</li>
+					<li>
+						<a href={blocksFolderUrl}>Block folder on GitHub</a>
+					</li>
+				</ul>
+			</div>
+		) : (
+			<p class="ru-no-match" data-no-match hidden>
+				No blocks match these filters. <button type="button" data-clear>Clear filters</button>
+			</p>
+		)
+	}
+</div>
+
+<script>
+	// Progressive filtering for the block table. Rows carry data-mod, data-category, and data-search.
+	const root = document.querySelector<HTMLElement>('[data-catalog]');
+	const form = root?.querySelector<HTMLFormElement>('[data-filters]');
+	const query = form?.querySelector<HTMLInputElement>('input[name="q"]');
+	const mod = form?.querySelector<HTMLSelectElement>('select[name="mod"]');
+	const category = form?.querySelector<HTMLSelectElement>('select[name="category"]');
+
+	if (root && form && query && mod && category) {
+		const rows = [...root.querySelectorAll<HTMLTableRowElement>('tbody tr[data-mod]')];
+		const count = root.querySelector<HTMLElement>('[data-count]');
+		const noMatch = root.querySelector<HTMLElement>('[data-no-match]');
+		const total = rows.length;
+
+		const setSelect = (select: HTMLSelectElement, value: string | null) => {
+			select.value = [...select.options].some((option) => option.value === value) ? (value ?? '') : '';
+		};
+
+		const params = new URLSearchParams(location.search);
+		query.value = params.get('q') ?? '';
+		setSelect(mod, params.get('mod'));
+		setSelect(category, params.get('category'));
+
+		const apply = () => {
+			const words = query.value.toLowerCase().split(/\s+/).filter(Boolean);
+			let shown = 0;
+			for (const row of rows) {
+				const visible =
+					(!mod.value || row.dataset.mod === mod.value) &&
+					(!category.value || row.dataset.category === category.value) &&
+					words.every((word) => row.dataset.search?.includes(word));
+				row.hidden = !visible;
+				if (visible) shown += 1;
+			}
+			if (count) {
+				const noun = total === 1 ? 'block' : 'blocks';
+				count.textContent = shown === total ? `${total} ${noun}` : `${shown} of ${total} ${noun}`;
+			}
+			if (noMatch) noMatch.hidden = shown > 0;
+
+			const next = new URL(location.href);
+			for (const [key, value] of [
+				['q', query.value.trim()],
+				['mod', mod.value],
+				['category', category.value],
+			] as const) {
+				if (value) next.searchParams.set(key, value);
+				else next.searchParams.delete(key);
+			}
+			history.replaceState(null, '', next);
+		};
+
+		form.addEventListener('input', apply);
+		form.addEventListener('submit', (event) => event.preventDefault());
+		root.querySelector('[data-clear]')?.addEventListener('click', () => {
+			form.reset();
+			apply();
+			query.focus();
+		});
+		form.hidden = false;
+		apply();
+	}
+</script>
+
+<style>
+	.ru-catalog {
+		margin-top: 2rem;
+	}
+	.ru-catalog > .ru-ledger:first-child {
+		margin-top: 0;
+	}
+	.ru-filters {
+		display: grid;
+		grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+		gap: 0.75rem 1rem;
+		align-items: end;
+	}
+	.ru-filters[hidden] {
+		display: none;
+	}
+	.ru-field {
+		display: grid;
+		gap: 0.375rem;
+		min-width: 0;
+		font-size: var(--sl-text-sm);
+		color: var(--ru-text-2);
+	}
+	.ru-field input,
+	.ru-field select {
+		width: 100%;
+		min-height: 2.5rem;
+		padding: 0.5rem 0.625rem;
+		border: 1px solid var(--ru-rule-strong);
+		border-radius: 0;
+		background: #000;
+		color: var(--ru-text);
+		font: inherit;
+		font-size: var(--sl-text-base);
+	}
+	.ru-field select {
+		appearance: none;
+		padding-inline-end: 2rem;
+		background-image: linear-gradient(45deg, transparent 50%, var(--ru-text-2) 50%),
+			linear-gradient(135deg, var(--ru-text-2) 50%, transparent 50%);
+		background-position:
+			calc(100% - 1rem) 55%,
+			calc(100% - 0.6875rem) 55%;
+		background-size: 0.3125rem 0.3125rem;
+		background-repeat: no-repeat;
+	}
+	.ru-field input::placeholder {
+		color: var(--ru-text-3);
+	}
+	.ru-field input:hover,
+	.ru-field select:hover {
+		border-color: var(--ru-text-2);
+	}
+	.ru-field input:focus-visible,
+	.ru-field select:focus-visible {
+		outline: 2px solid var(--ru-accent);
+		outline-offset: -1px;
+		border-color: var(--ru-accent);
+	}
+
+	.ru-count {
+		margin: 1.25rem 0 0.5rem;
+		font-size: var(--sl-text-sm);
+		font-variant-numeric: tabular-nums;
+		color: var(--ru-text-2);
+	}
+
+	.ru-ledger {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: var(--sl-text-sm);
+	}
+	.ru-ledger thead th {
+		padding: 0.5rem 1rem 0.5rem 0;
+		border-top: 1px solid var(--ru-text);
+		border-bottom: 1px solid var(--ru-rule-strong);
+		font-weight: 600;
+		text-align: start;
+		color: var(--ru-text);
+		white-space: nowrap;
+	}
+	.ru-ledger tbody th,
+	.ru-ledger tbody td {
+		padding: 0.625rem 1rem 0.625rem 0;
+		border-bottom: 1px solid var(--ru-rule);
+		text-align: start;
+		vertical-align: baseline;
+		color: var(--ru-text-2);
+	}
+	.ru-ledger .ru-col-id {
+		padding-inline-end: 0;
+		text-align: end;
+		white-space: nowrap;
+	}
+	.ru-ledger code {
+		font-family: var(--__sl-font-mono);
+		font-size: 0.8125rem;
+		color: var(--ru-text);
+	}
+	.ru-col-name {
+		font-weight: 400;
+	}
+	.ru-col-name a {
+		font-size: var(--sl-text-base);
+		font-weight: 650;
+		color: var(--ru-text);
+		text-decoration: none;
+	}
+	.ru-col-name a:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--ru-accent);
+		text-underline-offset: 0.2em;
+	}
+	.ru-desc {
+		display: block;
+		margin-top: 0.125rem;
+		max-width: 52ch;
+	}
+	.ru-ledger tbody tr:not(.ru-empty-row):hover th,
+	.ru-ledger tbody tr:not(.ru-empty-row):hover td {
+		background: var(--ru-hover);
+	}
+	.ru-empty-row td {
+		padding-block: 1.5rem;
+		color: var(--ru-text-2);
+	}
+
+	.ru-empty {
+		margin-top: 1.5rem;
+		max-width: 60ch;
+	}
+	.ru-empty p {
+		margin: 0;
+		color: var(--ru-text);
+	}
+	.ru-empty code,
+	.ru-no-match button {
+		font-family: var(--__sl-font-mono);
+		font-size: 0.875em;
+	}
+	.ru-empty ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+	.ru-empty a,
+	.ru-no-match button {
+		color: var(--ru-text);
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration-color: var(--ru-rule-strong);
+		text-underline-offset: 0.2em;
+	}
+	.ru-empty a:hover,
+	.ru-no-match button:hover {
+		text-decoration-color: var(--ru-accent);
+	}
+	.ru-no-match {
+		margin-top: 1rem;
+		color: var(--ru-text);
+	}
+	.ru-no-match button {
+		padding: 0;
+		border: 0;
+		background: none;
+		font-family: inherit;
+		font-size: inherit;
+		cursor: pointer;
+	}
+
+	@media (max-width: 40rem) {
+		.ru-filters {
+			grid-template-columns: 1fr 1fr;
+		}
+		.ru-field-q {
+			grid-column: 1 / -1;
+		}
+		/* Rows become two-line entries: name and description, then mod, category, and ID. */
+		.ru-ledger thead {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+		.ru-ledger tbody tr:not(.ru-empty-row) {
+			display: grid;
+			grid-template-columns: auto auto 1fr;
+			column-gap: 0.75rem;
+			padding: 0.75rem 0;
+			border-bottom: 1px solid var(--ru-rule);
+		}
+		.ru-ledger tbody tr[hidden] {
+			display: none;
+		}
+		.ru-ledger tbody tr:not(.ru-empty-row) > * {
+			padding: 0;
+			border: 0;
+		}
+		.ru-ledger .ru-col-name {
+			grid-column: 1 / -1;
+			margin-bottom: 0.25rem;
+		}
+		.ru-ledger .ru-col-id {
+			text-align: end;
+		}
+		.ru-empty-row td {
+			border-top: 1px solid var(--ru-text);
+		}
+	}
+</style>

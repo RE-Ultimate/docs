@@ -1,0 +1,31 @@
+{
+	"name": "reultimate-docs",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"packageManager": "pnpm@12.15.0",
+	"engines": {
+		"node": ">=22"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"check": "astro check",
+		"build": "astro build",
+		"preview": "astro preview",
+		"test:e2e": "playwright test",
+		"screenshots": "CAPTURE=1 playwright test tests/capture.spec.ts"
+	},
+	"dependencies": {
+		"@astrojs/starlight": "0.42.7",
+		"@fontsource-variable/archivo": "5.3.0",
+		"@fontsource-variable/jetbrains-mono": "5.3.0",
+		"astro": "7.4.2",
+		"sharp": "0.35.5"
+	},
+	"devDependencies": {
+		"@astrojs/check": "0.9.12",
+		"@playwright/test": "1.65.0",
+		"starlight-links-validator": "0.27.0",
+		"typescript": "6.0.3"
+	}
+}

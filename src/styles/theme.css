@@ -1,0 +1,650 @@
+/*
+ * Re:Ultimate docs theme. Tokens first, then Starlight surfaces.
+ * Rules: true black ground, white text, thin rules, one accent (Minecraft formatting code §e yellow).
+ * Status colors reuse the game's formatting codes: §6 gold for caution, §c red for danger, §a green for tips.
+ * See DESIGN.md for the reasons.
+ */
+
+:root,
+:root[data-theme='dark'],
+::backdrop {
+	--ru-bg: #000;
+	--ru-text: #fff;
+	--ru-text-2: #b0b0b0;
+	--ru-text-3: #8a8a8a;
+	--ru-rule: #262626;
+	--ru-rule-strong: #404040;
+	--ru-hover: #0e0e0e;
+	--ru-code-bg: #0b0b0b;
+	--ru-accent: #ffff55;
+	--ru-gold: #ffaa00;
+	--ru-red: #ff5555;
+	--ru-green: #55ff55;
+
+	--sl-font: 'Archivo Variable';
+	--sl-font-mono: 'JetBrains Mono Variable';
+
+	--sl-color-white: var(--ru-text);
+	--sl-color-gray-1: #ececec;
+	--sl-color-gray-2: #d6d6d6;
+	--sl-color-gray-3: var(--ru-text-2);
+	--sl-color-gray-4: var(--ru-text-3);
+	--sl-color-gray-5: var(--ru-rule-strong);
+	--sl-color-gray-6: var(--ru-rule);
+	--sl-color-black: var(--ru-bg);
+
+	--sl-color-accent-low: #2a2a00;
+	--sl-color-accent: var(--ru-accent);
+	--sl-color-accent-high: var(--ru-accent);
+	--sl-color-orange: var(--ru-gold);
+	--sl-color-orange-high: var(--ru-gold);
+	--sl-color-red: var(--ru-red);
+	--sl-color-red-high: var(--ru-red);
+	--sl-color-green: var(--ru-green);
+	--sl-color-green-high: var(--ru-green);
+	--sl-color-blue-high: var(--ru-text);
+	--sl-color-purple-high: var(--ru-text);
+
+	--sl-color-text: var(--ru-text);
+	--sl-color-text-accent: var(--ru-text);
+	--sl-color-text-invert: #000;
+	--sl-color-bg: var(--ru-bg);
+	--sl-color-bg-nav: var(--ru-bg);
+	--sl-color-bg-sidebar: var(--ru-bg);
+	--sl-color-bg-inline-code: #141414;
+	--sl-color-bg-accent: var(--ru-accent);
+	--sl-color-hairline-light: var(--ru-rule-strong);
+	--sl-color-hairline: var(--ru-rule);
+	--sl-color-hairline-shade: var(--ru-rule);
+	--sl-color-backdrop-overlay: rgb(0 0 0 / 0.8);
+
+	--sl-shadow-sm: none;
+	--sl-shadow-md: none;
+	--sl-shadow-lg: none;
+
+	--sl-text-h1: clamp(2.125rem, 1.6rem + 2vw, 3.25rem);
+	--sl-text-h2: 1.625rem;
+	--sl-text-h3: 1.25rem;
+	--sl-text-h4: 1.0625rem;
+	--sl-text-h5: 1rem;
+	--sl-line-height: 1.7;
+	--sl-line-height-headings: 1.15;
+
+	--sl-content-width: 44rem;
+	--sl-sidebar-width: 16.5rem;
+	--sl-nav-height: 3.5rem;
+
+	color-scheme: dark;
+	accent-color: var(--ru-accent);
+	scrollbar-color: var(--ru-rule-strong) var(--ru-bg);
+}
+
+@media (min-width: 50em) {
+	:root {
+		--sl-nav-height: 3.75rem;
+		--sl-text-h2: 1.875rem;
+		--sl-text-h3: 1.375rem;
+	}
+}
+
+body {
+	background: var(--ru-bg);
+	color: var(--ru-text);
+	font-size: 1.0625rem;
+	font-kerning: normal;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: var(--ru-accent);
+	color: #000;
+}
+
+:focus-visible {
+	outline: 2px solid var(--ru-accent);
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* ---------- Header ---------- */
+
+.page > .header {
+	border-bottom: 1px solid var(--ru-rule);
+}
+
+.sl-skip-link {
+	background: var(--ru-accent);
+	color: #000;
+	font-weight: 700;
+	border-radius: 0;
+}
+
+site-search > button[data-open-modal] {
+	border: 1px solid var(--ru-rule-strong);
+	border-radius: 0;
+	background: #000;
+	color: var(--ru-text-2);
+	font-size: var(--sl-text-sm);
+}
+site-search > button[data-open-modal]:hover {
+	border-color: var(--ru-text-2);
+	color: var(--ru-text);
+}
+site-search > button[data-open-modal] kbd {
+	border-radius: 0;
+	background: transparent;
+	color: var(--ru-text-2);
+	font-family: var(--__sl-font-mono);
+	font-size: var(--sl-text-2xs);
+}
+site-search > button[data-open-modal] kbd kbd {
+	border: 1px solid var(--ru-rule-strong);
+	padding-inline: 0.25rem;
+}
+
+@media (max-width: 49.99em) {
+	site-search > button[data-open-modal] {
+		border: 0;
+		background: transparent;
+		color: var(--ru-text);
+	}
+}
+
+/* Search dialog (Pagefind UI inside Starlight's modal). */
+site-search dialog {
+	border: 1px solid var(--ru-rule-strong);
+	border-radius: 0;
+	background: #000;
+	box-shadow: none;
+}
+site-search dialog::backdrop {
+	background: rgb(0 0 0 / 0.82);
+}
+#starlight__search {
+	--pagefind-ui-primary: var(--ru-text);
+	--pagefind-ui-text: var(--ru-text);
+	--pagefind-ui-font: var(--__sl-font);
+	--pagefind-ui-background: #000;
+	--pagefind-ui-border: var(--ru-rule-strong);
+	--pagefind-ui-border-width: 1px;
+	--pagefind-ui-border-radius: 0;
+	--pagefind-ui-tag: var(--ru-rule);
+	--sl-search-result-bg: #000;
+	--sl-search-result-hover-bg: var(--ru-hover);
+	--sl-search-result-border: var(--ru-rule);
+	--sl-search-result-pad-inline-start: 1rem;
+	--sl-search-result-pad-inline-end: 1rem;
+	--sl-search-corners: 0;
+}
+#starlight__search .pagefind-ui__search-input {
+	color: var(--ru-text);
+	font-weight: 500;
+}
+#starlight__search .pagefind-ui__search-input::placeholder {
+	color: var(--ru-text-3);
+	opacity: 1;
+}
+#starlight__search .pagefind-ui__result-link,
+#starlight__search .pagefind-ui__result-title {
+	color: var(--ru-text);
+	font-weight: 650;
+}
+#starlight__search .pagefind-ui__result-excerpt {
+	color: var(--ru-text-2);
+}
+#starlight__search mark {
+	background: var(--ru-accent);
+	color: #000;
+	padding-inline: 0.0625rem;
+}
+#starlight__search .pagefind-ui__result-nested .pagefind-ui__result-link::before {
+	color: var(--ru-text-3);
+}
+#starlight__search .pagefind-ui__button {
+	border-radius: 0;
+	background: #000;
+	color: var(--ru-text);
+	border-color: var(--ru-rule-strong);
+}
+#starlight__search .pagefind-ui__button:hover {
+	border-color: var(--ru-text-2);
+}
+site-search button[data-close-modal] {
+	color: var(--ru-text);
+	font-weight: 600;
+}
+
+/* Social and mobile menu buttons. */
+.social-icons a {
+	color: var(--ru-text);
+}
+.social-icons a:hover {
+	color: var(--ru-accent);
+	opacity: 1;
+}
+.social-icons::after {
+	content: none;
+}
+/* Mobile menu button: square, outlined, no fill. */
+.sl-menu-button {
+	--sl-menu-button-size: 2.25rem;
+	border: 1px solid var(--ru-rule-strong);
+	border-radius: 0;
+	background-color: #000;
+	color: var(--ru-text);
+	box-shadow: none;
+}
+.sl-menu-button:has(~ :popover-open) {
+	border-color: var(--ru-accent);
+	background-color: #000;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar-pane {
+	border-inline-end-color: var(--ru-rule);
+}
+.sidebar-content {
+	padding-top: 1.5rem;
+}
+.sidebar-content ul.top-level {
+	gap: 0;
+}
+.sidebar-content .top-level > li {
+	margin-bottom: 1.25rem;
+}
+.sidebar-content .top-level > li + li {
+	border-top: 0;
+}
+.sidebar-content summary {
+	padding: 0 0 0.375rem;
+	border-bottom: 1px solid var(--ru-rule);
+	margin-bottom: 0.375rem;
+}
+.sidebar-content .group-label .large {
+	font-size: var(--sl-text-sm);
+	font-weight: 750;
+	font-stretch: 112%;
+	letter-spacing: 0;
+	color: var(--ru-text);
+}
+.sidebar-content summary .caret {
+	color: var(--ru-text-3);
+}
+.sidebar-content ul ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.sidebar-content ul ul li {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+.sidebar-content a {
+	position: relative;
+	display: block;
+	padding: 0.3125rem 0 0.3125rem 1rem;
+	border-radius: 0;
+	font-size: var(--sl-text-sm);
+	line-height: 1.4;
+	color: var(--ru-text-2);
+}
+.sidebar-content a:hover {
+	color: var(--ru-text);
+	background: transparent;
+}
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+	background: transparent;
+	color: var(--ru-text);
+	font-weight: 650;
+}
+/* Current page marker: a small accent square at the start of the link. */
+.sidebar-content a[aria-current='page']::before {
+	content: '';
+	position: absolute;
+	inset-inline-start: 0;
+	top: calc(50% - 0.1875rem);
+	width: 0.375rem;
+	height: 0.375rem;
+	background: var(--ru-accent);
+}
+.sidebar-content a[aria-current='page'] > span {
+	color: var(--ru-text);
+}
+.sidebar-content a:focus-visible {
+	outline-offset: -2px;
+}
+.mobile-preferences {
+	border-top-color: var(--ru-rule);
+}
+
+/* ---------- Table of contents ---------- */
+
+.right-sidebar {
+	border-inline-start-color: var(--ru-rule);
+}
+starlight-toc h2,
+mobile-starlight-toc .toggle {
+	color: var(--ru-text);
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	font-stretch: 112%;
+}
+starlight-toc nav h2 {
+	padding-bottom: 0.375rem;
+	border-bottom: 1px solid var(--ru-rule);
+	margin-bottom: 0.25rem;
+}
+starlight-toc a,
+mobile-starlight-toc a {
+	font-size: var(--sl-text-sm);
+	color: var(--ru-text-2);
+	line-height: 1.4;
+}
+starlight-toc a:hover,
+mobile-starlight-toc a:hover {
+	color: var(--ru-text);
+}
+starlight-toc a[aria-current='true'],
+mobile-starlight-toc a[aria-current='true'] {
+	color: var(--ru-accent);
+}
+mobile-starlight-toc nav {
+	border-bottom-color: var(--ru-rule);
+	background: #000;
+}
+mobile-starlight-toc .toggle {
+	border-radius: 0;
+	border-color: var(--ru-rule-strong);
+	background: #000;
+}
+mobile-starlight-toc .dropdown {
+	border-radius: 0;
+	border-color: var(--ru-rule-strong);
+	background: #000;
+	box-shadow: none;
+}
+mobile-starlight-toc .display-current {
+	color: var(--ru-text);
+}
+
+/* ---------- Content panels ---------- */
+
+.content-panel + .content-panel {
+	border-top: 0;
+}
+.content-panel:first-of-type {
+	padding-top: 2.25rem;
+	padding-bottom: 0;
+}
+.main-pane .content-panel:nth-of-type(2) {
+	padding-top: 2rem;
+}
+
+/* ---------- Article typography ---------- */
+
+.sl-markdown-content {
+	font-size: 1.0625rem;
+	line-height: var(--sl-line-height);
+	color: var(--ru-text);
+}
+.sl-markdown-content :is(h2, h3, h4, h5) {
+	color: var(--ru-text);
+	text-wrap: balance;
+}
+.sl-markdown-content h2 {
+	margin-top: 3.25rem;
+	font-size: var(--sl-text-h2);
+	font-weight: 760;
+	font-stretch: 115%;
+	letter-spacing: -0.025em;
+	line-height: 1.15;
+}
+.sl-markdown-content h3 {
+	margin-top: 2.25rem;
+	font-size: var(--sl-text-h3);
+	font-weight: 720;
+	font-stretch: 108%;
+	letter-spacing: -0.015em;
+}
+.sl-markdown-content h4 {
+	margin-top: 1.75rem;
+	font-size: var(--sl-text-h4);
+	font-weight: 700;
+}
+.sl-markdown-content :is(h2, h3, h4) + * {
+	margin-top: 0.75rem;
+}
+.sl-markdown-content .sl-heading-wrapper {
+	margin-top: 3.25rem;
+}
+/* Each H2 opens a section with a full-width rule. */
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+	padding-top: 0.875rem;
+	border-top: 1px solid var(--ru-rule-strong);
+}
+.sl-markdown-content .sl-heading-wrapper.level-h3 {
+	margin-top: 2.25rem;
+}
+.sl-markdown-content .sl-heading-wrapper + * {
+	margin-top: 0.75rem;
+}
+.sl-markdown-content .sl-heading-wrapper h2 {
+	margin-top: 0;
+}
+.sl-markdown-content .sl-anchor-link {
+	color: var(--ru-text-3);
+}
+.sl-markdown-content .sl-anchor-link:hover {
+	color: var(--ru-accent);
+}
+
+.sl-markdown-content p:not(:where(.not-content *)),
+.sl-markdown-content li:not(:where(.not-content *)) {
+	max-width: 68ch;
+}
+.sl-markdown-content strong {
+	font-weight: 680;
+	color: var(--ru-text);
+}
+
+.sl-markdown-content a:not(:where(.not-content *)) {
+	color: var(--ru-text);
+	text-decoration: underline;
+	text-decoration-color: var(--ru-text-3);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+}
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+	color: var(--ru-text);
+	text-decoration-color: var(--ru-accent);
+}
+
+.sl-markdown-content :is(ul, ol):not(.not-content, :where(.not-content *)) {
+	padding-inline-start: 1.25rem;
+}
+.sl-markdown-content li::marker {
+	color: var(--ru-text-3);
+}
+.sl-markdown-content ol > li::marker {
+	font-variant-numeric: tabular-nums;
+	font-weight: 600;
+}
+
+.sl-markdown-content hr {
+	border: 0;
+	border-top: 1px solid var(--ru-rule);
+}
+
+/* Inline code */
+.sl-markdown-content :not(pre) > code {
+	padding: 0.0625rem 0.3125rem;
+	border: 1px solid var(--ru-rule);
+	border-radius: 0.125rem;
+	background: #111;
+	color: var(--ru-text);
+	font-family: var(--__sl-font-mono);
+	font-size: 0.875em;
+	overflow-wrap: anywhere;
+}
+.sl-markdown-content a > code {
+	text-decoration: inherit;
+}
+
+kbd {
+	font-family: var(--__sl-font-mono);
+}
+
+/* IDs and file names must read literally: no programming ligatures such as -> or <=. */
+code,
+kbd,
+pre,
+.expressive-code {
+	font-variant-ligatures: none;
+}
+
+/* Tables: rules only, no fills. */
+.sl-markdown-content table:not(:where(.not-content *)) {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+	font-size: var(--sl-text-sm);
+	font-variant-numeric: tabular-nums;
+}
+.sl-markdown-content table:not(:where(.not-content *)) :is(th, td) {
+	padding: 0.5rem 1.25rem 0.5rem 0;
+	border: 0;
+	border-bottom: 1px solid var(--ru-rule);
+	background: transparent;
+	text-align: start;
+	vertical-align: baseline;
+}
+.sl-markdown-content table:not(:where(.not-content *)) th {
+	border-top: 1px solid var(--ru-text);
+	border-bottom-color: var(--ru-rule-strong);
+	font-weight: 650;
+	color: var(--ru-text);
+}
+.sl-markdown-content table:not(:where(.not-content *)) td {
+	color: var(--ru-text);
+}
+.sl-markdown-content table:not(:where(.not-content *)) tr:nth-child(2n) {
+	background: transparent;
+}
+
+/* Definition-style first column for fact tables. */
+.sl-markdown-content table:not(:where(.not-content *)) td:first-child {
+	color: var(--ru-text-2);
+	white-space: nowrap;
+}
+
+/* Blockquotes */
+.sl-markdown-content blockquote:not(:where(.not-content *)) {
+	border-inline-start: 1px solid var(--ru-rule-strong);
+	padding-inline-start: 1rem;
+	color: var(--ru-text);
+	font-style: normal;
+}
+
+/* Asides: rules above and below, colored title only. */
+.starlight-aside {
+	padding: 0.75rem 0 0.875rem;
+	border: 0;
+	border-top: 1px solid var(--sl-color-asides-border, var(--ru-rule-strong));
+	border-bottom: 1px solid var(--ru-rule);
+	background: transparent;
+	color: var(--ru-text);
+}
+.starlight-aside--note {
+	--sl-color-asides-text-accent: var(--ru-text);
+	--sl-color-asides-border: var(--ru-text);
+}
+.starlight-aside--tip {
+	--sl-color-asides-text-accent: var(--ru-green);
+	--sl-color-asides-border: var(--ru-green);
+}
+.starlight-aside--caution {
+	--sl-color-asides-text-accent: var(--ru-gold);
+	--sl-color-asides-border: var(--ru-gold);
+}
+.starlight-aside--danger {
+	--sl-color-asides-text-accent: var(--ru-red);
+	--sl-color-asides-border: var(--ru-red);
+}
+.starlight-aside__title {
+	font-size: var(--sl-text-sm);
+	font-weight: 750;
+	font-stretch: 110%;
+	color: var(--sl-color-asides-text-accent);
+}
+
+/* Steps component */
+.sl-steps {
+	--bullet-size: 1.75rem;
+}
+.sl-steps > li::before {
+	border-radius: 0;
+	background: #000;
+	border: 1px solid var(--ru-rule-strong);
+	color: var(--ru-text);
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+}
+.sl-steps > li::after {
+	background: var(--ru-rule);
+}
+
+/* Images */
+.sl-markdown-content img {
+	border: 1px solid var(--ru-rule);
+}
+
+/* Code blocks get their frame from Expressive Code (astro.config.mjs). */
+.expressive-code {
+	margin-top: 1.25rem;
+}
+.expressive-code .frame .header {
+	font-weight: 500;
+}
+
+/* Hide Starlight's default 'built with' link if credits change upstream. */
+.kudos {
+	display: none;
+}
+
+@media print {
+	body {
+		background: #fff;
+		color: #000;
+	}
+}
+
+/* A Markdown table with empty headers is a fact list: no header row, a strong rule on top. */
+.sl-markdown-content table:not(:where(.not-content *)):has(thead th:empty) thead {
+	display: none;
+}
+.sl-markdown-content table:not(:where(.not-content *)):has(thead th:empty) tbody tr:first-child td {
+	border-top: 1px solid var(--ru-text);
+}

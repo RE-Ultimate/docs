@@ -1,0 +1,51 @@
+---
+title: Re:Ultimate documentation
+description: Install, play, and look up blocks in Re:Ultimate, a maintained Minecraft 1.4.7 modpack based on Rewind Upsilon and FTB Ultimate.
+tableOfContents: false
+pagefind: true
+---
+
+import DocIndex from '../../components/DocIndex.astro';
+import { getBlocks } from '../../lib/blocks';
+
+export const blockCount = (await getBlocks()).length;
+
+Re:Ultimate is a maintained Minecraft 1.4.7 modpack based on Rewind Upsilon and FTB Ultimate.
+
+<DocIndex
+	items={[
+		{
+			href: 'pack/overview/',
+			title: 'Pack overview',
+			summary: 'What Re:Ultimate is, where it comes from, and what this fork changes.',
+		},
+		{
+			href: 'pack/installation/',
+			title: 'Installation',
+			summary: 'Install the client in Prism Launcher or run a server. Java 8 is required.',
+		},
+		{
+			href: 'blocks/',
+			title: 'Block reference',
+			summary: 'Blocks by mod and category, with IDs.',
+			status: blockCount === 0 ? 'In progress' : `${blockCount} ${blockCount === 1 ? 'page' : 'pages'}`,
+		},
+		{
+			href: 'contribute/authoring/',
+			title: 'Authoring guide',
+			summary: 'Add a block page or an article with Markdown.',
+		},
+	]}
+/>
+
+## Pack facts
+
+| | |
+| --- | --- |
+| Minecraft | 1.4.7 |
+| Based on | Rewind Upsilon and FTB Ultimate |
+| Java | Java 8 runtime |
+| Client launcher | [Prism Launcher](https://prismlauncher.org/) |
+| Downloads | [GitHub Releases](https://github.com/RE-Ultimate/Re-Ultimate/releases) |
+| Update feed | `https://re-ultimate.github.io/Re-Ultimate/pack.toml` |
+| Source | [RE-Ultimate on GitHub](https://github.com/RE-Ultimate) |

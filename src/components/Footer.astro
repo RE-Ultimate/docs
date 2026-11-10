@@ -1,0 +1,104 @@
+---
+// Page footer: edit link, previous/next links from the sidebar order, and the license line.
+import { repositoryUrl } from '../lib/paths';
+
+const { editUrl, pagination } = Astro.locals.starlightRoute;
+const { prev, next } = pagination;
+---
+
+<footer class="ru-footer">
+	{
+		(prev || next) && (
+			<nav class="ru-pager print:hidden" aria-label="Previous and next page">
+				{prev ? (
+					<a href={prev.href} rel="prev">
+						<span class="ru-pager-dir">Previous</span>
+						<span class="ru-pager-title">{prev.label}</span>
+					</a>
+				) : (
+					<span />
+				)}
+				{next && (
+					<a href={next.href} rel="next" class="is-next">
+						<span class="ru-pager-dir">Next</span>
+						<span class="ru-pager-title">{next.label}</span>
+					</a>
+				)}
+			</nav>
+		)
+	}
+	<div class="ru-colophon">
+		{
+			editUrl && (
+				<a class="print:hidden" href={editUrl}>
+					Edit this page on GitHub
+				</a>
+			)
+		}
+		<p>
+			Site code and docs: <a href={`${repositoryUrl}/blob/main/LICENSE`}>MIT</a>. Mods and game content
+			keep their <a href="https://github.com/RE-Ultimate/Re-Ultimate/blob/main/THIRD_PARTY.md">original licenses</a>.
+		</p>
+	</div>
+</footer>
+
+<style>
+	.ru-footer {
+		margin-top: 4rem;
+	}
+	.ru-pager {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		border-top: 1px solid var(--ru-rule-strong);
+	}
+	.ru-pager a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		padding: 0.875rem 0 1rem;
+		color: var(--ru-text);
+		text-decoration: none;
+	}
+	.ru-pager a.is-next {
+		align-items: flex-end;
+		text-align: end;
+		grid-column: 2;
+	}
+	.ru-pager-dir {
+		font-size: var(--sl-text-xs);
+		color: var(--ru-text-2);
+	}
+	.ru-pager-title {
+		font-size: var(--sl-text-lg);
+		font-weight: 680;
+		font-stretch: 110%;
+		line-height: 1.25;
+	}
+	.ru-pager a:hover .ru-pager-title {
+		text-decoration: underline;
+		text-decoration-color: var(--ru-accent);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2em;
+	}
+	.ru-colophon {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.5rem 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid var(--ru-rule);
+		font-size: var(--sl-text-sm);
+		color: var(--ru-text-2);
+	}
+	.ru-colophon p {
+		margin: 0;
+	}
+	.ru-colophon a {
+		color: var(--ru-text);
+		text-decoration-color: var(--ru-rule-strong);
+		text-underline-offset: 0.2em;
+	}
+	.ru-colophon a:hover {
+		text-decoration-color: var(--ru-accent);
+	}
+</style>

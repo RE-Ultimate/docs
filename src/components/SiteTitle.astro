@@ -1,0 +1,49 @@
+---
+// Replaces Starlight's site title with the typographic Re:Ultimate wordmark.
+const { siteTitleHref } = Astro.locals.starlightRoute;
+---
+
+<a href={siteTitleHref} class="ru-brand">
+	<span class="ru-brand-word" translate="no">Re<span class="ru-brand-colon">:</span>Ultimate</span>
+	<span class="ru-brand-section">Docs</span>
+</a>
+
+<style>
+	.ru-brand {
+		display: flex;
+		align-items: baseline;
+		gap: 0.75rem;
+		min-width: 0;
+		color: var(--ru-text);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	.ru-brand-word {
+		font-size: 1.3125rem;
+		font-weight: 800;
+		font-stretch: 125%;
+		letter-spacing: -0.03em;
+		line-height: 1;
+	}
+	.ru-brand-colon {
+		color: var(--ru-accent);
+	}
+	.ru-brand-section {
+		padding-inline-start: 0.75rem;
+		border-inline-start: 1px solid var(--ru-rule-strong);
+		font-size: 0.9375rem;
+		font-weight: 500;
+		line-height: 1;
+	}
+	.ru-brand:hover .ru-brand-section {
+		color: var(--ru-accent);
+	}
+	@media (max-width: 24rem) {
+		.ru-brand-word {
+			font-size: 1.125rem;
+		}
+		.ru-brand-section {
+			display: none;
+		}
+	}
+</style>
