@@ -5,7 +5,7 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 
 ## Scope and working preferences
 
-- Build the documentation system first. Detailed block and pack content will be supplied later.
+- The site now includes a curated block reference and a playthrough guide. Add important, source-backed blocks rather than trying to cover every decorative variant.
 - Use short, clear English. Do not invent recipes, gameplay claims, mod counts, versions, quotes, or statistics.
 - Use pnpm, including pnpm dlx for one-off tools. Keep TypeScript strict and avoid any.
 - Keep the site static and compatible with the /docs/ Pages base path. No backend or credentials are needed for readers.
@@ -22,7 +22,17 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 - ../Re-Ultimate/README.md: pack description, release links, and installation basics.
 - ../Re-Ultimate/THIRD_PARTY.md and docs/UPSTREAM.md: upstream and license facts.
 - ../retroEMI/docs/upsilon-integration.md: feature coverage and known verification limits. Local source changes may not yet be in the published pack.
-- Do not copy or edit the Minecraft client, server, world, or other repositories for this task.
+- Read legacy mod artifacts and code as reference when needed. Do not publish decompiled third-party code or edit the client, server, world, or other source repositories for a documentation task.
+
+## Research and content quality
+
+- Target Minecraft 1.4.7 and the mod versions listed in `src/content/docs/pack/reference-scope.md`. Older FTB Ultimate and newer mod guides can differ from this pack.
+- Each block page needs a Sources section with inspected public references and a checked legacy version. Inspect the installed code and pack configuration before stating rates, voltage limits, machine layouts, or accepted inputs.
+- Source references may use the pack's pinned artifacts, manifests, and config. Write original summaries. Do not copy wiki prose, game textures, or decompiled code into the site.
+- Use EMI for exact installed recipes when configuration or integrations affect them. Use the installed Thaumonomicon for research and construction diagrams that have not been separately verified.
+- Local research evidence is under workspace `.work/docs-research/`. It records source locations, artifact checksums, and focused review results.
+- Re-check multiblock layouts against active structure patterns. Generic validators can support blocks that a particular pattern never uses.
+- The page count comes from content. Browser tests exercise the populated catalog and search without fixing a permanent count.
 
 ## Architecture
 

@@ -2,7 +2,7 @@ import { expect, test, type Page } from '@playwright/test';
 
 // Checks the built site at the GitHub Pages base path. Run `pnpm build` first, then `pnpm test:e2e`.
 
-const pages = ['/docs/', '/docs/pack/overview/', '/docs/pack/installation/', '/docs/blocks/', '/docs/contribute/authoring/'];
+const pages = ['/docs/', '/docs/pack/overview/', '/docs/pack/installation/', '/docs/blocks/', '/docs/pack/playthrough/', '/docs/pack/reference-scope/', '/docs/contribute/authoring/'];
 
 const horizontalOverflow = (page: Page) =>
 	page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
@@ -46,14 +46,44 @@ test('search finds the installation page', async ({ page }) => {
 	await expect(page.locator('h1')).toHaveText('Installation');
 });
 
-test('empty block catalog explains how to add a page', async ({ page }) => {
+test('block catalog filters by mod, text and category and restores filters from the URL', async ({ page }) => {
 	await page.goto('/docs/blocks/');
-	await expect(page.getByText('No block pages yet.')).toBeVisible();
 	await expect(page.getByRole('columnheader', { name: 'Block' })).toBeAttached();
-	const howTo = page.getByRole('link', { name: 'Add a block page' });
-	await howTo.click();
-	await expect(page).toHaveURL(/\/docs\/contribute\/authoring\/#add-a-block-page$/);
-	await expect(page.locator('#add-a-block-page')).toBeInViewport();
+	const query = page.getByRole('searchbox', { name: 'Filter', exact: true });
+	const mod = page.getByRole('combobox', { name: 'Mod', exact: true });
+	const category = page.getByRole('combobox', { name: 'Category', exact: true });
+	await mod.selectOption('ic2');
+	await query.fill('Macerator');
+	const macerator = page.getByRole('link', { name: 'Macerator', exact: true });
+	await expect(macerator).toBeVisible();
+	await expect(page.locator('[data-count]')).toHaveText(/1 of \d+ blocks/);
+	await expect(page).toHaveURL(/mod=ic2/);
+	await page.reload();
+	await expect(mod).toHaveValue('ic2');
+	await expect(query).toHaveValue('Macerator');
+	await expect(macerator).toBeVisible();
+	await category.selectOption('power');
+	await expect(page.getByText('No blocks match these filters.')).toBeVisible();
+	await expect(macerator).toBeHidden();
+	await page.getByRole('button', { name: 'Clear filters' }).click();
+	await expect(query).toHaveValue('');
+	await expect(mod).toHaveValue('');
+	await expect(category).toHaveValue('');
+	await expect(macerator).toBeVisible();
+	await macerator.click();
+	await expect(page.locator('h1')).toHaveText('Macerator');
+	await expect(page.getByRole('heading', { name: 'Sources', exact: true })).toBeVisible();
+});
+
+test('search finds and opens a researched block page', async ({ page }) => {
+	await page.goto('/docs/');
+	await page.getByRole('button', { name: 'Search' }).click();
+	const dialog = page.getByRole('dialog', { name: 'Search' });
+	await dialog.getByRole('textbox', { name: 'Search' }).fill('Macerator');
+	const result = dialog.locator('a[href="/docs/blocks/ic2/macerator/"]').first();
+	await expect(result).toBeVisible();
+	await result.click();
+	await expect(page.locator('h1')).toHaveText('Macerator');
 });
 
 test('unknown pages return the 404 page', async ({ page }) => {

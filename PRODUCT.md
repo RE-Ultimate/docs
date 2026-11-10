@@ -13,7 +13,7 @@ Maintainers need to add and edit content without rebuilding the site's structure
 
 Re:Ultimate is a maintained Minecraft 1.4.7 modpack based on Rewind Upsilon and FTB Ultimate.
 The owner now maintains the projects in the RE-Ultimate GitHub organization.
-The block reference content will follow later. The current task is the site and authoring system.
+The site includes a curated reference for important blocks in a normal playthrough. Source-backed content now covers the main processing, power, storage, automation, and magic systems.
 
 ## Required capabilities
 
@@ -29,6 +29,6 @@ Do not use continuously animated decorations. Respect reduced-motion and keyboar
 
 ## Scope
 
-Build the system now. Include only a small set of accurate foundation pages needed to make it usable.
+Maintain the site and a useful selection of block pages. Prefer the blocks that unlock common progression or solve practical base problems.
 Do not publish invented block details or a large set of empty articles.
 English is the starting language, matching the user's request. Keep content separate from UI so it can grow later.

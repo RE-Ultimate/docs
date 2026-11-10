@@ -79,6 +79,8 @@ export default defineConfig({
 						{ label: 'Documentation home', link: '/' },
 						{ slug: 'pack/overview' },
 						{ slug: 'pack/installation' },
+						{ slug: 'pack/playthrough' },
+						{ slug: 'pack/reference-scope' },
 					],
 				},
 				{
