@@ -1,0 +1,112 @@
+{
+  "block": "ic2/canning-machine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Canning Machine",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    },
+    {
+      "id": "cake",
+      "type": "machine",
+      "title": "Can cake",
+      "station": "Canning Machine",
+      "ingredients": [
+        {
+          "name": "Cake",
+          "count": 1
+        },
+        {
+          "name": "Tin Can",
+          "count": 6
+        }
+      ],
+      "outputs": [
+        {
+          "name": "(Filled) Tin Can",
+          "count": 6
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU, up to 32 EU per packet",
+    "inputs": [
+      "Food, fuel cells or construction foam pellets",
+      "Matching cans, jetpack or foam pack"
+    ],
+    "outputs": [
+      "Filled cans, fueled jetpack or filled foam pack"
+    ],
+    "tips": [
+      "The lower slot selects the operation."
+    ]
+  }
+}

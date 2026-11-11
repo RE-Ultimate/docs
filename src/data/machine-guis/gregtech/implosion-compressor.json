@@ -1,0 +1,64 @@
+{
+  "block": "gregtech/implosion-compressor",
+  "title": "Implosion Compressor",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 34,
+      "y": 16,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 34,
+      "y": 34,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 86,
+      "y": 25,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 104,
+      "y": 25,
+      "role": "output",
+      "label": "Output",
+      "index": 1
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 58,
+      "y": 28,
+      "w": 20,
+      "h": 11,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_ImplosionCompressor, gregtechmod.common.gui.GT_GUIContainer_ImplosionCompressor."
+  ]
+}

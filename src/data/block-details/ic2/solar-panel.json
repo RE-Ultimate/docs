@@ -1,0 +1,79 @@
+{
+  "block": "ic2/solar-panel",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Silicon Plate",
+          "count": 1
+        },
+        {
+          "name": "Carbon Plate",
+          "count": 1
+        },
+        {
+          "name": "Silicon Plate",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Generator",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Solar Panel",
+          "count": 1,
+          "href": "/docs/blocks/ic2/solar-panel/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ],
+      "notes": [
+        "GregTech accepts alternatives registered for the circuit and silicon plate."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Produces EU in daylight",
+    "inputs": [
+      "Sunlight"
+    ],
+    "outputs": [
+      "EU"
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "block": "advanced-machines/rotary-macerator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Macerator",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Rotary Macerator",
+          "count": 1,
+          "href": "/docs/blocks/advanced-machines/rotary-macerator/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Advanced Machines pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "iron-ore",
+      "type": "machine",
+      "title": "Iron ore",
+      "station": "Rotary Macerator",
+      "ingredients": [
+        {
+          "name": "Iron Ore",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Iron Dust",
+          "count": 2
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Advanced Machines pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "cobblestone",
+      "type": "machine",
+      "title": "Sand",
+      "station": "Rotary Macerator",
+      "ingredients": [
+        {
+          "name": "Cobblestone",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Sand",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Advanced Machines pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU; up to 32 EU per packet without transformer upgrades",
+    "inputs": [
+      "IC2 macerator recipes",
+      "Charged compatible battery"
+    ],
+    "outputs": [
+      "Processed items"
+    ],
+    "automation": [
+      {
+        "face": "Top",
+        "role": "Recipe input"
+      },
+      {
+        "face": "Sides",
+        "role": "Product output"
+      },
+      {
+        "face": "Bottom",
+        "role": "Battery slot"
+      }
+    ],
+    "tips": [
+      "A redstone signal keeps the machine spinning while it has energy."
+    ]
+  }
+}

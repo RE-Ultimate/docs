@@ -1,0 +1,131 @@
+{
+  "block": "gregtech/implosion-compressor",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Compressor",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Implosion Compressor",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "One valid selection from the registered ingredient alternatives."
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Multiblock structure",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Implosion Compressor",
+          "count": 1
+        },
+        {
+          "name": "Standard Machine Casing",
+          "count": 8
+        },
+        {
+          "name": "Reinforced Machine Casing",
+          "count": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Implosion Compressor",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        }
+      ],
+      "notes": [
+        "See the structure layout below for the exact placement."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "32 EU per packet before transformer upgrades",
+    "inputs": [
+      "Material and explosives"
+    ],
+    "outputs": [
+      "Compressed product and byproduct"
+    ],
+    "automation": [
+      {
+        "face": "Top",
+        "role": "First input"
+      },
+      {
+        "face": "Bottom, north and south",
+        "role": "Second input"
+      },
+      {
+        "face": "East and west",
+        "role": "Outputs"
+      }
+    ],
+    "tips": [
+      "Keep the casing complete and both outputs clear."
+    ]
+  }
+}

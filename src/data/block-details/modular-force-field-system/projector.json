@@ -1,0 +1,76 @@
+{
+  "block": "modular-force-field-system/projector",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "MFFS Projector Focus Matrix",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "MFFS Projector Focus Matrix",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "MFFS Projector Focus Matrix",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Frequency Transmitter",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MFFS Projector",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ModularForceFieldSystem.zip"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "MFFS force energy through a linked power source.",
+    "inputs": [
+      "Projector type module",
+      "Power link card",
+      "Compatible options and focus matrices"
+    ],
+    "outputs": [
+      "Force field"
+    ],
+    "tips": [
+      "Choose a valid type and link a source before switching on."
+    ]
+  }
+}

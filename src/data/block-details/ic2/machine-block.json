@@ -1,0 +1,63 @@
+{
+  "block": "ic2/machine-block",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Machine Block",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned IC2 artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "block": "thermal-expansion/steam-engine",
+  "title": "Steam Engine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 44,
+      "y": 35,
+      "role": "fuel",
+      "label": "Fuel"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 98,
+      "y": 35,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Fuel"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 152,
+      "y": 9,
+      "w": 16,
+      "h": 60,
+      "direction": "up",
+      "label": "Water"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pack configuration",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: ContainerEngineSteam, GuiEngineSteam, TileEngineSteam and cofh.gui.GuiAdv."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "block": "ic2/induction-furnace",
+  "title": "Induction Furnace",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 47,
+      "y": 17,
+      "role": "input",
+      "label": "Input 1",
+      "index": 0
+    },
+    {
+      "x": 63,
+      "y": 17,
+      "role": "input",
+      "label": "Input 2",
+      "index": 1
+    },
+    {
+      "x": 56,
+      "y": 53,
+      "role": "battery",
+      "label": "Battery"
+    },
+    {
+      "x": 113,
+      "y": 35,
+      "role": "output",
+      "label": "Output 1",
+      "index": 0
+    },
+    {
+      "x": 131,
+      "y": 35,
+      "role": "output",
+      "label": "Output 2",
+      "index": 1
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 56,
+      "y": 36,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pack GregTech recipe settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+    }
+  ],
+  "notes": [
+    "Classes: ic2.core.block.machine.ContainerInduction and ic2.core.block.machine.gui.GuiInduction. Heat is displayed as text."
+  ]
+}

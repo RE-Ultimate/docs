@@ -1,0 +1,83 @@
+{
+  "block": "ic2-nuclear-control/industrial-information-panel",
+  "recipes": [
+    {
+      "id": "panel",
+      "type": "shaped",
+      "title": "Industrial Information Panel",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Lime Dye",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Lime Dye",
+          "count": 1
+        },
+        {
+          "name": "Ink Sac",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Ink Sac",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Industrial Information Panel",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2NuclearControl.zip"
+        },
+        {
+          "title": "Pack settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/IC2NuclearControl.cfg"
+        },
+        {
+          "title": "GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ],
+      "notes": [
+        "The lime and black dyes are ore dictionary ingredients; EMI shows accepted alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Redstone signal enables the screen.",
+    "inputs": [
+      "Information card",
+      "Optional range and color upgrades"
+    ],
+    "outputs": [
+      "Screen readings"
+    ]
+  }
+}

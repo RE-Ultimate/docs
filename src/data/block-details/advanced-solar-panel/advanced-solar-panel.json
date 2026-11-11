@@ -1,0 +1,83 @@
+{
+  "block": "advanced-solar-panel/advanced-solar-panel",
+  "recipes": [
+    {
+      "id": "advanced-solar-panel",
+      "type": "shaped",
+      "title": "Advanced Solar Panel",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Irradiant Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Irradiant Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Irradiant Glass Pane",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Solar Panel",
+          "count": 1
+        },
+        {
+          "name": "Advanced Alloy",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Irradiant Reinforced Plate",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Advanced Solar Panel",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedSolarPanel.zip"
+        },
+        {
+          "title": "Pack panel settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/AdvancedSolarPanel.cfg"
+        },
+        {
+          "title": "Pack GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Generates EU: 8 EU/t in sunlight, 1 EU/t with sky access in darkness or rain.",
+    "inputs": [
+      "Sky access",
+      "Up to four rechargeable items"
+    ],
+    "outputs": [
+      "EU, up to 32 EU/t"
+    ],
+    "tips": [
+      "Stores up to 32,000 EU."
+    ]
+  }
+}

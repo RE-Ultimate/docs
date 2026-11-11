@@ -1,0 +1,95 @@
+{
+  "block": "gregtech/auto-crafting-table",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Electrum Plate",
+          "count": 1
+        },
+        {
+          "name": "RE-Battery",
+          "count": 1
+        },
+        {
+          "name": "Electrum Plate",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Crafting Table",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Electrum Plate",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Electrum Plate",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Electric Craftingtable",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "One valid selection from the registered ingredient alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "32 EU per packet before transformer upgrades",
+    "inputs": [
+      "Crafting ingredients and a ghost recipe pattern"
+    ],
+    "outputs": [
+      "Crafted items and returned containers"
+    ],
+    "automation": [
+      {
+        "face": "Front",
+        "role": "Input inventory"
+      },
+      {
+        "face": "Back",
+        "role": "Result slot"
+      },
+      {
+        "face": "Other sides",
+        "role": "Output inventory"
+      }
+    ],
+    "tips": [
+      "Check the result and output space before supplying a batch."
+    ]
+  }
+}

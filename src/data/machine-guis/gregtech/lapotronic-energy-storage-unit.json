@@ -1,0 +1,72 @@
+{
+  "block": "gregtech/lapotronic-energy-storage-unit",
+  "title": "L.E.S.U.",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 128,
+      "y": 14,
+      "role": "battery",
+      "label": "Charge item"
+    },
+    {
+      "x": 128,
+      "y": 50,
+      "role": "battery",
+      "label": "Discharge item"
+    },
+    {
+      "x": 152,
+      "y": 5,
+      "role": "other",
+      "label": "Helmet"
+    },
+    {
+      "x": 152,
+      "y": 23,
+      "role": "other",
+      "label": "Chestplate"
+    },
+    {
+      "x": 152,
+      "y": 41,
+      "role": "other",
+      "label": "Leggings"
+    },
+    {
+      "x": 152,
+      "y": 59,
+      "role": "other",
+      "label": "Boots"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 73,
+      "w": 116,
+      "h": 5,
+      "direction": "right",
+      "label": "Stored EU"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack GregTech artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Container and GUI classes: GT_Container_LESU and GT_GUIContainer_LESU."
+  ]
+}

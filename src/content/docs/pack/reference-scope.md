@@ -25,6 +25,19 @@ The pages describe the versions supplied by Re:Ultimate for Minecraft 1.4.7. Re:
 | Ender Storage | 1.4.1.5 |
 | ChickenChunks | 1.3.1.2 |
 | ComputerCraft | 1.5 |
+| Advanced Machines | 4.7b |
+| Advanced Solar Panels | 3.3.4 |
+| EE3 | pre1f |
+| GraviSuite | 1.8 |
+| IC2 Nuclear Control | 1.4.5 |
+| Iron Chests | 5.1.0.261 |
+| Logistics Pipes | 0.7.0.98d |
+| Modular Force Field System | 2.2.8.3.6 |
+| Modular Powersuits | 0.3.2-199 |
+| Mystcraft | 0.10.1.00 |
+| Soul Shards | 1.26 |
+| Steve's Carts | 2.0.0.dev |
+| Twilight Forest | 1.15.4 |
 
 The [pack manifests](https://github.com/RE-Ultimate/Re-Ultimate/tree/main/mods) and [pinned dependency list](https://github.com/RE-Ultimate/retroEMI/blob/main/tools/dependencies.json) identify the supplied artifacts. [Pack configuration](https://github.com/RE-Ultimate/Re-Ultimate/tree/main/config) determines options such as accepted fertilizers, machine recipes, and chunk-loader limits. A server can override its configuration.
 

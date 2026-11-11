@@ -1,0 +1,42 @@
+{
+  "block": "ic2/wind-mill",
+  "title": "Wind Mill",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 26,
+      "role": "battery",
+      "label": "Charge item"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "other",
+      "x": 80,
+      "y": 45,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Wind and overheat"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Coordinates from the IC2 container and GUI classes.",
+    "The wind and overheat indicators occupy the same position."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "block": "thermal-expansion/igneous-extruder",
+  "title": "Igneous Extruder",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 49,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 50,
+      "y": 19,
+      "role": "other",
+      "label": "Select cobblestone"
+    },
+    {
+      "x": 80,
+      "y": 19,
+      "role": "other",
+      "label": "Select stone"
+    },
+    {
+      "x": 110,
+      "y": 19,
+      "role": "other",
+      "label": "Select obsidian"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 40,
+      "y": 49,
+      "w": 24,
+      "h": 16,
+      "direction": "right",
+      "label": "Lava progress"
+    },
+    {
+      "kind": "arrow",
+      "x": 112,
+      "y": 49,
+      "w": 24,
+      "h": 16,
+      "direction": "left",
+      "label": "Water progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 8,
+      "y": 9,
+      "w": 16,
+      "h": 60,
+      "direction": "up",
+      "label": "Lava"
+    },
+    {
+      "kind": "fluid",
+      "x": 152,
+      "y": 9,
+      "w": 16,
+      "h": 60,
+      "direction": "up",
+      "label": "Water"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pack configuration",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.factory.gui.ContainerRockGen, thermalexpansion.factory.gui.GuiRockGen, thermalexpansion.factory.tileentity.TileRockGen, cofh.gui.GuiAdv."
+  ]
+}

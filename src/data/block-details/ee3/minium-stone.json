@@ -1,0 +1,100 @@
+{
+  "block": "ee3/minium-stone",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Minium Stone",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Inert Stone",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        },
+        {
+          "name": "Shard of Minium",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Minium Stone",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "EE3 pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/EE3.jar"
+        },
+        {
+          "title": "Pack EE3 configuration",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/config/EE3.cfg"
+        }
+      ]
+    },
+    {
+      "id": "gold",
+      "type": "shapeless",
+      "title": "Gold from iron",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Minium Stone",
+          "count": 1,
+          "consumed": false
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Gold Ingot",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "EE3 pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/EE3.jar"
+        },
+        {
+          "title": "Pack EE3 configuration",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/config/EE3.cfg"
+        }
+      ]
+    }
+  ]
+}

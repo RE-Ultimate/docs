@@ -1,0 +1,77 @@
+{
+  "block": "thermal-expansion/steam-engine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Redstone Transmission Coil",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Copper Gear",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Copper Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Steam Engine",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Produces MJ from solid fuel and water",
+    "inputs": [
+      "Water",
+      "Solid fuel"
+    ],
+    "outputs": [
+      "MJ"
+    ],
+    "tips": [
+      "The engine stops when its water is low or its energy buffer is full."
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "block": "gregtech/fusion-reactor",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "GregTech Computer Cube",
+          "count": 1
+        },
+        {
+          "name": "Fusion Coil",
+          "count": 1
+        },
+        {
+          "name": "GregTech Computer Cube",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fusion Control Computer",
+          "count": 1,
+          "href": "/docs/blocks/gregtech/fusion-reactor/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack GregTech artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/GregTech.cfg"
+        }
+      ],
+      "notes": [
+        "This is one selection from registered ingredient alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU supplied through Fusion Energy Injectors.",
+    "inputs": [
+      "Two fusion materials through separate upper and lower injectors."
+    ],
+    "outputs": [
+      "Reaction product through a Fusion Material Extractor."
+    ],
+    "tips": [
+      "The computer checks the complete multiblock before a reaction starts."
+    ]
+  }
+}

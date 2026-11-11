@@ -1,0 +1,73 @@
+{
+  "block": "gravisuite/gravichestplate",
+  "recipes": [
+    {
+      "id": "gravichestplate",
+      "type": "shaped",
+      "title": "GraviChestPlate",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Superconductor",
+          "count": 1
+        },
+        {
+          "name": "QuantumSuit Bodyarmor",
+          "count": 1
+        },
+        {
+          "name": "Superconductor",
+          "count": 1
+        },
+        {
+          "name": "Gravitation Engine",
+          "count": 1
+        },
+        {
+          "name": "HV-Transformer",
+          "count": 1
+        },
+        {
+          "name": "Gravitation Engine",
+          "count": 1
+        },
+        {
+          "name": "Superconductor",
+          "count": 1
+        },
+        {
+          "name": "Ultimate Lappack",
+          "count": 1
+        },
+        {
+          "name": "Superconductor",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GraviChestPlate",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GraviSuite.zip"
+        },
+        {
+          "title": "Pack settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GraviSuite.cfg"
+        },
+        {
+          "title": "Pack GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ],
+      "notes": [
+        "Superconductor is an ore dictionary ingredient. Check EMI for accepted alternatives."
+      ]
+    }
+  ]
+}

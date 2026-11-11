@@ -1,0 +1,131 @@
+{
+  "block": "gregtech/distillation-tower",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Industrial Centrifuge",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Industrial Centrifuge",
+          "count": 1
+        },
+        {
+          "name": "Pump",
+          "count": 1
+        },
+        {
+          "name": "Highly Advanced Machineblock",
+          "count": 1
+        },
+        {
+          "name": "Pump",
+          "count": 1
+        },
+        {
+          "name": "Industrial Electrolyzer",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Industrial Electrolyzer",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Distillation Tower",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "One valid selection from the registered ingredient alternatives."
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Multiblock structure",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Distillation Tower",
+          "count": 1
+        },
+        {
+          "name": "Standard Machine Casing",
+          "count": 26
+        },
+        {
+          "name": "Advanced Machine Casing",
+          "count": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Distillation Tower",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        }
+      ],
+      "notes": [
+        "See the structure layout below for the exact placement."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "128 EU per packet before transformer upgrades",
+    "inputs": [
+      "Recipe items and cells"
+    ],
+    "outputs": [
+      "Up to four products"
+    ],
+    "automation": [
+      {
+        "face": "Top",
+        "role": "First input"
+      },
+      {
+        "face": "Bottom",
+        "role": "Second input"
+      },
+      {
+        "face": "Sides",
+        "role": "Outputs"
+      }
+    ],
+    "tips": [
+      "Keep all product slots clear."
+    ]
+  }
+}

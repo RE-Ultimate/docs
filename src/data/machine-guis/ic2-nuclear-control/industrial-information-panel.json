@@ -1,0 +1,48 @@
+{
+  "block": "ic2-nuclear-control/industrial-information-panel",
+  "title": "Industrial Information Panel",
+  "width": 176,
+  "height": 190,
+  "playerInventory": true,
+  "playerInventoryY": 108,
+  "slots": [
+    {
+      "x": 8,
+      "y": 42,
+      "role": "other",
+      "label": "Information card"
+    },
+    {
+      "x": 8,
+      "y": 60,
+      "role": "upgrade",
+      "label": "Range upgrade"
+    },
+    {
+      "x": 8,
+      "y": 78,
+      "role": "upgrade",
+      "label": "Color upgrade"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2NuclearControl.zip"
+    },
+    {
+      "title": "Pack settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/IC2NuclearControl.cfg"
+    },
+    {
+      "title": "GregTech settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+    }
+  ],
+  "notes": [
+    "Classes: ContainerInfoPanel, GuiInfoPanel, TileEntityInfoPanel. Card settings vary with the inserted card."
+  ]
+}

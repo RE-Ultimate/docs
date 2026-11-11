@@ -1,0 +1,98 @@
+{
+  "block": "modular-force-field-system/projector",
+  "title": "MFFS Projector",
+  "width": 176,
+  "height": 186,
+  "playerInventory": true,
+  "playerInventoryY": 104,
+  "slots": [
+    {
+      "x": 11,
+      "y": 61,
+      "role": "upgrade",
+      "label": "Power link card"
+    },
+    {
+      "x": 11,
+      "y": 38,
+      "role": "upgrade",
+      "label": "Type module"
+    },
+    {
+      "x": 120,
+      "y": 82,
+      "role": "upgrade",
+      "label": "Option"
+    },
+    {
+      "x": 138,
+      "y": 82,
+      "role": "upgrade",
+      "label": "Option"
+    },
+    {
+      "x": 156,
+      "y": 82,
+      "role": "upgrade",
+      "label": "Option"
+    },
+    {
+      "x": 155,
+      "y": 64,
+      "role": "upgrade",
+      "label": "Strength modulator"
+    },
+    {
+      "x": 119,
+      "y": 64,
+      "role": "upgrade",
+      "label": "Distance modulator"
+    },
+    {
+      "x": 137,
+      "y": 28,
+      "role": "upgrade",
+      "label": "Focus up"
+    },
+    {
+      "x": 137,
+      "y": 62,
+      "role": "upgrade",
+      "label": "Focus down"
+    },
+    {
+      "x": 154,
+      "y": 45,
+      "role": "upgrade",
+      "label": "Focus right"
+    },
+    {
+      "x": 120,
+      "y": 45,
+      "role": "upgrade",
+      "label": "Focus left"
+    },
+    {
+      "x": 137,
+      "y": 45,
+      "role": "upgrade",
+      "label": "Center"
+    },
+    {
+      "x": 92,
+      "y": 38,
+      "role": "upgrade",
+      "label": "Security link card"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ModularForceFieldSystem.zip"
+    }
+  ],
+  "notes": [
+    "Available slots and effects depend on the selected projector module."
+  ]
+}
