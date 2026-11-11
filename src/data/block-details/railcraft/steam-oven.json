@@ -72,7 +72,8 @@
       "outputs": [
         {
           "name": "Formed Steam Oven",
-          "count": 1
+          "count": 1,
+          "icon": "/media/wiki/railcraft-steam-oven.png"
         }
       ],
       "verification": "pack-code",

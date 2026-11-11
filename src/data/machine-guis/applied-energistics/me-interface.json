@@ -1,0 +1,176 @@
+{
+  "block": "applied-energistics/me-interface",
+  "title": "ME Interface",
+  "width": 176,
+  "height": 196,
+  "playerInventory": true,
+  "playerInventoryY": 115,
+  "slots": [
+    {
+      "x": 8,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 26,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 44,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 62,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 80,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 98,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 116,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 134,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 152,
+      "y": 84,
+      "role": "pattern",
+      "label": "Encoded pattern"
+    },
+    {
+      "x": 8,
+      "y": 35,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 26,
+      "y": 35,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 44,
+      "y": 35,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 62,
+      "y": 35,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 8,
+      "y": 53,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 26,
+      "y": 53,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 44,
+      "y": 53,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 62,
+      "y": 53,
+      "role": "filter",
+      "label": "Export configuration"
+    },
+    {
+      "x": 98,
+      "y": 35,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 116,
+      "y": 35,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 134,
+      "y": 35,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 152,
+      "y": 35,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 98,
+      "y": 53,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 116,
+      "y": 53,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 134,
+      "y": 53,
+      "role": "storage",
+      "label": "Exported item"
+    },
+    {
+      "x": 152,
+      "y": 53,
+      "role": "storage",
+      "label": "Exported item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: appeng.me.container.ContainerInterface, appeng.me.gui.GuiInterface."
+  ]
+}

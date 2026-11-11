@@ -1,3 +1,9 @@
-/* Self-hosted fonts. Archivo carries a width axis: normal width for reading, expanded width for headings. */
-@import '@fontsource-variable/archivo/wdth.css';
+/*
+ * Self-hosted fonts.
+ * Bricolage Grotesque: headings and reading text (optical size and weight axes).
+ * Pixelify Sans: the wordmark and game UI only (buttons, tabs, window titles, tooltips, splash).
+ * JetBrains Mono: IDs, file names, and code.
+ */
+@import '@fontsource-variable/bricolage-grotesque/opsz.css';
+@import '@fontsource-variable/pixelify-sans/wght.css';
 @import '@fontsource-variable/jetbrains-mono/wght.css';

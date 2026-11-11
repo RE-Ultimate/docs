@@ -1,0 +1,112 @@
+{
+  "block": "gregtech/industrial-centrifuge",
+  "title": "Industrial Centrifuge",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 35,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 50,
+      "y": 5,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 80,
+      "y": 5,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 110,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 1
+    },
+    {
+      "x": 80,
+      "y": 65,
+      "role": "output",
+      "label": "Output",
+      "index": 2
+    },
+    {
+      "x": 50,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 3
+    },
+    {
+      "x": 110,
+      "y": 65,
+      "role": "other",
+      "label": "Display"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 83,
+      "y": 23,
+      "w": 10,
+      "h": 10,
+      "direction": "up",
+      "label": "Progress"
+    },
+    {
+      "kind": "bar",
+      "x": 68,
+      "y": 38,
+      "w": 10,
+      "h": 10,
+      "direction": "left",
+      "label": "Progress"
+    },
+    {
+      "kind": "bar",
+      "x": 83,
+      "y": 53,
+      "w": 10,
+      "h": 10,
+      "direction": "down",
+      "label": "Progress"
+    },
+    {
+      "kind": "bar",
+      "x": 98,
+      "y": 38,
+      "w": 10,
+      "h": 10,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_Centrifuge, gregtechmod.common.gui.GT_GUIContainer_Centrifuge.",
+    "The display slot is a non-removable hologram."
+  ]
+}

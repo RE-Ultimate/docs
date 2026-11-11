@@ -1,0 +1,90 @@
+{
+  "block": "applied-energistics/me-drive",
+  "title": "ME Drive",
+  "width": 176,
+  "height": 199,
+  "playerInventory": true,
+  "playerInventoryY": 117,
+  "slots": [
+    {
+      "x": 71,
+      "y": 14,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 89,
+      "y": 14,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 71,
+      "y": 32,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 89,
+      "y": 32,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 71,
+      "y": 50,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 89,
+      "y": 50,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 71,
+      "y": 68,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 89,
+      "y": 68,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 71,
+      "y": 86,
+      "role": "storage",
+      "label": "Storage cell"
+    },
+    {
+      "x": 89,
+      "y": 86,
+      "role": "storage",
+      "label": "Storage cell"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "Pack configuration",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/config/AppliedEnergistics.cfg"
+    }
+  ],
+  "notes": [
+    "Classes: appeng.me.container.ContainerDriveSmall, appeng.me.gui.GuiDriveSmall, appeng.me.tile.TileDrive, appeng.gui.AppEngGuiHandler."
+  ]
+}

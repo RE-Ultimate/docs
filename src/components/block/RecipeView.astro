@@ -8,6 +8,7 @@ import { chancePercent, formatAmount } from '../../lib/recipe-math.ts';
 import type { ViewCell, ViewOption, ViewRecipe } from '../../lib/block-details';
 import { withBase } from '../../lib/paths';
 import Slot from './Slot.astro';
+import MachineWindow from './MachineWindow.astro';
 
 interface Props {
 	recipe: ViewRecipe;
@@ -26,6 +27,14 @@ const alignAt = (position: number, length: number, columns: number) =>
 	position % columns === 0 ? 'start' : position % columns === columns - 1 || position === length - 1 ? 'end' : 'center';
 
 const station = recipe.station;
+// The window title, as the game would label the screen.
+// A processing recipe with a known window layout is drawn in the machine's own window.
+const inputs = cells.flatMap((cell) => (cell?.options[0] ? [cell.options[0]] : []));
+const gui =
+	recipe.gui && recipe.gui.slots.filter((slot) => slot.role === 'input').length >= inputs.length && recipe.gui.slots.filter((slot) => slot.role === 'output').length >= recipe.outputs.length
+		? recipe.gui
+		: undefined;
+const windowTitle = station ?? (isShaped ? 'Crafting' : isMachine ? recipe.title : 'Shapeless crafting');
 const facts = [
 	station ? { label: isMachine ? 'Machine' : 'Station', value: station } : undefined,
 	recipe.power ? { label: 'Power', value: recipe.power } : undefined,
@@ -50,8 +59,16 @@ const othersOf = (options: ViewOption[]) =>
 
 	<div class="ru-recipe-body">
 		{
-			!isConstruction && (
-				<div class="ru-diagram" role="group" aria-label={`${recipe.title}, ${isShaped ? '3 by 3 crafting grid' : 'slots'}`} data-pagefind-ignore>
+			gui && (
+				<div class="ru-diagram has-gui" role="group" aria-label={`${recipe.title} in the ${gui.title} window`} data-pagefind-ignore>
+					<MachineWindow gui={gui} fill={{ inputs, outputs: recipe.outputs }} />
+				</div>
+			)
+		}
+		{
+			!isConstruction && !gui && (
+				<div class="ru-diagram ru-win" role="group" aria-label={`${recipe.title}, ${isShaped ? '3 by 3 crafting grid' : 'slots'}`} data-pagefind-ignore>
+					<p class="ru-win-title" aria-hidden="true">{windowTitle}</p>
 					<div class="ru-draw">
 					{
 						isShaped ? (
@@ -76,8 +93,8 @@ const othersOf = (options: ViewOption[]) =>
 							</div>
 						)
 					}
-					<svg class="ru-arrow" viewBox="0 0 32 16" width="32" height="16" aria-hidden="true">
-						<path d="M1 8h27M21 2l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2" />
+					<svg class="ru-arrow" viewBox="0 0 17 11" width="34" height="22" shape-rendering="crispEdges" aria-hidden="true">
+						<path fill="currentColor" d="M0 4h11V0h1v1h1v1h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1V7H0z" />
 					</svg>
 					<div class="ru-row ru-outs">
 						{recipe.outputs.map((output, position) => (

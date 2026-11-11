@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { after, test } from 'node:test';
 import { blockDetailsSchema, normalizeName, wikiMediaSchema } from './block-details-schema.ts';
-import { checkReferences, indexItemMedia, readBlockDetails, readWikiMedia } from './block-details-source.ts';
+import { checkReferences, indexItemMedia, readBlockDetails, readMachineGuis, readWikiMedia } from './block-details-source.ts';
 
 const source = { title: 'Pinned mod dependencies', url: 'https://example.com/deps.json' };
 const stack = (name: string, count = 1) => ({ name, count });
@@ -148,4 +148,29 @@ test('reference checks find missing pages, dead links and missing image files', 
 	assert.match(problems, /image file public\/media\/wiki\/gone\.png does not exist/);
 	assert.match(problems, /wiki-media\.json blocks: "ic2\/nothing" has no block page/);
 	assert.doesNotMatch(problems, /ic2\/exists\/" does not match/);
+});
+
+test('machine GUI files load with the same path rule and reject unknown slot roles', () => {
+	const gui = {
+		block: 'ic2/oven',
+		title: 'Oven',
+		width: 176,
+		height: 166,
+		playerInventory: true,
+		slots: [
+			{ x: 56, y: 17, role: 'input', label: 'Input', index: 0 },
+			{ x: 116, y: 35, role: 'output', label: 'Output', index: 0 },
+		],
+		verification: 'pack-code',
+		sources: [source],
+	};
+	write('guis/ic2/oven.json', gui);
+	write('guis/ic2/stove.json', gui);
+	write('guis/ic2/odd.json', { ...gui, block: 'ic2/odd', slots: [{ x: 1, y: 1, role: 'chimney', label: 'Chimney' }] });
+	const { value, problems } = readMachineGuis(join(temp, 'guis'));
+	assert.deepEqual([...value.keys()], ['ic2/oven']);
+	assert.deepEqual(value.get('ic2/oven')?.progress, []);
+	const text = problems.join('\n');
+	assert.match(text, /stove\.json: "block" is "ic2\/oven" but the file path says "ic2\/stove"/);
+	assert.match(text, /odd\.json: slots\.0\.role/);
 });

@@ -49,7 +49,8 @@ if (block) {
 	)
 }
 
-<h1 id="_top">{entry.data.title}</h1>
+{/* The home page shows the pixel wordmark instead; its H1 stays for screen readers and the table of contents. */}
+<h1 id="_top" class:list={{ 'sr-only': isHome }}>{entry.data.title}</h1>
 
 {
 	block && (
@@ -133,7 +134,6 @@ if (block) {
 		margin-top: 0.75rem;
 		font-size: var(--sl-text-h1);
 		font-weight: 780;
-		font-stretch: 118%;
 		line-height: 1.05;
 		letter-spacing: -0.03em;
 		color: var(--ru-text);

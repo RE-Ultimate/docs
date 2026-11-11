@@ -3,6 +3,8 @@
 // the content collection (which pages and routes exist).
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import type { z } from 'astro/zod';
+import { machineGuiSchema, type MachineGui } from './machine-gui-schema.ts';
 import {
 	blockDetailsSchema,
 	describeIssues,
@@ -28,13 +30,13 @@ const readJson = (file: string): { ok: true; data: unknown } | { ok: false; prob
 };
 
 /**
- * Reads every `<dir>/<mod>/<slug>.json`. The `block` field must equal `<mod>/<slug>`.
- * Returns a map from block ID to details. A missing folder is an empty map.
+ * Reads every `<dir>/<mod>/<slug>.json` with one schema. The `block` field must equal `<mod>/<slug>`.
+ * Returns a map from block ID to the parsed file. A missing folder is an empty map.
  */
-export function readBlockDetails(dir: string): Loaded<Map<string, BlockDetails>> {
-	const details = new Map<string, BlockDetails>();
+function readPerBlockFiles<T extends { block: string }>(dir: string, schema: z.ZodType<T>): Loaded<Map<string, T>> {
+	const files = new Map<string, T>();
 	const problems: string[] = [];
-	if (!existsSync(dir)) return { value: details, problems };
+	if (!existsSync(dir)) return { value: files, problems };
 
 	for (const mod of readdirSync(dir, { withFileTypes: true })) {
 		if (!mod.isDirectory()) {
@@ -44,7 +46,7 @@ export function readBlockDetails(dir: string): Loaded<Map<string, BlockDetails>>
 		for (const entry of readdirSync(join(dir, mod.name), { withFileTypes: true })) {
 			const file = join(dir, mod.name, entry.name);
 			if (!entry.isFile() || !entry.name.endsWith('.json')) {
-				problems.push(`${file}: only <slug>.json files belong in block-details/<mod>/.`);
+				problems.push(`${file}: only <slug>.json files belong in <mod>/.`);
 				continue;
 			}
 			const raw = readJson(file);
@@ -52,7 +54,7 @@ export function readBlockDetails(dir: string): Loaded<Map<string, BlockDetails>>
 				problems.push(raw.problem);
 				continue;
 			}
-			const parsed = blockDetailsSchema.safeParse(raw.data);
+			const parsed = schema.safeParse(raw.data);
 			if (!parsed.success) {
 				problems.push(...describeIssues(parsed.error).map((line) => `${file}: ${line}`));
 				continue;
@@ -62,11 +64,17 @@ export function readBlockDetails(dir: string): Loaded<Map<string, BlockDetails>>
 				problems.push(`${file}: "block" is "${parsed.data.block}" but the file path says "${expected}".`);
 				continue;
 			}
-			details.set(parsed.data.block, parsed.data);
+			files.set(parsed.data.block, parsed.data);
 		}
 	}
-	return { value: details, problems };
+	return { value: files, problems };
 }
+
+/** Block detail files: src/data/block-details/<mod>/<slug>.json. */
+export const readBlockDetails = (dir: string): Loaded<Map<string, BlockDetails>> => readPerBlockFiles(dir, blockDetailsSchema);
+
+/** Machine GUI layout files: src/data/machine-guis/<mod>/<slug>.json. */
+export const readMachineGuis = (dir: string): Loaded<Map<string, MachineGui>> => readPerBlockFiles(dir, machineGuiSchema);
 
 /** Reads wiki-media.json. A missing file is an empty table, so the site works before images exist. */
 export function readWikiMedia(file: string): Loaded<WikiMedia> {

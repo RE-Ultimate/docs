@@ -1,0 +1,102 @@
+{
+  "block": "forestry/centrifuge",
+  "title": "Centrifuge",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 34,
+      "y": 37,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 98,
+      "y": 19,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 116,
+      "y": 19,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 134,
+      "y": 19,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 98,
+      "y": 37,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 116,
+      "y": 37,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 134,
+      "y": 37,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 98,
+      "y": 55,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 116,
+      "y": 55,
+      "role": "output",
+      "label": "Product"
+    },
+    {
+      "x": 134,
+      "y": 55,
+      "role": "output",
+      "label": "Product"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 62,
+      "y": 37,
+      "w": 4,
+      "h": 16,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerCentrifuge, forestry.factory.gui.GuiCentrifuge, forestry.factory.gadgets.MachineCentrifuge.",
+    "Products use the first available output slots; product order is not fixed."
+  ]
+}

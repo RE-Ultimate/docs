@@ -1,0 +1,74 @@
+{
+  "block": "applied-energistics/me-import-bus",
+  "title": "ME Import Bus",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 53,
+      "y": 26,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 71,
+      "y": 26,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 89,
+      "y": 26,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 107,
+      "y": 26,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 53,
+      "y": 44,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 71,
+      "y": 44,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 89,
+      "y": 44,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 107,
+      "y": 44,
+      "role": "filter",
+      "label": "Filter item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: appeng.me.container.ContainerIOCable, appeng.me.gui.GuiIOCable."
+  ]
+}

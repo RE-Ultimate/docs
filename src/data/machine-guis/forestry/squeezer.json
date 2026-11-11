@@ -1,0 +1,124 @@
+{
+  "block": "forestry/squeezer",
+  "title": "Squeezer",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 19,
+      "y": 18,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 0
+    },
+    {
+      "x": 37,
+      "y": 18,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 55,
+      "y": 18,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 19,
+      "y": 36,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 37,
+      "y": 36,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 55,
+      "y": 36,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 19,
+      "y": 54,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 37,
+      "y": 54,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 55,
+      "y": 54,
+      "role": "storage",
+      "label": "Ingredient storage"
+    },
+    {
+      "x": 123,
+      "y": 19,
+      "role": "other",
+      "label": "Byproduct"
+    },
+    {
+      "x": 106,
+      "y": 55,
+      "role": "container",
+      "label": "Empty container"
+    },
+    {
+      "x": 140,
+      "y": 55,
+      "role": "container",
+      "label": "Filled container"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 75,
+      "y": 20,
+      "w": 43,
+      "h": 18,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 85,
+      "y": 15,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Product liquid"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerSqueezer, forestry.factory.gui.GuiSqueezer, forestry.core.gui.LiquidTankSlot.",
+    "The first recipe output is liquid; the item byproduct uses a separate slot."
+  ]
+}

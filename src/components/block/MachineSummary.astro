@@ -1,15 +1,20 @@
 ---
-// Machine facts from the details file: power, accepted inputs, products, automation faces, and tips.
-// This describes the machine itself. Recipes it processes are under "Processing examples".
+// The machine itself: its in-game window with a slot legend (src/data/machine-guis), then the facts from
+// the details file: power, accepted inputs, products, automation faces, and tips.
+// Recipes it processes are under "Processing examples".
 import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
 import type { BlockDetailsView } from '../../lib/block-details';
 import { SECTION_TITLES } from '../../lib/block-details';
+import type { MachineGui } from '../../lib/machine-gui-schema.ts';
+import MachineWindow from './MachineWindow.astro';
 
 interface Props {
-	machine: NonNullable<BlockDetailsView['machine']>;
+	machine: BlockDetailsView['machine'];
+	gui: MachineGui | undefined;
 }
 
-const { machine } = Astro.props;
+const { gui } = Astro.props;
+const machine = Astro.props.machine ?? { power: undefined, inputs: [], outputs: [], automation: [], tips: [] };
 const lists = [
 	{ label: 'Accepts', items: machine.inputs },
 	{ label: 'Produces', items: machine.outputs },
@@ -18,6 +23,8 @@ const lists = [
 
 <section class="ru-machine not-content">
 	<AnchorHeading level={2} id="machine">{SECTION_TITLES.machine}</AnchorHeading>
+
+	{gui && <MachineWindow gui={gui} legend />}
 
 	{
 		machine.power && (

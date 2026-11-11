@@ -1,0 +1,38 @@
+{
+  "block": "applied-energistics/me-controller",
+  "title": "ME Controller",
+  "width": 222,
+  "height": 196,
+  "playerInventory": true,
+  "playerInventoryY": 115,
+  "slots": [
+    {
+      "x": 192,
+      "y": 10,
+      "role": "other",
+      "label": "Wireless terminal"
+    },
+    {
+      "x": 192,
+      "y": 68,
+      "role": "other",
+      "label": "Encoded terminal"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: appeng.me.container.ContainerController, appeng.me.gui.GuiController."
+  ]
+}

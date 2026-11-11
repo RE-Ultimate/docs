@@ -1,0 +1,99 @@
+{
+  "block": "forestry/fermenter",
+  "title": "Fermenter",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 85,
+      "y": 23,
+      "role": "input",
+      "label": "Resource",
+      "index": 0
+    },
+    {
+      "x": 75,
+      "y": 57,
+      "role": "fuel",
+      "label": "Fermenter fuel"
+    },
+    {
+      "x": 150,
+      "y": 58,
+      "role": "container",
+      "label": "Filled container"
+    },
+    {
+      "x": 150,
+      "y": 22,
+      "role": "container",
+      "label": "Empty container"
+    },
+    {
+      "x": 10,
+      "y": 40,
+      "role": "container",
+      "label": "Liquid input container"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 98,
+      "y": 47,
+      "w": 4,
+      "h": 16,
+      "direction": "up",
+      "label": "Fuel"
+    },
+    {
+      "kind": "bar",
+      "x": 74,
+      "y": 33,
+      "w": 4,
+      "h": 16,
+      "direction": "up",
+      "label": "Fermentation"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 35,
+      "y": 19,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Input liquid"
+    },
+    {
+      "kind": "fluid",
+      "x": 125,
+      "y": 19,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Product liquid"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerFermenter, forestry.factory.gui.GuiFermenter, forestry.factory.gadgets.MachineFermenter, forestry.core.gui.LiquidTankSlot."
+  ]
+}

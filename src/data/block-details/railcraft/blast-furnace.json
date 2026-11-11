@@ -46,7 +46,7 @@
       ],
       "outputs": [
         {
-          "name": "Blast Furnace",
+          "name": "Blast Furnace Brick",
           "count": 4
         }
       ],
@@ -65,14 +65,15 @@
       "station": "World",
       "ingredients": [
         {
-          "name": "Blast Furnace",
+          "name": "Blast Furnace Brick",
           "count": 34
         }
       ],
       "outputs": [
         {
           "name": "Formed Blast Furnace",
-          "count": 1
+          "count": 1,
+          "icon": "/media/wiki/extras/railcraft-blast-furnace.png"
         }
       ],
       "verification": "pack-code",

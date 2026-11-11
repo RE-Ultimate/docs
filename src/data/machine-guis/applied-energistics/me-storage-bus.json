@@ -1,0 +1,350 @@
+{
+  "block": "applied-energistics/me-storage-bus",
+  "title": "ME Storage Bus",
+  "width": 176,
+  "height": 222,
+  "playerInventory": true,
+  "playerInventoryY": 140,
+  "slots": [
+    {
+      "x": 8,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 18,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 8,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 36,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 8,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 54,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 8,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 72,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 8,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 90,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 8,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 26,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 44,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 116,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 134,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 152,
+      "y": 108,
+      "role": "filter",
+      "label": "Filter item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: appeng.me.container.ContainerStorageBus, appeng.me.gui.GuiStorageBus."
+  ]
+}

@@ -5,43 +5,9 @@ tableOfContents: false
 pagefind: true
 ---
 
-import DocIndex from '../../components/DocIndex.astro';
-import { getBlocks } from '../../lib/blocks';
+import Home from '../../components/home/Home.astro';
 
-export const blockCount = (await getBlocks()).length;
-
-Re:Ultimate is a maintained Minecraft 1.4.7 modpack based on Rewind Upsilon and FTB Ultimate.
-
-<DocIndex
-	items={[
-		{
-			href: 'pack/overview/',
-			title: 'Pack overview',
-			summary: 'What Re:Ultimate is, where it comes from, and what this fork changes.',
-		},
-		{
-			href: 'pack/installation/',
-			title: 'Installation',
-			summary: 'Install the client in Prism Launcher or run a server. Java 8 is required.',
-		},
-		{
-			href: 'pack/playthrough/',
-			title: 'Playthrough guide',
-			summary: 'Useful routes through power, processing, storage, automation, and magic.',
-		},
-		{
-			href: 'blocks/',
-			title: 'Block reference',
-			summary: 'Selected machines, storage, transport, and useful blocks by mod and category.',
-			status: blockCount === 0 ? 'In progress' : `${blockCount} ${blockCount === 1 ? 'page' : 'pages'}`,
-		},
-		{
-			href: 'contribute/authoring/',
-			title: 'Authoring guide',
-			summary: 'Add a block page or an article with Markdown.',
-		},
-	]}
-/>
+<Home />
 
 ## Pack facts
 

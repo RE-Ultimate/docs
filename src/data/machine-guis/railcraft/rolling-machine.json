@@ -1,0 +1,122 @@
+{
+  "block": "railcraft/rolling-machine",
+  "title": "Rolling Machine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 93,
+      "y": 27,
+      "role": "other",
+      "label": "Recipe preview"
+    },
+    {
+      "x": 124,
+      "y": 35,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    },
+    {
+      "x": 30,
+      "y": 17,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 0
+    },
+    {
+      "x": 48,
+      "y": 17,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 1
+    },
+    {
+      "x": 66,
+      "y": 17,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 2
+    },
+    {
+      "x": 30,
+      "y": 35,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 3
+    },
+    {
+      "x": 48,
+      "y": 35,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 4
+    },
+    {
+      "x": 66,
+      "y": 35,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 5
+    },
+    {
+      "x": 30,
+      "y": 53,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 6
+    },
+    {
+      "x": 48,
+      "y": 53,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 7
+    },
+    {
+      "x": 66,
+      "y": 53,
+      "role": "input",
+      "label": "Ingredient",
+      "index": 8
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 89,
+      "y": 45,
+      "w": 24,
+      "h": 12,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 157,
+      "y": 19,
+      "w": 6,
+      "h": 48,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Railcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: railcraft.common.gui.containers.ContainerRollingMachine, railcraft.client.gui.GuiRollingMachine."
+  ]
+}

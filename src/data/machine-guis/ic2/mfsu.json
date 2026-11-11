@@ -1,0 +1,48 @@
+{
+  "block": "ic2/mfsu",
+  "title": "MFSU",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 17,
+      "role": "battery",
+      "label": "Charge item"
+    },
+    {
+      "x": 56,
+      "y": 53,
+      "role": "battery",
+      "label": "Discharge item"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 79,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: ic2.core.block.wiring.ContainerElectricBlock, ic2.core.block.wiring.GuiElectricBlock, ic2.core.block.wiring.TileEntityElectricBlock, ic2.core.init.Localization."
+  ]
+}

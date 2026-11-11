@@ -2,6 +2,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { expect, test, type Locator, type Page } from '@playwright/test';
 import { blockDetailsSchema, type Recipe } from '../src/lib/block-details-schema';
+import { machineGuiSchema } from '../src/lib/machine-gui-schema';
 
 // Recipe and machine sections on block pages. Run `pnpm build` first, then `pnpm test:e2e`.
 // These tests read the real dataset (src/data/block-details) to pick pages, so they follow data changes.
@@ -194,4 +195,35 @@ test('block pages fit the viewport and every image loads', async ({ page }) => {
 		const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
 		expect(overflow, details.block).toBeLessThanOrEqual(0);
 	}
+});
+
+const guiRoot = join(process.cwd(), 'src/data/machine-guis');
+const allGuis = () =>
+	readdirSync(guiRoot).flatMap((mod) =>
+		readdirSync(join(guiRoot, mod)).map((file) => machineGuiSchema.parse(JSON.parse(readFileSync(join(guiRoot, mod, file), 'utf8')))),
+	);
+
+test('machines with a GUI layout show their window, and processing runs inside it', async ({ page }) => {
+	for (const gui of allGuis()) {
+		await page.goto(`/docs/blocks/${gui.block}/`);
+		const summary = page.locator('.ru-machine');
+		await expect(summary.locator('.ru-mwin .ru-mslot'), gui.block).toHaveCount(gui.slots.length);
+		// Neighbouring slots with the same label share a legend line, so there is one line per run of labels.
+		const runs = gui.slots.filter((slot, i) => i === 0 || slot.label !== gui.slots[i - 1]?.label).length;
+		await expect(summary.locator('.ru-mwin-legend li'), gui.block).toHaveCount(runs);
+	}
+	const { panel } = await openRecipe(page, '/docs/blocks/ic2/macerator/', 'iron-ore');
+	await expect(panel.locator('.ru-mwin')).toBeVisible();
+	await expect(panel.locator('.ru-mwin .ru-slot')).toHaveCount(2);
+});
+
+test('every recipe item shows a picture instead of its name', async ({ page }) => {
+	const textOnly: string[] = [];
+	for (const details of allDetails()) {
+		if (details.recipes.length === 0) continue;
+		await page.goto(`/docs/blocks/${details.block}/`);
+		const names = await page.locator('.ru-recipes .ru-name').allTextContents();
+		textOnly.push(...names.map((name) => `${details.block}: ${name}`));
+	}
+	expect(textOnly).toEqual([]);
 });

@@ -23,7 +23,7 @@ The site must build as static files with a reproducible pnpm install and deploy 
 
 ## Brand commitments
 
-Display the name Re:Ultimate. Use a true-black background and white primary text.
+Display the name Re:Ultimate. Use the Crest brand from DESIGN.md: the pixel wordmark, the gold colon icon, a warm oak-dark background (never pure black), and parchment primary text. Game UI style is for controls and in-game data; reading text stays calm.
 Use strong typography and a useful documentation layout, with minimal copy, thin rules, and no decorative card or pill containers.
 Do not use continuously animated decorations. Respect reduced-motion and keyboard navigation.
 

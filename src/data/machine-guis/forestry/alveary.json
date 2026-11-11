@@ -1,0 +1,105 @@
+{
+  "block": "forestry/alveary",
+  "title": "Alveary",
+  "width": 176,
+  "height": 190,
+  "playerInventory": true,
+  "playerInventoryY": 108,
+  "slots": [
+    {
+      "x": 29,
+      "y": 39,
+      "role": "input",
+      "label": "Princess or queen",
+      "index": 0
+    },
+    {
+      "x": 29,
+      "y": 65,
+      "role": "input",
+      "label": "Drone",
+      "index": 1
+    },
+    {
+      "x": 116,
+      "y": 52,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 0
+    },
+    {
+      "x": 137,
+      "y": 39,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 1
+    },
+    {
+      "x": 137,
+      "y": 65,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 2
+    },
+    {
+      "x": 116,
+      "y": 78,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 3
+    },
+    {
+      "x": 95,
+      "y": 65,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 4
+    },
+    {
+      "x": 95,
+      "y": 39,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 5
+    },
+    {
+      "x": 116,
+      "y": 26,
+      "role": "output",
+      "label": "Bee or product",
+      "index": 6
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "other",
+      "x": 20,
+      "y": 37,
+      "w": 4,
+      "h": 46,
+      "direction": "up",
+      "label": "Bee health"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.apiculture.gui.ContainerAlveary, forestry.apiculture.gui.GuiAlveary.",
+    "Bee and product slots share the output inventory.",
+    "The window belongs to the formed plain alveary."
+  ]
+}

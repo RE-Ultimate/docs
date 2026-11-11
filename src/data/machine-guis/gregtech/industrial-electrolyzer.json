@@ -1,0 +1,85 @@
+{
+  "block": "gregtech/industrial-electrolyzer",
+  "title": "Industrial Electrolyzer",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 46,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 50,
+      "y": 46,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 50,
+      "y": 16,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 70,
+      "y": 16,
+      "role": "output",
+      "label": "Output",
+      "index": 1
+    },
+    {
+      "x": 90,
+      "y": 16,
+      "role": "output",
+      "label": "Output",
+      "index": 2
+    },
+    {
+      "x": 110,
+      "y": 16,
+      "role": "output",
+      "label": "Output",
+      "index": 3
+    },
+    {
+      "x": 110,
+      "y": 46,
+      "role": "other",
+      "label": "Display"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 73,
+      "y": 34,
+      "w": 30,
+      "h": 10,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_Electrolyzer, gregtechmod.common.gui.GT_GUIContainer_Electrolyzer.",
+    "The display slot is a non-removable hologram."
+  ]
+}

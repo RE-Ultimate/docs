@@ -1,27 +1,50 @@
 /*
- * Re:Ultimate docs theme. Tokens first, then Starlight surfaces.
- * Rules: true black ground, white text, thin rules, one accent (Minecraft formatting code §e yellow).
- * Status colors reuse the game's formatting codes: §6 gold for caution, §c red for danger, §a green for tips.
+ * Re:Ultimate docs theme ("Crest"). Tokens first, then Starlight surfaces.
+ * Warm oak dark ground, parchment text, torch gold as the one brand accent. Game UI pieces
+ * (windows, slots, buttons, tooltips) follow Minecraft's bevelled style; reading text stays calm.
+ * Status colors keep the game's formatting codes: gold for caution, red for danger, green for tips.
  * See DESIGN.md for the reasons.
  */
 
 :root,
 :root[data-theme='dark'],
 ::backdrop {
-	--ru-bg: #000;
-	--ru-text: #fff;
-	--ru-text-2: #b0b0b0;
-	--ru-text-3: #8a8a8a;
-	--ru-rule: #262626;
-	--ru-rule-strong: #404040;
-	--ru-hover: #0e0e0e;
-	--ru-code-bg: #0b0b0b;
-	--ru-accent: #ffff55;
+	--ru-bg: #1b1713;
+	--ru-surface: #251f19;
+	--ru-surface-2: #30281f;
+	--ru-text: #f3e9d8;
+	--ru-text-2: #c0b19a;
+	--ru-text-3: #8e7f6a;
+	--ru-rule: #3a3128;
+	--ru-rule-strong: #4e4236;
+	--ru-hover: #251f19;
+	--ru-code-bg: #16120e;
+	--ru-accent: #f2b25c;
+	--ru-accent-ink: #2a1a05;
 	--ru-gold: #ffaa00;
-	--ru-red: #ff5555;
-	--ru-green: #55ff55;
+	--ru-red: #ff6b5b;
+	--ru-green: #a5c46f;
+	--ru-splash: #ffff55;
 
-	--sl-font: 'Archivo Variable';
+	/* Game UI: window, slot, button bevels. Light edge top-left, shade bottom-right. */
+	--ru-gui: #3a2f25;
+	--ru-gui-hi: #5e4c3a;
+	--ru-gui-lo: #110d09;
+	--ru-slot: #16120e;
+	--ru-slot-hi: #4a3d30;
+	--ru-slot-lo: #0b0806;
+	--ru-btn: #4a3c2e;
+	--ru-btn-hi: #7a6650;
+	--ru-btn-lo: #241b13;
+	--ru-btn-hover: #6b5137;
+	--ru-tip-bg: rgb(16 0 16 / 0.95);
+	--ru-tip-edge: #5000ff;
+	--ru-tip-edge-2: #28007f;
+	--ru-mod: #7d7dff;
+
+	--ru-font-ui: 'Pixelify Sans Variable', ui-monospace, monospace;
+
+	--sl-font: 'Bricolage Grotesque Variable';
 	--sl-font-mono: 'JetBrains Mono Variable';
 
 	--sl-color-white: var(--ru-text);
@@ -33,7 +56,7 @@
 	--sl-color-gray-6: var(--ru-rule);
 	--sl-color-black: var(--ru-bg);
 
-	--sl-color-accent-low: #2a2a00;
+	--sl-color-accent-low: #3a2a12;
 	--sl-color-accent: var(--ru-accent);
 	--sl-color-accent-high: var(--ru-accent);
 	--sl-color-orange: var(--ru-gold);
@@ -42,21 +65,21 @@
 	--sl-color-red-high: var(--ru-red);
 	--sl-color-green: var(--ru-green);
 	--sl-color-green-high: var(--ru-green);
-	--sl-color-blue-high: var(--ru-text);
+	--sl-color-blue-high: var(--ru-mod);
 	--sl-color-purple-high: var(--ru-text);
 
 	--sl-color-text: var(--ru-text);
 	--sl-color-text-accent: var(--ru-text);
-	--sl-color-text-invert: #000;
+	--sl-color-text-invert: var(--ru-accent-ink);
 	--sl-color-bg: var(--ru-bg);
 	--sl-color-bg-nav: var(--ru-bg);
 	--sl-color-bg-sidebar: var(--ru-bg);
-	--sl-color-bg-inline-code: #141414;
+	--sl-color-bg-inline-code: var(--ru-code-bg);
 	--sl-color-bg-accent: var(--ru-accent);
 	--sl-color-hairline-light: var(--ru-rule-strong);
 	--sl-color-hairline: var(--ru-rule);
 	--sl-color-hairline-shade: var(--ru-rule);
-	--sl-color-backdrop-overlay: rgb(0 0 0 / 0.8);
+	--sl-color-backdrop-overlay: rgb(12 9 6 / 0.82);
 
 	--sl-shadow-sm: none;
 	--sl-shadow-md: none;
@@ -98,7 +121,7 @@ body {
 
 ::selection {
 	background: var(--ru-accent);
-	color: #000;
+	color: var(--ru-accent-ink);
 }
 
 :focus-visible {
@@ -132,7 +155,7 @@ body {
 
 .sl-skip-link {
 	background: var(--ru-accent);
-	color: #000;
+	color: var(--ru-accent-ink);
 	font-weight: 700;
 	border-radius: 0;
 }
@@ -140,7 +163,7 @@ body {
 site-search > button[data-open-modal] {
 	border: 1px solid var(--ru-rule-strong);
 	border-radius: 0;
-	background: #000;
+	background: var(--ru-bg);
 	color: var(--ru-text-2);
 	font-size: var(--sl-text-sm);
 }
@@ -172,7 +195,7 @@ site-search > button[data-open-modal] kbd kbd {
 site-search dialog {
 	border: 1px solid var(--ru-rule-strong);
 	border-radius: 0;
-	background: #000;
+	background: var(--ru-bg);
 	box-shadow: none;
 }
 site-search dialog::backdrop {
@@ -182,12 +205,12 @@ site-search dialog::backdrop {
 	--pagefind-ui-primary: var(--ru-text);
 	--pagefind-ui-text: var(--ru-text);
 	--pagefind-ui-font: var(--__sl-font);
-	--pagefind-ui-background: #000;
+	--pagefind-ui-background: var(--ru-bg);
 	--pagefind-ui-border: var(--ru-rule-strong);
 	--pagefind-ui-border-width: 1px;
 	--pagefind-ui-border-radius: 0;
 	--pagefind-ui-tag: var(--ru-rule);
-	--sl-search-result-bg: #000;
+	--sl-search-result-bg: var(--ru-bg);
 	--sl-search-result-hover-bg: var(--ru-hover);
 	--sl-search-result-border: var(--ru-rule);
 	--sl-search-result-pad-inline-start: 1rem;
@@ -212,7 +235,7 @@ site-search dialog::backdrop {
 }
 #starlight__search mark {
 	background: var(--ru-accent);
-	color: #000;
+	color: var(--ru-accent-ink);
 	padding-inline: 0.0625rem;
 }
 #starlight__search .pagefind-ui__result-nested .pagefind-ui__result-link::before {
@@ -220,7 +243,7 @@ site-search dialog::backdrop {
 }
 #starlight__search .pagefind-ui__button {
 	border-radius: 0;
-	background: #000;
+	background: var(--ru-bg);
 	color: var(--ru-text);
 	border-color: var(--ru-rule-strong);
 }
@@ -248,13 +271,13 @@ site-search button[data-close-modal] {
 	--sl-menu-button-size: 2.25rem;
 	border: 1px solid var(--ru-rule-strong);
 	border-radius: 0;
-	background-color: #000;
+	background-color: var(--ru-bg);
 	color: var(--ru-text);
 	box-shadow: none;
 }
 .sl-menu-button:has(~ :popover-open) {
 	border-color: var(--ru-accent);
-	background-color: #000;
+	background-color: var(--ru-bg);
 }
 
 /* ---------- Sidebar ---------- */
@@ -282,7 +305,6 @@ site-search button[data-close-modal] {
 .sidebar-content .group-label .large {
 	font-size: var(--sl-text-sm);
 	font-weight: 750;
-	font-stretch: 112%;
 	letter-spacing: 0;
 	color: var(--ru-text);
 }
@@ -349,7 +371,6 @@ mobile-starlight-toc .toggle {
 	color: var(--ru-text);
 	font-size: var(--sl-text-sm);
 	font-weight: 700;
-	font-stretch: 112%;
 }
 starlight-toc nav h2 {
 	padding-bottom: 0.375rem;
@@ -372,17 +393,17 @@ mobile-starlight-toc a[aria-current='true'] {
 }
 mobile-starlight-toc nav {
 	border-bottom-color: var(--ru-rule);
-	background: #000;
+	background: var(--ru-bg);
 }
 mobile-starlight-toc .toggle {
 	border-radius: 0;
 	border-color: var(--ru-rule-strong);
-	background: #000;
+	background: var(--ru-bg);
 }
 mobile-starlight-toc .dropdown {
 	border-radius: 0;
 	border-color: var(--ru-rule-strong);
-	background: #000;
+	background: var(--ru-bg);
 	box-shadow: none;
 }
 mobile-starlight-toc .display-current {
@@ -417,7 +438,6 @@ mobile-starlight-toc .display-current {
 	margin-top: 3.25rem;
 	font-size: var(--sl-text-h2);
 	font-weight: 760;
-	font-stretch: 115%;
 	letter-spacing: -0.025em;
 	line-height: 1.15;
 }
@@ -425,7 +445,6 @@ mobile-starlight-toc .display-current {
 	margin-top: 2.25rem;
 	font-size: var(--sl-text-h3);
 	font-weight: 720;
-	font-stretch: 108%;
 	letter-spacing: -0.015em;
 }
 .sl-markdown-content h4 {
@@ -502,7 +521,7 @@ mobile-starlight-toc .display-current {
 	padding: 0.0625rem 0.3125rem;
 	border: 1px solid var(--ru-rule);
 	border-radius: 0.125rem;
-	background: #111;
+	background: var(--ru-code-bg);
 	color: var(--ru-text);
 	font-family: var(--__sl-font-mono);
 	font-size: 0.875em;
@@ -596,7 +615,6 @@ pre,
 .starlight-aside__title {
 	font-size: var(--sl-text-sm);
 	font-weight: 750;
-	font-stretch: 110%;
 	color: var(--sl-color-asides-text-accent);
 }
 
@@ -606,7 +624,7 @@ pre,
 }
 .sl-steps > li::before {
 	border-radius: 0;
-	background: #000;
+	background: var(--ru-bg);
 	border: 1px solid var(--ru-rule-strong);
 	color: var(--ru-text);
 	font-weight: 700;
@@ -617,7 +635,7 @@ pre,
 }
 
 /* Images */
-.sl-markdown-content img {
+.sl-markdown-content img:not(:where(.not-content *)) {
 	border: 1px solid var(--ru-rule);
 }
 
@@ -647,4 +665,198 @@ pre,
 }
 .sl-markdown-content table:not(:where(.not-content *)):has(thead th:empty) tbody tr:first-child td {
 	border-top: 1px solid var(--ru-text);
+}
+
+/* ---------- Crest: headings and reading type ---------- */
+
+.sl-markdown-content h2,
+.content-panel h1,
+h1#_top {
+	letter-spacing: -0.03em;
+}
+h1#_top {
+	font-weight: 760;
+	line-height: 1.02;
+}
+.sl-markdown-content h2 {
+	font-weight: 720;
+}
+.sl-markdown-content h3 {
+	font-weight: 680;
+}
+.sidebar-content .group-label .large,
+starlight-toc h2,
+mobile-starlight-toc .toggle {
+	font-family: var(--ru-font-ui);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+/* ---------- Crest: game UI primitives ---------- */
+
+/* A game window: oak panel with a bevel and a hard black edge. */
+.ru-win {
+	position: relative;
+	padding: 0.875rem 1rem 1rem;
+	border: 2px solid #000;
+	background: var(--ru-gui);
+	box-shadow:
+		inset 3px 3px 0 var(--ru-gui-hi),
+		inset -3px -3px 0 var(--ru-gui-lo);
+	color: var(--ru-text);
+}
+.ru-win-title {
+	margin: 0 0 0.75rem;
+	font-family: var(--ru-font-ui);
+	font-size: 1.125rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--ru-text);
+}
+.ru-win-title small {
+	margin-inline-start: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: var(--ru-text-2);
+}
+
+/* A game button: bevelled block with a pixel label. */
+.ru-btn {
+	display: inline-grid;
+	place-items: center;
+	box-sizing: border-box;
+	min-height: 2.75rem;
+	padding: 0 1.25rem;
+	border: 2px solid #000;
+	border-radius: 0;
+	background: var(--ru-btn);
+	box-shadow:
+		inset 2px 2px 0 var(--ru-btn-hi),
+		inset -2px -3px 0 var(--ru-btn-lo);
+	color: #fff;
+	font-family: var(--ru-font-ui);
+	font-size: 1.0625rem;
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	text-shadow: 2px 2px 0 #2a1f15;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.ru-btn:hover {
+	background: var(--ru-btn-hover);
+	color: #ffffa0;
+}
+.ru-btn:active {
+	transform: translateY(1px);
+}
+.ru-btn.is-primary {
+	background: #c98a2e;
+	box-shadow:
+		inset 2px 2px 0 var(--ru-accent),
+		inset -2px -3px 0 #7a4f12;
+}
+.ru-btn.is-primary:hover {
+	background: #d99a3e;
+}
+.ru-btn.is-small {
+	min-height: 2rem;
+	padding: 0 0.625rem;
+	font-size: 0.875rem;
+	text-shadow: 1px 1px 0 #2a1f15;
+}
+.ru-btn[aria-pressed='true'],
+.ru-btn[aria-selected='true'] {
+	background: var(--ru-accent);
+	box-shadow:
+		inset 2px 2px 0 #ffd79a,
+		inset -2px -2px 0 #b07a2f;
+	color: var(--ru-accent-ink);
+	text-shadow: none;
+}
+
+/* The splash text: one per page, static. */
+.ru-splash {
+	position: absolute;
+	transform: rotate(-14deg);
+	font-family: var(--ru-font-ui);
+	font-weight: 600;
+	letter-spacing: 0;
+	color: var(--ru-splash);
+	text-shadow: 2px 2px 0 #3f3f15;
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+/* The pixel wordmark with its three-step oak extrusion. */
+.ru-wordmark {
+	position: relative;
+	margin: 0;
+	font-family: var(--ru-font-ui);
+	font-weight: 700;
+	line-height: 0.95;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: var(--ru-text);
+	text-shadow:
+		0 0.06em 0 #c79a5b,
+		0 0.12em 0 #8a5f30,
+		0 0.18em 0 #4a3016,
+		0.06em 0.24em 0 #0b0806;
+}
+.ru-wordmark .ru-colon {
+	color: var(--ru-accent);
+}
+
+/* ---------- Header: search box as an inventory field ---------- */
+
+site-search > button[data-open-modal] {
+	border: 2px solid #000;
+	background: var(--ru-slot);
+	box-shadow:
+		inset 2px 2px 0 var(--ru-slot-lo),
+		inset -2px -2px 0 var(--ru-slot-hi);
+	color: var(--ru-text-3);
+	font-family: var(--ru-font-ui);
+}
+site-search > button[data-open-modal]:hover {
+	border-color: var(--ru-accent);
+	color: var(--ru-text-2);
+}
+@media (max-width: 49.99em) {
+	site-search > button[data-open-modal] {
+		border: 0;
+		box-shadow: none;
+		background: transparent;
+	}
+}
+site-search dialog {
+	border: 2px solid #000;
+	background: var(--ru-gui);
+	box-shadow:
+		inset 3px 3px 0 var(--ru-gui-hi),
+		inset -3px -3px 0 var(--ru-gui-lo);
+}
+#starlight__search {
+	--pagefind-ui-background: var(--ru-slot);
+	--sl-search-result-bg: var(--ru-surface);
+	--sl-search-result-hover-bg: var(--ru-surface-2);
+}
+.sl-menu-button {
+	border: 2px solid #000;
+	background-color: var(--ru-btn);
+	box-shadow:
+		inset 2px 2px 0 var(--ru-btn-hi),
+		inset -2px -2px 0 var(--ru-btn-lo);
+}
+
+/* Steps: numbered slots. */
+.sl-steps > li::before {
+	border: 2px solid #000;
+	background: var(--ru-slot);
+	box-shadow:
+		inset 2px 2px 0 var(--ru-slot-lo),
+		inset -2px -2px 0 var(--ru-slot-hi);
+	color: var(--ru-accent);
+	font-family: var(--ru-font-ui);
 }

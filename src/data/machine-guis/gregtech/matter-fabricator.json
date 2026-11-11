@@ -1,0 +1,100 @@
+{
+  "block": "gregtech/matter-fabricator",
+  "title": "Matterfabricator",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 8,
+      "y": 14,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 26,
+      "y": 14,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 44,
+      "y": 14,
+      "role": "input",
+      "label": "Input",
+      "index": 2
+    },
+    {
+      "x": 62,
+      "y": 14,
+      "role": "input",
+      "label": "Input",
+      "index": 3
+    },
+    {
+      "x": 8,
+      "y": 32,
+      "role": "input",
+      "label": "Input",
+      "index": 4
+    },
+    {
+      "x": 26,
+      "y": 32,
+      "role": "input",
+      "label": "Input",
+      "index": 5
+    },
+    {
+      "x": 44,
+      "y": 32,
+      "role": "input",
+      "label": "Input",
+      "index": 6
+    },
+    {
+      "x": 62,
+      "y": 32,
+      "role": "input",
+      "label": "Input",
+      "index": 7
+    },
+    {
+      "x": 128,
+      "y": 14,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 60,
+      "w": 160,
+      "h": 5,
+      "direction": "right",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_Matterfabricator, gregtechmod.common.gui.GT_GUIContainer_Matterfabricator.",
+    "The input slots accept amplifier material."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "block": "forestry/still",
+  "title": "Still",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 150,
+      "y": 54,
+      "role": "container",
+      "label": "Filled container"
+    },
+    {
+      "x": 150,
+      "y": 18,
+      "role": "container",
+      "label": "Empty container"
+    },
+    {
+      "x": 10,
+      "y": 36,
+      "role": "container",
+      "label": "Input container"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 84,
+      "y": 18,
+      "w": 4,
+      "h": 16,
+      "direction": "up",
+      "label": "Distillation"
+    },
+    {
+      "kind": "other",
+      "x": 81,
+      "y": 57,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Working"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 35,
+      "y": 15,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Input liquid"
+    },
+    {
+      "kind": "fluid",
+      "x": 125,
+      "y": 15,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Product liquid"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerStill, forestry.factory.gui.GuiStill, forestry.core.gui.LiquidTankSlot."
+  ]
+}
