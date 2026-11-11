@@ -1,0 +1,90 @@
+{
+  "block": "ic2/electric-furnace",
+  "title": "Electric Furnace",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 56,
+      "y": 53,
+      "role": "battery",
+      "label": "Battery"
+    },
+    {
+      "x": 116,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 152,
+      "y": 8,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 26,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 44,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 62,
+      "role": "upgrade",
+      "label": "Upgrade"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 56,
+      "y": 36,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: ic2.core.block.machine.ContainerElectricMachine, ic2.core.block.machine.gui.GuiElecFurnace, ic2.core.init.Localization."
+  ]
+}

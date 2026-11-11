@@ -1,0 +1,233 @@
+{
+  "block": "forestry/thermionic-fabricator",
+  "title": "Thermionic Fabricator",
+  "width": 176,
+  "height": 211,
+  "playerInventory": true,
+  "playerInventoryY": 129,
+  "slots": [
+    {
+      "x": 8,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 26,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 44,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 62,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 80,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 98,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 116,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 134,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 152,
+      "y": 84,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 8,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 26,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 44,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 62,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 80,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 98,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 116,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 134,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 152,
+      "y": 102,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 26,
+      "y": 21,
+      "role": "other",
+      "label": "Glass"
+    },
+    {
+      "x": 139,
+      "y": 17,
+      "role": "pattern",
+      "label": "Plan"
+    },
+    {
+      "x": 139,
+      "y": 53,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    },
+    {
+      "x": 67,
+      "y": 17,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 85,
+      "y": 17,
+      "role": "input",
+      "label": "Crafting ingredient",
+      "index": 0
+    },
+    {
+      "x": 103,
+      "y": 17,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 67,
+      "y": 35,
+      "role": "input",
+      "label": "Crafting ingredient",
+      "index": 1
+    },
+    {
+      "x": 85,
+      "y": 35,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 103,
+      "y": 35,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 67,
+      "y": 53,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 85,
+      "y": 53,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 103,
+      "y": 53,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "heat",
+      "x": 55,
+      "y": 17,
+      "w": 4,
+      "h": 52,
+      "direction": "up",
+      "label": "Heat"
+    },
+    {
+      "kind": "fluid",
+      "x": 26,
+      "y": 48,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Molten glass"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerFabricator, forestry.factory.gui.GuiFabricator, forestry.factory.gadgets.MachineFabricator, forestry.core.gui.ReservoirSlot.",
+    "The grid uses a recipe pattern; the listed recipe combines repeated ingredients."
+  ]
+}

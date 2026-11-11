@@ -11,8 +11,8 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 - Keep the site static and compatible with the /docs/ Pages base path. No backend or credentials are needed for readers.
 - The user authorized building, checking, and publishing this site to GitHub Pages.
 - This site has its own PRODUCT.md and DESIGN.md. The workspace-root product and design files describe an unrelated quarry dashboard.
-- Preserve original authors and notices when reusing assets. The pack's new wordmark is in ../Re-Ultimate/branding/wordmark.svg.
-- Visual constraints: true black (#000) background, white primary text, clear type, dense useful information, minimal copy, thin rules. No decorative card or pill chrome, no light-gray eyebrow subtitles, and no continuous decorative animations.
+- Preserve original authors and notices when reusing assets. The Crest brand (pixel wordmark, gold colon icon, social card) is described in DESIGN.md; the icon source is public/favicon.svg.
+- Visual constraints (see DESIGN.md): warm oak-dark background (never pure black), parchment primary text, torch gold accent, clear type, dense useful information, minimal copy. Game UI style (windows, slots, game buttons, item tooltips) is for controls and in-game data only. No continuous decorative animations, no em dashes.
 - Make UI changes directly. Mocks are only needed if the user explicitly asks for them.
 - Do not include AI, model, or tool credits in commits, PRs, or public comments.
 - Keep operational secrets and live server addresses out of public docs.
@@ -37,9 +37,11 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 ## Architecture
 
 - Astro 7 with Starlight 0.42, fully static. Config: `astro.config.mjs` (`site` https://re-ultimate.github.io, `base` /docs/, trailing slashes).
-- Starlight overrides in `src/components/`: `SiteTitle` (typographic wordmark), `PageTitle` (breadcrumbs, H1, block spec and picture), `MarkdownContent` (adds the data-driven block sections around the Markdown), `Footer`, and `ThemeProvider`/`ThemeSelect` (dark only).
+- Starlight overrides in `src/components/`: `SiteTitle` (pixel wordmark), `PageTitle` (breadcrumbs, H1, block spec and picture), `MarkdownContent` (adds the data-driven block sections around the Markdown), `Footer`, and `ThemeProvider`/`ThemeSelect` (dark only).
 - Block details: `src/data/block-details/<mod>/<slug>.json` (recipes, machine facts) and `src/data/wiki-media.json` (images with credits). `src/lib/block-details-schema.ts` holds the schemas and types, `block-details-source.ts` reads and cross-checks the files, `block-details.ts` resolves them for rendering, and `recipe-math.ts` has the quantity rules shared with the browser script. Components are in `src/components/block/`, styles in `src/styles/block-details.css`, and `src/routeData.ts` adds the sections to the table of contents. A malformed file, a path that does not match its `block` field, a block without a page, a dead internal link, or a missing local image fails the build with the full list of problems.
-- Theme: `src/styles/theme.css` and `src/styles/fonts.css`. DESIGN.md records the design decisions.
+- Theme: `src/styles/theme.css` (tokens and game UI primitives) and `src/styles/fonts.css`. DESIGN.md records the design decisions.
+- Home page: `src/components/home/Home.astro` with its route stops and bench recipes in `src/lib/home.ts` (unknown block IDs fail the build).
+- Machine windows: `src/data/machine-guis/<mod>/<slug>.json` (schema `src/lib/machine-gui-schema.ts`) holds each machine's GUI layout from the pinned mod artifact. `MachineWindow.astro` draws it; never ship a mod's GUI texture. A file whose block has no page fails the build.
 - Search: Starlight's built-in Pagefind, built locally by `pnpm build`. No external service.
 - `starlight-links-validator` fails the build on broken internal links and anchors.
 - `pnpm-workspace.yaml` pins `@emnapi/runtime` to 1.x because a 2.0 beta crashes `astro check`. Remove it only after `pnpm check` works without it.

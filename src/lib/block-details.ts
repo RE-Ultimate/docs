@@ -15,11 +15,13 @@ import {
 	checkReferences,
 	indexItemMedia,
 	readBlockDetails,
+	readMachineGuis,
 	readWikiMedia,
 } from './block-details-source.ts';
 import { normalizeName, type BlockDetails, type Ingredient, type Media, type Product, type Recipe } from './block-details-schema.ts';
 import { groupIngredients, optionsKey, type Group } from './recipe-math.ts';
 import { withBase } from './paths';
+import type { MachineGui } from './machine-gui-schema.ts';
 
 /** A resolved image. `meta` carries the credit; it is missing when an icon path has no media entry. */
 export interface ViewImage {
@@ -69,6 +71,8 @@ export interface ViewRecipe {
 	/** Distinct ingredient choices for the material list. */
 	groups: Group<ViewOption>[];
 	outputs: ViewOption[];
+	/** The machine's own window layout, for a processing recipe that runs in this block. */
+	gui: MachineGui | undefined;
 }
 
 export type SectionId = 'crafting' | 'construction' | 'processing' | 'recipe' | 'machine' | 'image-credits';
@@ -95,6 +99,8 @@ export interface BlockDetailsView {
 	/** Shown as its own "Recipe" section when there is no crafting or construction recipe. */
 	recipeNote: string | undefined;
 	machine: BlockDetails['machine'];
+	/** The block's in-game window layout, from src/data/machine-guis. */
+	gui: MachineGui | undefined;
 	credits: CreditRow[];
 }
 
@@ -121,7 +127,7 @@ export function planSections(view: BlockDetailsView | undefined): SectionPlan {
 	if (view.recipeNote && !view.sections.some((entry) => entry.id !== 'processing')) lead.unshift(section('recipe'));
 	return {
 		lead,
-		machine: view.machine && hasMachineContent(view.machine) ? section('machine') : undefined,
+		machine: view.gui || (view.machine && hasMachineContent(view.machine)) ? section('machine') : undefined,
 		credits: view.credits.length > 0 ? section('image-credits') : undefined,
 	};
 }
@@ -133,10 +139,13 @@ const hasMachineContent = (machine: NonNullable<BlockDetails['machine']>): boole
 
 interface Index {
 	details: Map<string, BlockDetails>;
+	guis: Map<string, MachineGui>;
 	items: Map<string, Media>;
 	blockMedia: Record<string, Media>;
 	/** Normalized block title to page link, only for titles that belong to one page. */
 	pages: Map<string, string>;
+	/** Normalized block title to that page's picture, so a recipe item named like a block page shows its render. */
+	pageMedia: Map<string, Media>;
 }
 
 const root = process.cwd();
@@ -146,6 +155,7 @@ const loadIndex = async (): Promise<Index> => {
 	const [docs, blocks] = await Promise.all([getCollection('docs'), getBlocks()]);
 	const loadedDetails = readBlockDetails(join(root, 'src/data/block-details'));
 	const loadedMedia = readWikiMedia(join(root, 'src/data/wiki-media.json'));
+	const loadedGuis = readMachineGuis(join(root, 'src/data/machine-guis'));
 	const items = indexItemMedia(loadedMedia.value);
 
 	const blockIds = new Set(docs.map((entry) => entry.id).filter((id) => /^blocks\/[^/]+\/[^/]+$/.test(id)).map((id) => id.slice('blocks/'.length)));
@@ -158,6 +168,8 @@ const loadIndex = async (): Promise<Index> => {
 	const problems = [
 		...loadedDetails.problems,
 		...loadedMedia.problems,
+		...loadedGuis.problems,
+		...[...loadedGuis.value.keys()].filter((id) => !blockIds.has(id)).map((id) => `machine-guis/${id}.json: no block page at src/content/docs/blocks/${id}.md.`),
 		...items.problems,
 		...checkReferences({
 			details: loadedDetails.value,
@@ -179,8 +191,14 @@ const loadIndex = async (): Promise<Index> => {
 	}
 	const pages = new Map<string, string>();
 	for (const [key, href] of titles) if (href) pages.set(key, href);
+	const pageMedia = new Map<string, Media>();
+	for (const block of blocks) {
+		const key = normalizeName(block.title);
+		const media = loadedMedia.value.blocks[block.id.slice('blocks/'.length)];
+		if (media && pages.has(key)) pageMedia.set(key, media);
+	}
 
-	return { details: loadedDetails.value, items: items.value, blockMedia: loadedMedia.value.blocks, pages };
+	return { details: loadedDetails.value, guis: loadedGuis.value, items: items.value, pageMedia, blockMedia: loadedMedia.value.blocks, pages };
 };
 
 let cached: Promise<Index> | undefined;
@@ -236,10 +254,13 @@ export async function getBlockDetails(block: Block): Promise<BlockDetailsView> {
 	const ownKey = normalizeName(block.title);
 
 	const image = blockMedia ? await resolveImage(blockMedia.src, blockMedia.alt, blockMedia) : undefined;
+	const gui = index.guis.get(block.id.slice('blocks/'.length));
+	// A processing recipe runs in this block's window when it names no other station.
+	const runsHere = (recipe: Recipe) => recipe.type === 'machine' && (!recipe.station || normalizeName(recipe.station) === ownKey);
 
 	const toOption = async (stack: Stackish): Promise<ViewOption> => {
 		const key = normalizeName(stack.name);
-		const known = stack.icon ? undefined : index.items.get(key);
+		const known = stack.icon ? undefined : (index.items.get(key) ?? (key === ownKey ? undefined : index.pageMedia.get(key)));
 		const iconSrc = stack.icon ?? known?.src;
 		const meta = known ?? (stack.icon ? findBySrc(index, stack.icon) : undefined);
 		const icon = iconSrc
@@ -282,6 +303,7 @@ export async function getBlockDetails(block: Block): Promise<BlockDetailsView> {
 			cells: cells.map((options) => (options ? { group: groupIndex.get(optionsKey(options)) ?? 0, options } : null)),
 			groups,
 			outputs: await Promise.all(recipe.outputs.map(toOption)),
+			gui: gui && runsHere(recipe) ? gui : undefined,
 		};
 	};
 
@@ -297,6 +319,7 @@ export async function getBlockDetails(block: Block): Promise<BlockDetailsView> {
 		sections,
 		recipeNote: details?.recipeNote,
 		machine: details?.machine,
+		gui,
 		credits: collectCredits(block.title, image, sections),
 	};
 }

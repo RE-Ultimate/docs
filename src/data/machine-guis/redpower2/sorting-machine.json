@@ -1,0 +1,285 @@
+{
+  "block": "redpower2/sorting-machine",
+  "title": "Sorting Machine",
+  "width": 176,
+  "height": 222,
+  "playerInventory": true,
+  "playerInventoryY": 140,
+  "slots": [
+    {
+      "x": 26,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 44,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 62,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 80,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 98,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 116,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 134,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 152,
+      "y": 18,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 26,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 44,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 62,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 80,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 98,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 116,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 134,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 152,
+      "y": 36,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 26,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 44,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 62,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 80,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 98,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 116,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 134,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 152,
+      "y": 54,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 26,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 44,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 62,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 80,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 98,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 116,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 134,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 152,
+      "y": 72,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 26,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 44,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 62,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 80,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 98,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 116,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 134,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    },
+    {
+      "x": 152,
+      "y": 90,
+      "role": "filter",
+      "label": "Sorting item"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 20,
+      "w": 5,
+      "h": 48,
+      "direction": "up",
+      "label": "Charge"
+    },
+    {
+      "kind": "energy",
+      "x": 15,
+      "y": 20,
+      "w": 5,
+      "h": 48,
+      "direction": "up",
+      "label": "Flow"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/redpower2-mechanical.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: com.eloraam.redpower.machine.ContainerSorter, com.eloraam.redpower.machine.GuiSorter."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "block": "redpower2/alloy-furnace",
+  "title": "Alloy Furnace",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 48,
+      "y": 17,
+      "role": "input",
+      "label": "Alloy ingredient",
+      "index": 0
+    },
+    {
+      "x": 66,
+      "y": 17,
+      "role": "input",
+      "label": "Alloy ingredient",
+      "index": 1
+    },
+    {
+      "x": 84,
+      "y": 17,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 48,
+      "y": 35,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 66,
+      "y": 35,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 84,
+      "y": 35,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 48,
+      "y": 53,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 66,
+      "y": 53,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 84,
+      "y": 53,
+      "role": "input",
+      "label": "Alloy ingredient"
+    },
+    {
+      "x": 17,
+      "y": 42,
+      "role": "fuel",
+      "label": "Fuel"
+    },
+    {
+      "x": 141,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    }
+  ],
+  "progress": [
+    {
+      "kind": "flame",
+      "x": 17,
+      "y": 25,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Fuel"
+    },
+    {
+      "kind": "arrow",
+      "x": 107,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/redpower2-core.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: com.eloraam.redpower.base.ContainerAlloyFurnace, com.eloraam.redpower.base.GuiAlloyFurnace."
+  ]
+}

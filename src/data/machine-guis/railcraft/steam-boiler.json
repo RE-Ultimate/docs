@@ -1,0 +1,101 @@
+{
+  "block": "railcraft/steam-boiler",
+  "title": "Steam Boiler",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 143,
+      "y": 21,
+      "role": "container",
+      "label": "Water container"
+    },
+    {
+      "x": 143,
+      "y": 56,
+      "role": "container",
+      "label": "Empty container"
+    },
+    {
+      "x": 62,
+      "y": 39,
+      "role": "fuel",
+      "label": "Fuel"
+    },
+    {
+      "x": 89,
+      "y": 20,
+      "role": "fuel",
+      "label": "Fuel"
+    },
+    {
+      "x": 89,
+      "y": 38,
+      "role": "fuel",
+      "label": "Fuel"
+    },
+    {
+      "x": 89,
+      "y": 56,
+      "role": "fuel",
+      "label": "Fuel"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "flame",
+      "x": 62,
+      "y": 22,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Fuel"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 116,
+      "y": 23,
+      "w": 16,
+      "h": 47,
+      "direction": "up",
+      "label": "Water"
+    },
+    {
+      "kind": "steam",
+      "x": 17,
+      "y": 23,
+      "w": 16,
+      "h": 47,
+      "direction": "up",
+      "label": "Steam"
+    },
+    {
+      "kind": "heat",
+      "x": 40,
+      "y": 25,
+      "w": 6,
+      "h": 43,
+      "direction": "up",
+      "label": "Heat"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Railcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: railcraft.common.gui.containers.ContainerBoilerSolid, railcraft.client.gui.GuiBoilerSolid, railcraft.common.gui.containers.ContainerBoilerLiquid, railcraft.client.gui.GuiBoilerLiquid, railcraft.common.blocks.machine.beta.TileBoilerFirebox.",
+    "Solid-fuel firebox window. The liquid-fuel firebox replaces the fuel slots with a liquid fuel gauge at 89, 23, 16 \u00d7 47 and moves the flame to 62, 38."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "block": "thermal-expansion/redstone-energy-cell",
+  "title": "Redstone Energy Cell",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 80,
+      "y": 18,
+      "w": 16,
+      "h": 42,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "CoFH Core artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/CoFHCore.zip"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.energy.gui.ContainerEnergyCell, thermalexpansion.energy.gui.GuiEnergyCell, cofh.gui.GuiAdv."
+  ]
+}

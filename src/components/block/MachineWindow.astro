@@ -1,0 +1,117 @@
+---
+// A machine's in-game window, drawn by the site from the layout facts in src/data/machine-guis
+// (no mod texture is used). Coordinates are GUI texture pixels and render at exactly 2x, so a 16px item
+// becomes 32px and stays crisp. The player inventory is left out and the window is cropped to the drawn part.
+//   fill:   example items for the input and output slots (a processing recipe). Without it the window is empty.
+//   legend: numbers each slot and lists what it is for (the machine summary uses this).
+import type { MachineGui, GuiSlot } from '../../lib/machine-gui-schema.ts';
+import type { ViewOption } from '../../lib/block-details';
+import Slot from './Slot.astro';
+
+interface Props {
+	gui: MachineGui;
+	fill?: { inputs: ViewOption[]; outputs: ViewOption[] } | undefined;
+	legend?: boolean;
+}
+
+const { gui, fill, legend = false } = Astro.props;
+
+// Only the machine part of the window: down to the lowest drawn element, plus the window's own margin.
+const bottoms = [
+	...gui.slots.map((slot) => slot.y + (slot.large ? 21 : 17)),
+	...gui.progress.map((item) => item.y + item.h),
+	...gui.gauges.map((item) => item.y + item.h),
+];
+// Above the content, keep 18px for the title; anything more is empty space to crop.
+const tops = [...gui.slots.map((slot) => slot.y - (slot.large ? 5 : 1)), ...gui.progress.map((item) => item.y), ...gui.gauges.map((item) => item.y - 1)];
+const cropTop = Math.min(...tops) - 18 > 24 ? Math.min(...tops) - 18 : 0;
+const height = Math.min(gui.height, Math.max(...bottoms) + 7) - cropTop;
+// Sideways, keep only the drawn part too: a window whose player inventory sat beside the machine
+// (the Mining Turtle) would otherwise be mostly empty. Small margins are kept as in the game.
+const lefts = [...gui.slots.map((slot) => slot.x - (slot.large ? 5 : 1)), ...gui.progress.map((item) => item.x), ...gui.gauges.map((item) => item.x - 1)];
+const rights = [...gui.slots.map((slot) => slot.x + (slot.large ? 21 : 17)), ...gui.progress.map((item) => item.x + item.w), ...gui.gauges.map((item) => item.x + item.w + 1)];
+const cropLeft = Math.min(...lefts) - 7 > 24 ? Math.min(...lefts) - 7 : 0;
+const cropRight = gui.width - Math.max(...rights) - 7 > 24 ? Math.max(...rights) + 7 : gui.width;
+const width = cropRight - cropLeft;
+const pct = (value: number, of: number) => `${((value / of) * 100).toFixed(4)}%`;
+const box = (x: number, y: number, w: number, h: number) =>
+	`left:${pct(x - cropLeft, width)};top:${pct(y - cropTop, height)};width:${pct(w, width)};height:${pct(h, height)}`;
+
+// Recipe items go into input and output slots in order (`index` first, then position in the file).
+const ordered = (role: GuiSlot['role']) =>
+	gui.slots
+		.map((slot, position) => ({ slot, position }))
+		.filter(({ slot }) => slot.role === role)
+		.sort((a, b) => (a.slot.index ?? a.position) - (b.slot.index ?? b.position))
+		.map(({ position }) => position);
+const contents = new Map<number, ViewOption>();
+ordered('input').forEach((position, i) => fill?.inputs[i] && contents.set(position, fill.inputs[i]));
+ordered('output').forEach((position, i) => fill?.outputs[i] && contents.set(position, fill.outputs[i]));
+
+// The title sits top-left as in most windows; when a gauge or slot already uses that corner, centre it.
+const titleWidth = 8 + gui.title.length * 6;
+const cornerTaken = [...gui.slots.map((slot) => ({ x: slot.x - 1, y: slot.y - 1 })), ...gui.progress, ...gui.gauges].some(
+	(item) => item.y - cropTop < 15 && item.x - cropLeft < titleWidth,
+);
+const titleStyle = cornerTaken ? `left:50%;top:${pct(5, height)};transform:translateX(-50%)` : `left:${pct(8, width)};top:${pct(5, height)}`;
+
+// Legend entries: neighbouring slots with the same label share one line ("1–18 Storage").
+const legendRuns: { from: number; to: number; label: string }[] = [];
+gui.slots.forEach((slot, position) => {
+	const last = legendRuns.at(-1);
+	if (last && last.label === slot.label && last.to === position) last.to = position + 1;
+	else legendRuns.push({ from: position + 1, to: position + 1, label: slot.label });
+});
+
+const alignOf = (slot: GuiSlot) => {
+	const x = slot.x - cropLeft;
+	return x < width / 3 ? 'start' : x > (width * 2) / 3 ? 'end' : 'center';
+};
+---
+
+<figure class="ru-mwin" style={`--w:${width};--h:${height}`}>
+	<div class="ru-mwin-area ru-win" role="img" aria-label={`${gui.title} window`}>
+		<span class="ru-mwin-title" style={titleStyle} aria-hidden="true">{gui.title}</span>
+		{
+			gui.gauges.map((gauge) => (
+				<span class:list={['ru-gauge', `is-${gauge.kind}`]} data-dir={gauge.direction} style={box(gauge.x - 1, gauge.y - 1, gauge.w + 2, gauge.h + 2)} title={gauge.label}>
+					<span class="ru-gauge-fill" />
+				</span>
+			))
+		}
+		{
+			gui.progress.map((item) => (
+				<span class:list={['ru-prog', `is-${item.kind}`]} data-dir={item.direction} style={box(item.x, item.y, item.w, item.h)} title={item.label} />
+			))
+		}
+		{
+			gui.slots.map((slot, position) => {
+				const size = slot.large ? 26 : 18;
+				const offset = slot.large ? 5 : 1;
+				const item = contents.get(position);
+				return (
+					<span class:list={['ru-mslot', { 'is-large': slot.large }]} style={box(slot.x - offset, slot.y - offset, size, size)} title={item ? undefined : slot.label}>
+						{item && <Slot option={item} align={alignOf(slot)} />}
+						{legend && <span class="ru-mslot-n" aria-hidden="true">{position + 1}</span>}
+					</span>
+				);
+			})
+		}
+	</div>
+	{
+		legend && (
+			<figcaption>
+				<ol class="ru-mwin-legend">
+					{legendRuns.map((run) => (
+						<li>
+							<span class="ru-mwin-n">{run.from === run.to ? run.from : `${run.from}–${run.to}`}</span> {run.label}
+						</li>
+					))}
+				</ol>
+				{(gui.progress.length > 0 || gui.gauges.length > 0) && (
+					<p class="ru-mwin-also">{[...gui.gauges, ...gui.progress].map((item) => item.label).join(', ')}.</p>
+				)}
+			</figcaption>
+		)
+	}
+</figure>

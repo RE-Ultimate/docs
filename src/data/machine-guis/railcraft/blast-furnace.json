@@ -1,0 +1,66 @@
+{
+  "block": "railcraft/blast-furnace",
+  "title": "Blast Furnace",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 56,
+      "y": 53,
+      "role": "fuel",
+      "label": "Fuel"
+    },
+    {
+      "x": 116,
+      "y": 35,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    }
+  ],
+  "progress": [
+    {
+      "kind": "flame",
+      "x": 56,
+      "y": 36,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Fuel"
+    },
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Railcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: railcraft.common.gui.containers.ContainerBlastFurnace, railcraft.client.gui.GuiBlastFurnace.",
+    "The window belongs to the formed blast furnace."
+  ]
+}

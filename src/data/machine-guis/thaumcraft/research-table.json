@@ -1,0 +1,69 @@
+{
+  "block": "thaumcraft/research-table",
+  "title": "Research Table",
+  "width": 240,
+  "height": 242,
+  "playerInventory": true,
+  "playerInventoryY": 160,
+  "slots": [
+    {
+      "x": 15,
+      "y": 16,
+      "role": "other",
+      "label": "Research item"
+    },
+    {
+      "x": 15,
+      "y": 40,
+      "role": "other",
+      "label": "Research item"
+    },
+    {
+      "x": 15,
+      "y": 64,
+      "role": "other",
+      "label": "Research item"
+    },
+    {
+      "x": 15,
+      "y": 88,
+      "role": "other",
+      "label": "Research item"
+    },
+    {
+      "x": 15,
+      "y": 112,
+      "role": "other",
+      "label": "Research item"
+    },
+    {
+      "x": 75,
+      "y": 65,
+      "role": "other",
+      "label": "Research notes"
+    },
+    {
+      "x": 75,
+      "y": 97,
+      "role": "other",
+      "label": "Paper"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Thaumcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: thaumcraft.common.container.ContainerResearchTable, thaumcraft.client.gui.GuiResearchTable.",
+    "The player inventory starts at x 40."
+  ]
+}

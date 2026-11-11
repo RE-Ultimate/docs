@@ -1,0 +1,51 @@
+{
+  "block": "buildcraft/combustion-engine",
+  "title": "Combustion Engine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 52,
+      "y": 41,
+      "role": "container",
+      "label": "Fluid container"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 104,
+      "y": 19,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Fuel"
+    },
+    {
+      "kind": "fluid",
+      "x": 122,
+      "y": 19,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Coolant"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/buildcraft-A-1.4.7-3.4.5%2Bupsilon1.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: buildcraft.energy.gui.ContainerEngine, buildcraft.energy.gui.GuiCombustionEngine."
+  ]
+}

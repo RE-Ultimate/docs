@@ -46,7 +46,7 @@
       ],
       "outputs": [
         {
-          "name": "Alveary Block",
+          "name": "Alveary",
           "count": 1
         }
       ],
@@ -76,7 +76,8 @@
       "outputs": [
         {
           "name": "Formed Alveary",
-          "count": 1
+          "count": 1,
+          "icon": "/media/wiki/forestry-alveary.png"
         }
       ],
       "verification": "pack-code",

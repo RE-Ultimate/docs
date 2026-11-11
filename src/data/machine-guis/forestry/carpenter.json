@@ -1,0 +1,239 @@
+{
+  "block": "forestry/carpenter",
+  "title": "Carpenter",
+  "width": 176,
+  "height": 215,
+  "playerInventory": true,
+  "playerInventoryY": 136,
+  "slots": [
+    {
+      "x": 8,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 26,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 44,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 62,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 80,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 98,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 116,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 134,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 152,
+      "y": 90,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 8,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 26,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 44,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 62,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 80,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 98,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 116,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 134,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 152,
+      "y": 108,
+      "role": "storage",
+      "label": "Storage"
+    },
+    {
+      "x": 120,
+      "y": 20,
+      "role": "container",
+      "label": "Liquid container"
+    },
+    {
+      "x": 83,
+      "y": 20,
+      "role": "container",
+      "label": "Box"
+    },
+    {
+      "x": 120,
+      "y": 56,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    },
+    {
+      "x": 80,
+      "y": 51,
+      "role": "other",
+      "label": "Recipe preview"
+    },
+    {
+      "x": 10,
+      "y": 20,
+      "role": "input",
+      "label": "Crafting ingredient",
+      "index": 0
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 46,
+      "y": 20,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 10,
+      "y": 38,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 28,
+      "y": 38,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 46,
+      "y": 38,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 10,
+      "y": 56,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 28,
+      "y": 56,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    },
+    {
+      "x": 46,
+      "y": 56,
+      "role": "pattern",
+      "label": "Crafting ingredient"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 98,
+      "y": 51,
+      "w": 4,
+      "h": 16,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 150,
+      "y": 17,
+      "w": 16,
+      "h": 58,
+      "direction": "up",
+      "label": "Liquid"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://cdn.modrinth.com/data/MHni9gjy/versions/oCKQY1wF/forestry-A-2.0.0.11.jar"
+    },
+    {
+      "title": "Pack artifact pin",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/forestry.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: forestry.factory.gui.ContainerCarpenter, forestry.factory.gui.GuiCarpenter, forestry.core.gui.LiquidTankSlot, forestry.factory.gadgets.MachineCarpenter.",
+    "The grid uses the recipe pattern; the listed recipe combines eight logs into one ingredient."
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "block": "ender-storage/ender-chest",
+  "title": "Ender Chest",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 85,
+  "slots": [
+    {
+      "x": 8,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 44,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 62,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 80,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 98,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 116,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 134,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 152,
+      "y": 18,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 8,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 26,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 44,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 62,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 80,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 98,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 116,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 134,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 152,
+      "y": 36,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 8,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 26,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 44,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 62,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 80,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 98,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 116,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 134,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    },
+    {
+      "x": 152,
+      "y": 54,
+      "role": "storage",
+      "label": "Stored item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/mods/ender-storage.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: codechicken.enderstorage.storage.item.ContainerEnderItemStorage, codechicken.enderstorage.storage.item.GuiEnderItemStorage.",
+    "The installed config sets storage-size to 1; other settings change the layout."
+  ]
+}

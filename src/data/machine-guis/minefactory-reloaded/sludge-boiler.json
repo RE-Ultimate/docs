@@ -1,0 +1,63 @@
+{
+  "block": "minefactory-reloaded/sludge-boiler",
+  "title": "Sludge Boiler",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 150,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Work"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 140,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Energy"
+    },
+    {
+      "kind": "other",
+      "x": 160,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Idle"
+    },
+    {
+      "kind": "fluid",
+      "x": 122,
+      "y": 14,
+      "w": 16,
+      "h": 61,
+      "direction": "up",
+      "label": "Fluid"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/MineFactoryReloaded.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: powercrystals.minefactoryreloaded.gui.container.ContainerFactoryInventory, powercrystals.minefactoryreloaded.gui.container.ContainerFactoryPowered, powercrystals.minefactoryreloaded.gui.client.GuiFactoryInventory, powercrystals.minefactoryreloaded.gui.client.GuiFactoryPowered, powercrystals.minefactoryreloaded.processing.TileEntitySludgeBoiler."
+  ]
+}

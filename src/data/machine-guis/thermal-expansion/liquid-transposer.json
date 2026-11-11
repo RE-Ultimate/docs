@@ -1,0 +1,83 @@
+{
+  "block": "thermal-expansion/liquid-transposer",
+  "title": "Liquid Transposer",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 19,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 80,
+      "y": 49,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 112,
+      "y": 19,
+      "w": 24,
+      "h": 16,
+      "direction": "left",
+      "label": "Fill progress"
+    },
+    {
+      "kind": "bar",
+      "x": 44,
+      "y": 49,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Speed"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 152,
+      "y": 9,
+      "w": 16,
+      "h": 60,
+      "direction": "up",
+      "label": "Liquid"
+    },
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 42,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "CoFH Core artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/CoFHCore.zip"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.factory.gui.ContainerTransposer, thermalexpansion.factory.gui.GuiTransposer, thermalexpansion.factory.tileentity.TileTransposer, cofh.gui.GuiAdv.",
+    "The default fill mode moves progress left. Extract mode moves progress right."
+  ]
+}

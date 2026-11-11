@@ -1,0 +1,80 @@
+{
+  "block": "redpower2/filter",
+  "title": "Filter",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 62,
+      "y": 17,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 17,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 17,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 35,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 35,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 35,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 62,
+      "y": 53,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 80,
+      "y": 53,
+      "role": "filter",
+      "label": "Filter item"
+    },
+    {
+      "x": 98,
+      "y": 53,
+      "role": "filter",
+      "label": "Filter item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/redpower2-mechanical.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: com.eloraam.redpower.machine.ContainerFilter, com.eloraam.redpower.machine.GuiFilter."
+  ]
+}

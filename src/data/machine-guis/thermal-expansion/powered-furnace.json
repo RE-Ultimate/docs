@@ -1,0 +1,73 @@
+{
+  "block": "thermal-expansion/powered-furnace",
+  "title": "Powered Furnace",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 26,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 116,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 56,
+      "y": 44,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Speed"
+    },
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 24,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 42,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "CoFH Core artifact",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/CoFHCore.zip"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.factory.gui.ContainerFurnace, thermalexpansion.factory.gui.GuiFurnace, thermalexpansion.factory.tileentity.TileFurnace, cofh.gui.GuiAdv."
+  ]
+}

@@ -46,7 +46,7 @@
       ],
       "outputs": [
         {
-          "name": "Coke Oven",
+          "name": "Coke Oven Brick",
           "count": 1
         }
       ],
@@ -65,14 +65,15 @@
       "station": "World",
       "ingredients": [
         {
-          "name": "Coke Oven",
+          "name": "Coke Oven Brick",
           "count": 26
         }
       ],
       "outputs": [
         {
           "name": "Formed Coke Oven",
-          "count": 1
+          "count": 1,
+          "icon": "/media/wiki/extras/railcraft-coke-oven.png"
         }
       ],
       "verification": "pack-code",

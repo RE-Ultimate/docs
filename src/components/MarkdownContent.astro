@@ -49,7 +49,7 @@ const showNoteSection = plan.lead.some((entry) => entry.id === 'recipe');
 				<RecipeSection section={section} note={index === 0 && !showNoteSection ? view.recipeNote : undefined} />
 			))}
 			<Fragment set:html={middle} />
-			{plan.machine && view.machine && <MachineSummary machine={view.machine} />}
+			{plan.machine && <MachineSummary machine={view.machine} gui={view.gui} />}
 			<Fragment set:html={rest} />
 			{plan.credits && <ImageCredits credits={view.credits} />}
 		</Default>

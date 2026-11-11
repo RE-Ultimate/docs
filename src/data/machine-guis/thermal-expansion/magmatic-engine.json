@@ -1,0 +1,56 @@
+{
+  "block": "thermal-expansion/magmatic-engine",
+  "title": "Magmatic Engine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 44,
+      "y": 35,
+      "role": "container",
+      "label": "Container"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 98,
+      "y": 35,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 152,
+      "y": 9,
+      "w": 16,
+      "h": 60,
+      "direction": "up",
+      "label": "Lava"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "CoFH Core artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/CoFHCore.zip"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.energy.gui.ContainerEngineMagmatic, thermalexpansion.energy.gui.GuiEngineMagmatic, thermalexpansion.energy.tileentity.TileEngineMagmatic, cofh.gui.GuiAdv."
+  ]
+}

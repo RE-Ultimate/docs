@@ -1,0 +1,33 @@
+{
+  "block": "factorization/router",
+  "title": "Item Router",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 62,
+      "y": 22,
+      "role": "storage",
+      "label": "Routed item"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/factorization.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: factorization.common.ContainerFactorization, factorization.client.gui.GuiRouter.",
+    "The item filter upgrade shows nine extra slots on its filter screen."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "block": "thaumcraft/arcane-worktable",
+  "title": "Arcane Worktable",
+  "width": 176,
+  "height": 176,
+  "playerInventory": true,
+  "playerInventoryY": 94,
+  "slots": [
+    {
+      "x": 30,
+      "y": 17,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 48,
+      "y": 17,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 66,
+      "y": 17,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 30,
+      "y": 35,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 48,
+      "y": 35,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 66,
+      "y": 35,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 30,
+      "y": 53,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 48,
+      "y": 53,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 66,
+      "y": 53,
+      "role": "other",
+      "label": "Crafting grid"
+    },
+    {
+      "x": 124,
+      "y": 29,
+      "role": "other",
+      "label": "Crafting result"
+    },
+    {
+      "x": 124,
+      "y": 61,
+      "role": "tool",
+      "label": "Wand"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Thaumcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: thaumcraft.common.container.ContainerArcaneWorkbench, thaumcraft.client.gui.GuiArcaneWorkbench."
+  ]
+}

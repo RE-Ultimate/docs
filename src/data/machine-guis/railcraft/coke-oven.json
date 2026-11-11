@@ -1,0 +1,82 @@
+{
+  "block": "railcraft/coke-oven",
+  "title": "Coke Oven",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 16,
+      "y": 43,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 62,
+      "y": 43,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    },
+    {
+      "x": 149,
+      "y": 57,
+      "role": "container",
+      "label": "Filled container"
+    },
+    {
+      "x": 149,
+      "y": 22,
+      "role": "container",
+      "label": "Empty container"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "flame",
+      "x": 16,
+      "y": 26,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Working"
+    },
+    {
+      "kind": "arrow",
+      "x": 34,
+      "y": 43,
+      "w": 21,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 90,
+      "y": 24,
+      "w": 48,
+      "h": 47,
+      "direction": "up",
+      "label": "Creosote oil"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Railcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: railcraft.common.gui.containers.ContainerCokeOven, railcraft.client.gui.GuiCokeOven.",
+    "The window belongs to the formed coke oven."
+  ]
+}

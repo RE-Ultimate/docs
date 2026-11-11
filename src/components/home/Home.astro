@@ -1,0 +1,598 @@
+---
+// The docs home page: hero (wordmark, splash, actions, update feed, crafting bench), the route line
+// through the playthrough guide, and the block inventory. Used by src/content/docs/index.mdx.
+// Without JavaScript every part works: the bench shows its first recipe and the inventory shows all blocks.
+import { getBlocks } from '../../lib/blocks';
+import { getBlockDetails } from '../../lib/block-details';
+import { resolveHome } from '../../lib/home';
+import { withBase } from '../../lib/paths';
+import Slot from '../block/Slot.astro';
+
+const FEED = 'https://re-ultimate.github.io/Re-Ultimate/pack.toml';
+const RELEASES = 'https://github.com/RE-Ultimate/Re-Ultimate/releases';
+
+const blocks = await getBlocks();
+const { stages, bench } = resolveHome(blocks);
+const imageOf = new Map(await Promise.all(blocks.map(async (block) => [block.id, (await getBlockDetails(block)).image] as const)));
+
+// The first crafting recipe of each bench block, in the shape the recipe slots expect.
+const benchRecipes = (
+	await Promise.all(
+		bench.map(async (block) => {
+			const recipe = (await getBlockDetails(block)).sections.find((section) => section.id === 'crafting')?.recipes.find((r) => r.type === 'shaped');
+			return recipe ? { block, recipe } : undefined;
+		}),
+	)
+).filter((entry) => entry !== undefined);
+
+const mods = [...new Map(blocks.map((block) => [block.mod.id, block.mod.name]))]
+	.map(([id, name]) => ({ id, name, count: blocks.filter((block) => block.mod.id === id).length }))
+	.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'en'));
+const alignAt = (position: number) => (position % 3 === 0 ? 'start' : position % 3 === 2 ? 'end' : 'center');
+---
+
+<div class="ru-home not-content">
+	<section class="ru-hero">
+		<div class="ru-hero-copy">
+			<p class="ru-hero-logo" aria-hidden="true">
+				<span class="ru-wordmark">Re<span class="ru-colon">:</span>Ultimate</span>
+				<span class="ru-splash">Maintained again!</span>
+			</p>
+			<p class="ru-tagline">
+				A Minecraft 1.4.7 modpack based on Rewind Upsilon and FTB Ultimate. Install it, follow a route, and look up the blocks you build.
+			</p>
+			<div class="ru-actions">
+				<a class="ru-btn is-primary" href={RELEASES} rel="noopener">Download</a>
+				<a class="ru-btn" href={withBase('pack/installation/')}>Install guide</a>
+			</div>
+			<p class="ru-feed">
+				<span>Update feed</span>
+				<code>{FEED}</code>
+				<button type="button" data-copy={FEED} hidden>Copy</button>
+			</p>
+		</div>
+
+		{
+			benchRecipes.length > 0 && (
+				<div class="ru-bench ru-recipes" data-bench>
+					<div class="ru-bench-tabs" role="tablist" aria-label="Example recipes" data-bench-tabs hidden>
+						{benchRecipes.map(({ block }, index) => (
+							<button type="button" role="tab" class="ru-btn is-small" aria-selected={index === 0 ? 'true' : 'false'} tabindex={index === 0 ? 0 : -1} data-tab={index}>
+								{block.title}
+							</button>
+						))}
+					</div>
+					{benchRecipes.map(({ block, recipe }, index) => (
+						<div class="ru-win ru-bench-panel" role="tabpanel" data-panel={index} hidden={index > 0} aria-label={`${block.title} crafting recipe`}>
+							<p class="ru-win-title">Crafting</p>
+							<div class="ru-draw">
+								<div class="ru-grid">
+									{recipe.cells.map((cell, position) => (
+										<div class="ru-cell">{cell?.options[0] && <Slot option={cell.options[0]} align={alignAt(position)} />}</div>
+									))}
+								</div>
+								<svg class="ru-arrow" viewBox="0 0 17 11" width="34" height="22" shape-rendering="crispEdges" aria-hidden="true">
+									<path fill="currentColor" d="M0 4h11V0h1v1h1v1h1v1h1v1h1v1h1v1h-1v1h-1v1h-1v1h-1v1h-1v1h-1V7H0z" />
+								</svg>
+								<div class="ru-outs">
+									<div class="ru-cell is-out">{recipe.outputs[0] && <Slot option={recipe.outputs[0]} align="end" />}</div>
+								</div>
+							</div>
+							<p class="ru-bench-cap">
+								<span class:list={['ru-verify', recipe.verification === 'pack-code' ? 'is-pack' : 'is-legacy']}>
+									{recipe.verification === 'pack-code' ? 'Checked against pack code' : 'Legacy reference'}
+								</span>
+								<a href={block.href}>{block.title} page</a>
+							</p>
+						</div>
+					))}
+				</div>
+			)
+		}
+	</section>
+
+	<section class="ru-home-sec" aria-labelledby="route">
+		<h2 id="route">Ride the route</h2>
+		<p class="ru-sub">Five stops from the <a href={withBase('pack/playthrough/')}>playthrough guide</a>. Get off wherever your base needs it.</p>
+		<ol class="ru-line">
+			{
+				stages.map((stage, index) => {
+					const [lead, ...rest] = stage.blocks;
+					const leadImage = lead ? imageOf.get(lead.id) : undefined;
+					return (
+						<li class="ru-stop">
+							{lead && (
+								<a class="ru-stop-node" href={lead.href} aria-label={lead.title}>
+									{leadImage && <img src={leadImage.src} alt="" width="48" height="48" loading="lazy" decoding="async" />}
+								</a>
+							)}
+							<span class="ru-stop-k">Stop {index + 1}</span>
+							<h3>{stage.title}</h3>
+							<p>{stage.summary}</p>
+							<span class="ru-stop-icons">
+								{rest.map((block) => {
+									const image = imageOf.get(block.id);
+									return image ? (
+										<a href={block.href} title={block.title}>
+											<img src={image.src} alt={block.title} width="30" height="30" loading="lazy" decoding="async" />
+										</a>
+									) : (
+										<a href={block.href} class="ru-stop-text">{block.title}</a>
+									);
+								})}
+							</span>
+						</li>
+					);
+				})
+			}
+		</ol>
+	</section>
+
+	<section class="ru-home-sec" aria-labelledby="inventory">
+		<div class="ru-win ru-inventory" data-inventory>
+			<h2 id="inventory" class="ru-win-title">Block reference <small>{blocks.length} blocks, {mods.length} mods</small></h2>
+			<div class="ru-inv-tabs" role="group" aria-label="Show blocks from" data-inv-tabs hidden>
+				<button type="button" class="ru-btn is-small" aria-pressed="true" data-mod="">All</button>
+				{
+					mods.map((mod) => (
+						<button type="button" class="ru-btn is-small" aria-pressed="false" data-mod={mod.id}>
+							{mod.name}
+						</button>
+					))
+				}
+			</div>
+			<ul class="ru-inv">
+				{
+					blocks.map((block) => {
+						const image = imageOf.get(block.id);
+						return (
+							<li class="ru-inv-slot" data-mod={block.mod.id}>
+								<a href={block.href} aria-label={`${block.title}, ${block.mod.name}`}>
+									{image ? <img src={image.src} alt="" width="40" height="40" loading="lazy" decoding="async" /> : <span class="ru-inv-name">{block.title}</span>}
+								</a>
+								<span class="ru-inv-tip" aria-hidden="true">
+									<strong>{block.title}</strong>
+									{block.description && <span>{block.description}</span>}
+									<em>{block.mod.name}</em>
+								</span>
+							</li>
+						);
+					})
+				}
+			</ul>
+			<p class="ru-inv-more"><a href={withBase('blocks/')}>Search and filter all blocks</a></p>
+		</div>
+	</section>
+</div>
+
+<script>
+	// Bench tabs, inventory mod filter, and the copy button. Each part stays usable without this script.
+	for (const bench of document.querySelectorAll<HTMLElement>('[data-bench]')) {
+		const tabs = [...bench.querySelectorAll<HTMLButtonElement>('[data-tab]')];
+		const panels = [...bench.querySelectorAll<HTMLElement>('[data-panel]')];
+		const list = bench.querySelector<HTMLElement>('[data-bench-tabs]');
+		if (list) list.hidden = false;
+		const select = (index: number, focus: boolean) => {
+			tabs.forEach((tab, i) => {
+				tab.setAttribute('aria-selected', String(i === index));
+				tab.tabIndex = i === index ? 0 : -1;
+			});
+			panels.forEach((panel, i) => (panel.hidden = i !== index));
+			if (focus) tabs[index]?.focus();
+		};
+		tabs.forEach((tab, index) => {
+			tab.addEventListener('click', () => select(index, false));
+			tab.addEventListener('keydown', (event) => {
+				const step = event.key === 'ArrowRight' ? 1 : event.key === 'ArrowLeft' ? -1 : 0;
+				if (step) select((index + step + tabs.length) % tabs.length, true);
+			});
+		});
+	}
+
+	for (const inventory of document.querySelectorAll<HTMLElement>('[data-inventory]')) {
+		const bar = inventory.querySelector<HTMLElement>('[data-inv-tabs]');
+		const buttons = [...inventory.querySelectorAll<HTMLButtonElement>('[data-mod]:is(button)')];
+		const slots = [...inventory.querySelectorAll<HTMLElement>('li[data-mod]')];
+		if (bar) bar.hidden = false;
+		for (const button of buttons) {
+			button.addEventListener('click', () => {
+				const mod = button.dataset['mod'] ?? '';
+				buttons.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+				slots.forEach((slot) => (slot.hidden = mod !== '' && slot.dataset['mod'] !== mod));
+			});
+		}
+	}
+
+	for (const button of document.querySelectorAll<HTMLButtonElement>('[data-copy]')) {
+		if (!navigator.clipboard) continue;
+		button.hidden = false;
+		button.addEventListener('click', async () => {
+			const label = button.textContent;
+			try {
+				await navigator.clipboard.writeText(button.dataset['copy'] ?? '');
+				button.textContent = 'Copied';
+			} catch {
+				button.textContent = 'Copy failed';
+			}
+			setTimeout(() => (button.textContent = label), 1500);
+		});
+	}
+</script>
+
+<style>
+	/* The home page uses a wider content column than articles. The sidebar stays, so phones keep the menu. */
+	:global(:root:has(.ru-home)) {
+		--sl-content-width: 76rem;
+	}
+
+	.ru-hero {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 3.5rem;
+		align-items: center;
+		padding: 2.5rem 0 1rem;
+	}
+	.ru-hero-logo {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		font-size: clamp(2.5rem, 6.4vw, 5.25rem);
+	}
+	.ru-hero-logo .ru-splash {
+		right: -6%;
+		bottom: -0.55em;
+		font-size: clamp(0.875rem, 1.6vw, 1.375rem);
+	}
+	.ru-tagline {
+		max-width: 36ch;
+		margin: 2.75rem 0 0;
+		font-size: 1.1875rem;
+		line-height: 1.55;
+		color: var(--ru-text-2);
+	}
+	.ru-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.75rem;
+	}
+	.ru-actions .ru-btn {
+		min-width: 10rem;
+	}
+	.ru-feed {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem;
+		max-width: 32rem;
+		margin: 1.125rem 0 0;
+		font-size: 0.8125rem;
+		color: var(--ru-text-3);
+		white-space: nowrap;
+	}
+	.ru-feed code {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-family: var(--__sl-font-mono);
+		font-size: 0.75rem;
+		color: var(--ru-text-2);
+	}
+	.ru-feed button {
+		padding: 0;
+		border: 0;
+		background: none;
+		color: var(--ru-accent);
+		font: inherit;
+		font-weight: 650;
+		cursor: pointer;
+	}
+
+	.ru-bench-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		margin-bottom: 0.375rem;
+	}
+	.ru-bench-panel .ru-draw {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		padding: 0.125rem 0.25rem;
+	}
+	.ru-bench-cap {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+		margin: 0.875rem 0 0;
+		padding-top: 0.625rem;
+		border-top: 2px solid var(--ru-gui-lo);
+		box-shadow: inset 0 2px 0 var(--ru-gui-hi);
+		font-size: 0.875rem;
+		color: var(--ru-text-2);
+	}
+	.ru-bench-cap a {
+		color: var(--ru-text);
+		font-weight: 650;
+		text-decoration: none;
+	}
+	.ru-bench-cap a:hover {
+		color: var(--ru-accent);
+	}
+
+	.ru-home-sec {
+		padding-top: 4.5rem;
+	}
+	.ru-home-sec > h2 {
+		margin: 0;
+		font-size: 2.125rem;
+		font-weight: 720;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+	.ru-sub {
+		margin: 0.375rem 0 2rem;
+		color: var(--ru-text-2);
+	}
+	.ru-sub a {
+		color: var(--ru-text);
+		text-decoration-color: var(--ru-accent);
+		text-underline-offset: 0.2em;
+	}
+
+	/* Route line: stops joined by a rail track (two rails over wooden ties). */
+	.ru-line {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 1rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.ru-line::before {
+		content: '';
+		position: absolute;
+		left: 2.125rem;
+		right: calc((100% - 4rem) / 5 - 2.125rem);
+		top: 1.6875rem;
+		height: 0.875rem;
+		background:
+			linear-gradient(#9aa0a6, #9aa0a6) 0 2px / 100% 2px no-repeat,
+			linear-gradient(#9aa0a6, #9aa0a6) 0 10px / 100% 2px no-repeat,
+			repeating-linear-gradient(90deg, #6b4a2b 0 5px, transparent 5px 14px);
+	}
+	.ru-stop {
+		position: relative;
+		margin: 0;
+	}
+	.ru-stop-node {
+		position: relative;
+		z-index: 1;
+		display: grid;
+		place-items: center;
+		width: 4.25rem;
+		height: 4.25rem;
+		box-sizing: border-box;
+		border: 2px solid #000;
+		background: var(--ru-slot);
+		box-shadow:
+			inset 2px 2px 0 var(--ru-slot-lo),
+			inset -2px -2px 0 var(--ru-slot-hi);
+	}
+	.ru-stop-node:hover {
+		border-color: var(--ru-accent);
+	}
+	.ru-stop-node img {
+		width: 3rem;
+		height: 3rem;
+		object-fit: contain;
+	}
+	.ru-stop-k {
+		display: block;
+		margin-top: 1rem;
+		font-family: var(--ru-font-ui);
+		font-size: 0.9375rem;
+		color: var(--ru-accent);
+	}
+	.ru-stop h3 {
+		margin: 0.125rem 0 0.375rem;
+		font-size: 1.125rem;
+		font-weight: 680;
+		line-height: 1.25;
+		letter-spacing: -0.01em;
+	}
+	.ru-stop p {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.45;
+		color: var(--ru-text-2);
+	}
+	.ru-stop-icons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.125rem;
+		margin-top: 0.625rem;
+	}
+	.ru-stop-icons img {
+		width: 1.875rem;
+		height: 1.875rem;
+		object-fit: contain;
+	}
+	.ru-stop-text {
+		font-size: 0.75rem;
+		color: var(--ru-text-2);
+	}
+
+	/* Inventory: touching slots, game tooltips, mod tabs. */
+	.ru-inventory .ru-win-title {
+		margin-top: 0;
+		margin-bottom: 0.75rem;
+		font-size: 1.375rem;
+		letter-spacing: 0;
+	}
+	.ru-inv-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		margin-bottom: 0.75rem;
+	}
+	.ru-inv {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 3.25rem);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.ru-inv-slot {
+		position: relative;
+		margin: 0;
+	}
+	.ru-inv-slot[hidden] {
+		display: none;
+	}
+	.ru-inv-slot > a {
+		display: grid;
+		place-items: center;
+		width: 3.25rem;
+		height: 3.25rem;
+		background: var(--ru-slot);
+		box-shadow:
+			inset 2px 2px 0 var(--ru-slot-lo),
+			inset -2px -2px 0 var(--ru-slot-hi);
+		text-decoration: none;
+	}
+	.ru-inv-slot > a:hover,
+	.ru-inv-slot > a:focus-visible {
+		background: #2a221a;
+		outline: none;
+	}
+	.ru-inv-slot img {
+		width: 2.5rem;
+		height: 2.5rem;
+		object-fit: contain;
+	}
+	.ru-inv-name {
+		padding: 2px;
+		font-family: var(--ru-font-ui);
+		font-size: 0.5625rem;
+		line-height: 1.05;
+		text-align: center;
+		color: var(--ru-text-2);
+	}
+	.ru-inv-tip {
+		display: none;
+		position: absolute;
+		left: calc(100% + 0.5rem);
+		top: -0.25rem;
+		z-index: 20;
+		width: max-content;
+		max-width: 17rem;
+		padding: 0.375rem 0.5625rem 0.4375rem;
+		border: 2px solid;
+		border-image: linear-gradient(var(--ru-tip-edge), var(--ru-tip-edge-2)) 1;
+		background: var(--ru-tip-bg);
+		font-family: var(--ru-font-ui);
+		font-size: 0.875rem;
+		line-height: 1.35;
+		color: #aaa;
+		text-shadow: 1px 1px 0 #3f3f3f;
+		pointer-events: none;
+	}
+	.ru-inv-tip strong {
+		display: block;
+		font-weight: 500;
+		color: #fff;
+	}
+	.ru-inv-tip span {
+		display: block;
+	}
+	.ru-inv-tip em {
+		display: block;
+		color: var(--ru-mod);
+	}
+	.ru-inv-slot:focus-within .ru-inv-tip {
+		display: block;
+	}
+	@media (hover: hover) {
+		.ru-inv-slot:hover .ru-inv-tip {
+			display: block;
+		}
+	}
+	/* Slots near the right edge open their tooltip to the left. */
+	.ru-inv-slot:nth-child(20n + 15) .ru-inv-tip,
+	.ru-inv-slot:nth-child(20n + 16) .ru-inv-tip,
+	.ru-inv-slot:nth-child(20n + 17) .ru-inv-tip,
+	.ru-inv-slot:nth-child(20n + 18) .ru-inv-tip,
+	.ru-inv-slot:nth-child(20n + 19) .ru-inv-tip,
+	.ru-inv-slot:nth-child(20n) .ru-inv-tip {
+		left: auto;
+		right: calc(100% + 0.5rem);
+	}
+	.ru-inv-more {
+		margin: 0.875rem 0 0;
+		font-size: 0.875rem;
+	}
+	.ru-inv-more a {
+		color: var(--ru-text);
+		text-decoration-color: var(--ru-accent);
+		text-underline-offset: 0.2em;
+	}
+
+	@media (max-width: 60rem) {
+		.ru-hero {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 2.5rem;
+			padding-top: 1rem;
+		}
+		.ru-line {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 1.5rem;
+		}
+		.ru-line::before {
+			left: 1.9375rem;
+			right: auto;
+			top: 2.125rem;
+			bottom: 2.125rem;
+			width: 0.375rem;
+			height: auto;
+			background: #6b4a2b;
+		}
+		.ru-stop {
+			display: grid;
+			grid-template-columns: 4.25rem minmax(0, 1fr);
+			gap: 0 1rem;
+		}
+		.ru-stop-node {
+			grid-row: span 4;
+		}
+		.ru-stop-k {
+			margin-top: 0;
+		}
+		.ru-hero-logo .ru-splash {
+			right: 0;
+		}
+	}
+	@media (max-width: 40rem) {
+		.ru-inv {
+			grid-template-columns: repeat(auto-fill, 2.75rem);
+		}
+		.ru-inv-slot > a {
+			width: 2.75rem;
+			height: 2.75rem;
+		}
+		.ru-inv-slot img {
+			width: 2rem;
+			height: 2rem;
+		}
+		.ru-inv-tip {
+			left: 0;
+			right: auto;
+			top: calc(100% + 0.25rem);
+		}
+		.ru-inv-slot:nth-child(n) .ru-inv-tip {
+			left: auto;
+			right: auto;
+		}
+	}
+</style>

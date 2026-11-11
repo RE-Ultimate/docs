@@ -3,11 +3,14 @@
 // Without JavaScript, all rows show. With JavaScript, the filter form narrows rows and keeps its state in
 // the URL (?q=, ?mod=, ?category=) so filtered views can be linked.
 import { getBlockFacets, getBlocks } from '../lib/blocks';
+import { getBlockDetails } from '../lib/block-details';
 import { blocksFolderUrl, withBase } from '../lib/paths';
 
 const blocks = await getBlocks();
 const facets = getBlockFacets(blocks);
 const total = blocks.length;
+// Each row shows the block's picture in a small inventory slot, when one is on file.
+const images = new Map(await Promise.all(blocks.map(async (block) => [block.id, (await getBlockDetails(block)).image] as const)));
 const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`;
 ---
 
@@ -43,7 +46,7 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 
 	{
 		total > 0 && (
-			<p class="ru-count" aria-live="polite" data-count>
+			<p class="ru-result-count" aria-live="polite" data-count>
 				{plural(total)}
 			</p>
 		)
@@ -71,8 +74,15 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 							.toLowerCase()}
 					>
 						<th scope="row" class="ru-col-name">
-							<a href={block.href}>{block.title}</a>
-							{block.description && <span class="ru-desc">{block.description}</span>}
+							<span class="ru-name-row">
+							<span class="ru-thumb" aria-hidden="true">
+								{images.get(block.id) && <img src={images.get(block.id)?.src} alt="" width="32" height="32" loading="lazy" decoding="async" />}
+							</span>
+							<span class="ru-name-text">
+								<a href={block.href}>{block.title}</a>
+								{block.description && <span class="ru-desc">{block.description}</span>}
+							</span>
+							</span>
 						</th>
 						<td class="ru-col-mod">{block.mod.name}</td>
 						<td class="ru-col-cat">{block.category.label}</td>
@@ -205,9 +215,12 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 		width: 100%;
 		min-height: 2.5rem;
 		padding: 0.5rem 0.625rem;
-		border: 1px solid var(--ru-rule-strong);
+		border: 2px solid #000;
 		border-radius: 0;
-		background: #000;
+		background-color: var(--ru-slot);
+		box-shadow:
+			inset 2px 2px 0 var(--ru-slot-lo),
+			inset -2px -2px 0 var(--ru-slot-hi);
 		color: var(--ru-text);
 		font: inherit;
 		font-size: var(--sl-text-base);
@@ -226,9 +239,12 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 	.ru-field input::placeholder {
 		color: var(--ru-text-3);
 	}
+	.ru-field > span {
+		font-family: var(--ru-font-ui);
+	}
 	.ru-field input:hover,
 	.ru-field select:hover {
-		border-color: var(--ru-text-2);
+		border-color: var(--ru-text-3);
 	}
 	.ru-field input:focus-visible,
 	.ru-field select:focus-visible {
@@ -237,7 +253,7 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 		border-color: var(--ru-accent);
 	}
 
-	.ru-count {
+	.ru-result-count {
 		margin: 1.25rem 0 0.5rem;
 		font-size: var(--sl-text-sm);
 		font-variant-numeric: tabular-nums;
@@ -278,6 +294,30 @@ const plural = (count: number) => `${count} ${count === 1 ? 'block' : 'blocks'}`
 	}
 	.ru-col-name {
 		font-weight: 400;
+	}
+	.ru-name-row {
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+	}
+	.ru-thumb {
+		flex: none;
+		display: grid;
+		place-items: center;
+		width: 2.75rem;
+		height: 2.75rem;
+		background: var(--ru-slot);
+		box-shadow:
+			inset 2px 2px 0 var(--ru-slot-lo),
+			inset -2px -2px 0 var(--ru-slot-hi);
+	}
+	.ru-thumb img {
+		width: 2rem;
+		height: 2rem;
+		object-fit: contain;
+	}
+	.ru-ledger tbody :is(th, td) {
+		vertical-align: middle;
 	}
 	.ru-col-name a {
 		font-size: var(--sl-text-base);

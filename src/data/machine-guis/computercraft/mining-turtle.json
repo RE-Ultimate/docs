@@ -1,0 +1,122 @@
+{
+  "block": "computercraft/mining-turtle",
+  "title": "Turtle",
+  "width": 254,
+  "height": 217,
+  "playerInventory": true,
+  "playerInventoryY": 135,
+  "slots": [
+    {
+      "x": 176,
+      "y": 135,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 194,
+      "y": 135,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 212,
+      "y": 135,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 230,
+      "y": 135,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 176,
+      "y": 153,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 194,
+      "y": 153,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 212,
+      "y": 153,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 230,
+      "y": 153,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 176,
+      "y": 171,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 194,
+      "y": 171,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 212,
+      "y": 171,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 230,
+      "y": 171,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 176,
+      "y": 189,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 194,
+      "y": 189,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 212,
+      "y": 189,
+      "role": "storage",
+      "label": "Turtle inventory"
+    },
+    {
+      "x": 230,
+      "y": 189,
+      "role": "storage",
+      "label": "Turtle inventory"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod manifest",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/computercraft.pw.toml"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: dan200.turtle.shared.ContainerTurtle, dan200.turtle.client.GuiTurtle."
+  ]
+}

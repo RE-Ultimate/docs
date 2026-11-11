@@ -1,0 +1,124 @@
+{
+  "block": "minefactory-reloaded/fertilizer",
+  "title": "Fertilizer",
+  "width": 176,
+  "height": 180,
+  "playerInventory": true,
+  "playerInventoryY": 99,
+  "slots": [
+    {
+      "x": 8,
+      "y": 15,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 26,
+      "y": 15,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 44,
+      "y": 15,
+      "role": "input",
+      "label": "Input",
+      "index": 2
+    },
+    {
+      "x": 8,
+      "y": 33,
+      "role": "input",
+      "label": "Input",
+      "index": 3
+    },
+    {
+      "x": 26,
+      "y": 33,
+      "role": "input",
+      "label": "Input",
+      "index": 4
+    },
+    {
+      "x": 44,
+      "y": 33,
+      "role": "input",
+      "label": "Input",
+      "index": 5
+    },
+    {
+      "x": 8,
+      "y": 51,
+      "role": "input",
+      "label": "Input",
+      "index": 6
+    },
+    {
+      "x": 26,
+      "y": 51,
+      "role": "input",
+      "label": "Input",
+      "index": 7
+    },
+    {
+      "x": 44,
+      "y": 51,
+      "role": "input",
+      "label": "Input",
+      "index": 8
+    },
+    {
+      "x": 152,
+      "y": 79,
+      "role": "upgrade",
+      "label": "Upgrade"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 150,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Work"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 140,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Energy"
+    },
+    {
+      "kind": "other",
+      "x": 160,
+      "y": 15,
+      "w": 8,
+      "h": 60,
+      "direction": "up",
+      "label": "Idle"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/MineFactoryReloaded.jar"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: powercrystals.minefactoryreloaded.gui.container.ContainerFactoryInventory, powercrystals.minefactoryreloaded.gui.container.ContainerFactoryPowered, powercrystals.minefactoryreloaded.gui.client.GuiFactoryInventory, powercrystals.minefactoryreloaded.gui.client.GuiFactoryPowered, powercrystals.minefactoryreloaded.gui.container.ContainerUpgradable, powercrystals.minefactoryreloaded.gui.client.GuiUpgradable."
+  ]
+}

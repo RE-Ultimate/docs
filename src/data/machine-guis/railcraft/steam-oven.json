@@ -1,0 +1,173 @@
+{
+  "block": "railcraft/steam-oven",
+  "title": "Steam Oven",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 8,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 44,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 2
+    },
+    {
+      "x": 8,
+      "y": 35,
+      "role": "input",
+      "label": "Input",
+      "index": 3
+    },
+    {
+      "x": 26,
+      "y": 35,
+      "role": "input",
+      "label": "Input",
+      "index": 4
+    },
+    {
+      "x": 44,
+      "y": 35,
+      "role": "input",
+      "label": "Input",
+      "index": 5
+    },
+    {
+      "x": 8,
+      "y": 53,
+      "role": "input",
+      "label": "Input",
+      "index": 6
+    },
+    {
+      "x": 26,
+      "y": 53,
+      "role": "input",
+      "label": "Input",
+      "index": 7
+    },
+    {
+      "x": 44,
+      "y": 53,
+      "role": "input",
+      "label": "Input",
+      "index": 8
+    },
+    {
+      "x": 116,
+      "y": 17,
+      "role": "output",
+      "label": "Product",
+      "index": 0
+    },
+    {
+      "x": 134,
+      "y": 17,
+      "role": "output",
+      "label": "Product",
+      "index": 1
+    },
+    {
+      "x": 152,
+      "y": 17,
+      "role": "output",
+      "label": "Product",
+      "index": 2
+    },
+    {
+      "x": 116,
+      "y": 35,
+      "role": "output",
+      "label": "Product",
+      "index": 3
+    },
+    {
+      "x": 134,
+      "y": 35,
+      "role": "output",
+      "label": "Product",
+      "index": 4
+    },
+    {
+      "x": 152,
+      "y": 35,
+      "role": "output",
+      "label": "Product",
+      "index": 5
+    },
+    {
+      "x": 116,
+      "y": 53,
+      "role": "output",
+      "label": "Product",
+      "index": 6
+    },
+    {
+      "x": 134,
+      "y": 53,
+      "role": "output",
+      "label": "Product",
+      "index": 7
+    },
+    {
+      "x": 152,
+      "y": 53,
+      "role": "output",
+      "label": "Product",
+      "index": 8
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 65,
+      "y": 18,
+      "w": 23,
+      "h": 50,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "steam",
+      "x": 94,
+      "y": 20,
+      "w": 16,
+      "h": 47,
+      "direction": "up",
+      "label": "Steam"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/Railcraft.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: railcraft.common.gui.containers.ContainerSteamOven, railcraft.client.gui.GuiSteamOven.",
+    "The window belongs to the formed steam oven."
+  ]
+}
