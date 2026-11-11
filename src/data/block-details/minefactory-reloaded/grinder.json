@@ -1,0 +1,70 @@
+{
+  "block": "minefactory-reloaded/grinder",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Book",
+          "count": 1
+        },
+        {
+          "name": "Golden Sword",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Factory Machine Block",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Grinder",
+          "count": 1,
+          "href": "/docs/blocks/minefactory-reloaded/grinder/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Living mobs in front"
+    ],
+    "outputs": [
+      "Mob drops",
+      "Mob Essence"
+    ],
+    "tips": [
+      "Pipe out Mob Essence and collect the drops."
+    ],
+    "power": "BuildCraft MJ or IC2 EU"
+  }
+}

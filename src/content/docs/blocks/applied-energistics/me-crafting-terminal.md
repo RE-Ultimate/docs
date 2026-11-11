@@ -15,7 +15,7 @@ Connect the terminal to a powered [ME Controller](/docs/blocks/applied-energisti
 
 This is a manual crafting grid. Automatic crafting requires separate crafting equipment and encoded patterns. If ingredients do not refill, check that the network has suitable items and that the controller has power. Items placed in the grid are separate from the storage list until returned to storage.
 
-An [ME Access Terminal](/docs/blocks/applied-energistics/me-access-terminal/) provides storage access without the grid. Search EMI for the installed recipe. This version is AE1, so AE2 crafting equipment instructions do not apply.
+An [ME Access Terminal](/docs/blocks/applied-energistics/me-access-terminal/) provides storage access without the grid. This version is AE1, so AE2 crafting equipment instructions do not apply.
 
 ## Sources
 

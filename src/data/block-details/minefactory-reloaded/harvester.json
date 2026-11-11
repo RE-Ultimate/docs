@@ -1,0 +1,70 @@
+{
+  "block": "minefactory-reloaded/harvester",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Shears",
+          "count": 1
+        },
+        {
+          "name": "Golden Axe",
+          "count": 1
+        },
+        {
+          "name": "Shears",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Factory Machine Block",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Harvester",
+          "count": 1,
+          "href": "/docs/blocks/minefactory-reloaded/harvester/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Mature supported plants in front"
+    ],
+    "outputs": [
+      "Harvested items",
+      "Sludge"
+    ],
+    "tips": [
+      "Collect items and drain sludge to keep the farm running."
+    ],
+    "power": "BuildCraft MJ or IC2 EU"
+  }
+}

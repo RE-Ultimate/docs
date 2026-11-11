@@ -20,10 +20,13 @@ export default defineConfig({
 			favicon: '/favicon.png',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/RE-Ultimate' }],
 			editLink: { baseUrl: `${repository}/edit/main/` },
-			customCss: ['./src/styles/fonts.css', './src/styles/theme.css'],
+			customCss: ['./src/styles/fonts.css', './src/styles/theme.css', './src/styles/block-details.css'],
+			// Adds the generated block sections (recipes, machine summary, image credits) to the table of contents.
+			routeMiddleware: './src/routeData.ts',
 			components: {
 				SiteTitle: './src/components/SiteTitle.astro',
 				PageTitle: './src/components/PageTitle.astro',
+				MarkdownContent: './src/components/MarkdownContent.astro',
 				Footer: './src/components/Footer.astro',
 				ThemeProvider: './src/components/ThemeProvider.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',

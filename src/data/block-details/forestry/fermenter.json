@@ -1,0 +1,99 @@
+{
+  "block": "forestry/fermenter",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Fermenter",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Bronze Gear",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Bronze Gear",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Bronze Gear",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Bronze Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fermenter",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Top",
+        "role": "Access the fermentation ingredient slot."
+      },
+      {
+        "face": "Bottom",
+        "role": "Access the fertilizer slot."
+      },
+      {
+        "face": "North",
+        "role": "Access the filled product container slot."
+      },
+      {
+        "face": "South",
+        "role": "Access the empty product container slot."
+      },
+      {
+        "face": "East and west",
+        "role": "Access the liquid ingredient container slot."
+      }
+    ],
+    "inputs": [
+      "Saplings or other plant material",
+      "Water or suitable liquid",
+      "Fertilizer or mulch",
+      "Honeydew and honey for the mead process"
+    ],
+    "outputs": [
+      "Biomass",
+      "Mead from the honeydew and honey process"
+    ],
+    "tips": [],
+    "power": "BuildCraft-compatible MJ"
+  },
+  "recipeNote": "Biomass yield depends on the input and Forestry game mode."
+}

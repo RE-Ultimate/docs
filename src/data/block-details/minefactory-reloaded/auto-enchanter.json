@@ -1,0 +1,86 @@
+{
+  "block": "minefactory-reloaded/auto-enchanter",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Book",
+          "count": 1
+        },
+        {
+          "name": "Book",
+          "count": 1
+        },
+        {
+          "name": "Book",
+          "count": 1
+        },
+        {
+          "name": "Diamond",
+          "count": 1
+        },
+        {
+          "name": "Factory Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Diamond",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Auto-Enchanter",
+          "count": 1,
+          "href": "/docs/blocks/minefactory-reloaded/auto-enchanter/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Top and bottom",
+        "role": "Access the item to enchant."
+      },
+      {
+        "face": "Horizontal sides",
+        "role": "Access the enchanted item output slot."
+      }
+    ],
+    "inputs": [
+      "Enchantable item",
+      "Mob Essence"
+    ],
+    "outputs": [
+      "Enchanted item"
+    ],
+    "tips": [
+      "Set the desired enchantment level in the interface."
+    ],
+    "power": "BuildCraft MJ or IC2 EU"
+  }
+}

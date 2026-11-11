@@ -3,6 +3,8 @@
 // Starlight requires the H1 to keep the `_top` ID so the table of contents can link to it.
 import { Image } from 'astro:assets';
 import { findBlock } from '../lib/blocks';
+import { getBlockDetails } from '../lib/block-details';
+import BlockFigure from './block/BlockFigure.astro';
 import { withBase } from '../lib/paths';
 
 type SidebarEntry = (typeof Astro.locals.starlightRoute.sidebar)[number];
@@ -11,6 +13,7 @@ type Crumb = { label: string; href?: string };
 const route = Astro.locals.starlightRoute;
 const { entry } = route;
 const block = await findBlock(entry.id);
+const details = block ? await getBlockDetails(block) : undefined;
 
 /** Group labels that lead to the current sidebar link. */
 const trail = (entries: SidebarEntry[], parents: string[] = []): string[] | undefined => {
@@ -50,7 +53,7 @@ if (block) {
 
 {
 	block && (
-		<div class="ru-block-head">
+		<div class:list={['ru-block-head', { 'has-figure': Boolean(details?.image) }]}>
 			{block.description && <p class="ru-lead">{block.description}</p>}
 			<dl class="ru-spec">
 				<div>
@@ -69,6 +72,12 @@ if (block) {
 					<dt>ID</dt>
 					<dd>{block.registryId ? <code>{block.registryId}</code> : <span class="ru-muted">Not recorded</span>}</dd>
 				</div>
+				{details?.machine?.power && (
+					<div>
+						<dt>Power</dt>
+						<dd>{details.machine.power}</dd>
+					</div>
+				)}
 				{block.tags.length > 0 && (
 					<div>
 						<dt>Tags</dt>
@@ -76,10 +85,14 @@ if (block) {
 					</div>
 				)}
 			</dl>
-			{block.image && (
-				<figure class:list={['ru-block-figure', { 'is-icon': block.image.src.width <= 64 }]}>
-					<Image src={block.image.src} alt={block.image.alt} />
-				</figure>
+			{details?.image ? (
+				<BlockFigure image={details.image} title={block.title} />
+			) : (
+				block.image && (
+					<figure class:list={['ru-block-figure', { 'is-icon': block.image.src.width <= 64 }]}>
+						<Image src={block.image.src} alt={block.image.alt} />
+					</figure>
+				)
 			)}
 		</div>
 	)
@@ -134,6 +147,28 @@ if (block) {
 	.ru-block-head {
 		margin-top: 1.25rem;
 	}
+	/* With a picture: intro text on the left, figure on the right, facts across the full width below. */
+	.ru-block-head.has-figure {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		column-gap: 1.75rem;
+		align-items: start;
+	}
+	.ru-block-head.has-figure > :global(.ru-figure) {
+		grid-column: 2;
+		grid-row: 1;
+	}
+	.ru-block-head.has-figure > .ru-spec {
+		grid-column: 1 / -1;
+	}
+	@media (max-width: 30rem) {
+		.ru-block-head.has-figure {
+			display: block;
+		}
+		.ru-block-head.has-figure > :global(.ru-figure) {
+			margin-top: 1rem;
+		}
+	}
 	.ru-lead {
 		max-width: 60ch;
 		font-size: var(--sl-text-lg);
@@ -142,7 +177,7 @@ if (block) {
 	}
 	.ru-spec {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
 		margin: 1.25rem 0 0;
 		border-top: 1px solid var(--ru-rule-strong);
 		border-bottom: 1px solid var(--ru-rule);

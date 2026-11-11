@@ -7,7 +7,9 @@ block:
   tags: [items, wireless, inventory]
 ---
 
-An Ender Chest gives distant locations access to the same item inventory. Use one at a quarry and another at your base to move the quarry output into your storage system. Look up the installed recipe in EMI.
+An Ender Chest gives distant locations access to the same item inventory. Use one at a quarry and another at your base to move the quarry output into your storage system.
+
+The wool color in the recipe sets all three markers on the new chest.
 
 ## Connect chests
 

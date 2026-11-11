@@ -1,0 +1,87 @@
+{
+  "block": "ic2/extractor",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Treetap",
+          "count": 1
+        },
+        {
+          "name": "Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Treetap",
+          "count": 1
+        },
+        {
+          "name": "Treetap",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Treetap",
+          "count": 1
+        },
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Extractor",
+          "count": 1,
+          "href": "/docs/blocks/ic2/extractor/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    },
+    {
+      "id": "resin",
+      "type": "machine",
+      "title": "Rubber",
+      "station": "Extractor",
+      "ingredients": [
+        {
+          "name": "Sticky Resin",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Rubber",
+          "count": 3
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

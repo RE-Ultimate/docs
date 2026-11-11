@@ -17,6 +17,8 @@ A cell is useful with a [Magmatic Engine](/docs/blocks/thermal-expansion/magmati
 
 Use EMI for the installed crafting steps. This cell belongs to the MJ-era Thermal Expansion 2 power system, not the later RF system.
 
+Make the full Energy Cell Frame in a Liquid Transposer with 1,000 mB of Molten Redstone.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

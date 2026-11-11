@@ -1,0 +1,77 @@
+{
+  "block": "factorization/router",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Ender Pearl",
+          "count": 1
+        },
+        {
+          "name": "Egg",
+          "count": 1
+        },
+        {
+          "name": "Ender Pearl",
+          "count": 1
+        },
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Dark Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Router",
+          "count": 1,
+          "href": "/docs/blocks/factorization/router/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "Both ender pearl positions use the same item in this registered recipe."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Items in its buffer"
+    ],
+    "outputs": [
+      "Items moved to or from connected inventories"
+    ],
+    "tips": [
+      "Choose the target slot and transfer direction in the interface."
+    ]
+  }
+}

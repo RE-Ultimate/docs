@@ -1,0 +1,1702 @@
+{
+  "blocks": {
+    "applied-energistics/me-access-terminal": {
+      "src": "/media/wiki/applied-energistics-me-access-terminal.png",
+      "alt": "ME Access Terminal",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Access_Terminal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-crafting-terminal": {
+      "src": "/media/wiki/applied-energistics-me-crafting-terminal.png",
+      "alt": "ME Crafting Terminal",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Crafting_Terminal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-drive": {
+      "src": "/media/wiki/applied-energistics-me-drive.png",
+      "alt": "ME Drive",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Drive.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-interface": {
+      "src": "/media/wiki/applied-energistics-me-interface.png",
+      "alt": "ME Interface",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Interface.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ender-storage/ender-tank": {
+      "src": "/media/wiki/ender-storage-ender-tank.png",
+      "alt": "Ender Tank",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Ender_Tank.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "factorization/router": {
+      "src": "/media/wiki/factorization-router.png",
+      "alt": "Router",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Router.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/induction-smelter": {
+      "src": "/media/wiki/thermal-expansion-induction-smelter.png",
+      "alt": "Induction Smelter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Induction_Smelter.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/pulverizer": {
+      "src": "/media/wiki/thermal-expansion-pulverizer.png",
+      "alt": "Pulverizer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Pulverizer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-chest": {
+      "src": "/media/wiki/applied-energistics-me-chest.png",
+      "alt": "ME Chest",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Chest_(Applied_Energistics).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "chickenchunks/chunk-loader": {
+      "src": "/media/wiki/chickenchunks-chunk-loader.png",
+      "alt": "Chunk Loader",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Chunk_Loader_(ChickenChunks).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ender-storage/ender-chest": {
+      "src": "/media/wiki/ender-storage-ender-chest.png",
+      "alt": "Ender Chest",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Ender_Chest_(EnderStorage).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "factorization/barrel": {
+      "src": "/media/wiki/factorization-barrel.png",
+      "alt": "Barrel",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Barrel_(Factorization).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/alloy-furnace": {
+      "src": "/media/wiki/redpower2-alloy-furnace.png",
+      "alt": "Alloy Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Alloy_Furnace_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/block-breaker": {
+      "src": "/media/wiki/redpower2-block-breaker.png",
+      "alt": "Block Breaker",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Block_Breaker_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/deployer": {
+      "src": "/media/wiki/redpower2-deployer.png",
+      "alt": "Deployer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Deployer_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/filter": {
+      "src": "/media/wiki/redpower2-filter.png",
+      "alt": "Filter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Filter_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-controller": {
+      "src": "/media/wiki/applied-energistics-me-controller.png",
+      "alt": "ME Controller",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Controller_(Applied_Energistics).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-08",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-export-bus": {
+      "src": "/media/wiki/applied-energistics-me-export-bus.png",
+      "alt": "ME Export Bus",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Export_Bus_(Applied_Energistics).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-08",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-import-bus": {
+      "src": "/media/wiki/applied-energistics-me-import-bus.png",
+      "alt": "ME Import Bus",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Import_Bus_(Applied_Energistics).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-08",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "applied-energistics/me-storage-bus": {
+      "src": "/media/wiki/applied-energistics-me-storage-bus.png",
+      "alt": "ME Storage Bus",
+      "sourceUrl": "https://ftbwiki.org/File:Block_ME_Storage_Bus.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-08",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "buildcraft/combustion-engine": {
+      "src": "/media/wiki/buildcraft-combustion-engine.png",
+      "alt": "Combustion Engine",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Combustion_Engine.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-07",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "buildcraft/pump": {
+      "src": "/media/wiki/buildcraft-pump.png",
+      "alt": "Pump",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Pump_(BuildCraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-11",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "buildcraft/quarry": {
+      "src": "/media/wiki/buildcraft-quarry.png",
+      "alt": "Quarry",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Quarry.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-11",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "buildcraft/wooden-transport-pipe": {
+      "src": "/media/wiki/buildcraft-wooden-transport-pipe.png",
+      "alt": "Wooden Transport Pipe",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Wooden_Transport_Pipe.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-04",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "computercraft/mining-turtle": {
+      "src": "/media/wiki/computercraft-mining-turtle.png",
+      "alt": "Mining Turtle",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Mining_Turtle.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-12",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/alveary": {
+      "src": "/media/wiki/forestry-alveary.png",
+      "alt": "Alveary",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Alveary.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-13",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/apiary": {
+      "src": "/media/wiki/forestry-apiary.png",
+      "alt": "Apiary",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Apiary_(Forestry).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/carpenter": {
+      "src": "/media/wiki/forestry-carpenter.png",
+      "alt": "Carpenter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Carpenter.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/centrifuge": {
+      "src": "/media/wiki/forestry-centrifuge.png",
+      "alt": "Centrifuge",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Centrifuge_(Forestry).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/fermenter": {
+      "src": "/media/wiki/forestry-fermenter.png",
+      "alt": "Fermenter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Fermenter_(Forestry).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/squeezer": {
+      "src": "/media/wiki/forestry-squeezer.png",
+      "alt": "Squeezer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Squeezer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-07",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Squeezer.png"
+    },
+    "forestry/still": {
+      "src": "/media/wiki/forestry-still.png",
+      "alt": "Still",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Still.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "forestry/thermionic-fabricator": {
+      "src": "/media/wiki/forestry-thermionic-fabricator.png",
+      "alt": "Thermionic Fabricator",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Thermionic_Fabricator.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-18",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "gregtech/industrial-blast-furnace": {
+      "src": "/media/wiki/gregtech-industrial-blast-furnace.png",
+      "alt": "Industrial Blast Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Industrial_Blast_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-05-30",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Industrial_Blast_Furnace.png"
+    },
+    "gregtech/industrial-centrifuge": {
+      "src": "/media/wiki/gregtech-industrial-centrifuge.png",
+      "alt": "Industrial Centrifuge",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Industrial_Centrifuge.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-05-31",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "gregtech/industrial-electrolyzer": {
+      "src": "/media/wiki/gregtech-industrial-electrolyzer.png",
+      "alt": "Industrial Electrolyzer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Industrial_Electrolyzer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-05-31",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "gregtech/industrial-grinder": {
+      "src": "/media/wiki/gregtech-industrial-grinder.png",
+      "alt": "Industrial Grinder",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Industrial_Grinder.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-05-30",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Industrial_Grinder.png"
+    },
+    "gregtech/industrial-sawmill": {
+      "src": "/media/wiki/gregtech-industrial-sawmill.png",
+      "alt": "Industrial Sawmill",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Industrial_Sawmill.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-05-30",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Industrial_Sawmill.png"
+    },
+    "ic2/batbox": {
+      "src": "/media/wiki/ic2-batbox.png",
+      "alt": "BatBox",
+      "sourceUrl": "https://ftbwiki.org/File:Block_BatBox.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-20",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/compressor": {
+      "src": "/media/wiki/ic2-compressor.png",
+      "alt": "Compressor",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Compressor_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/electric-furnace": {
+      "src": "/media/wiki/ic2-electric-furnace.png",
+      "alt": "Electric Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Electric_Furnace_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/extractor": {
+      "src": "/media/wiki/ic2-extractor.png",
+      "alt": "Extractor",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Extractor_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/generator": {
+      "src": "/media/wiki/ic2-generator.png",
+      "alt": "Generator",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Generator_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-08",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/macerator": {
+      "src": "/media/wiki/ic2-macerator.png",
+      "alt": "Macerator",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Macerator.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/mfe": {
+      "src": "/media/wiki/ic2-mfe.png",
+      "alt": "MFE",
+      "sourceUrl": "https://ftbwiki.org/File:Block_MFE.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-20",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/mfsu": {
+      "src": "/media/wiki/ic2-mfsu.png",
+      "alt": "MFSU",
+      "sourceUrl": "https://ftbwiki.org/File:Block_MFSU.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-20",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ic2/recycler": {
+      "src": "/media/wiki/ic2-recycler.png",
+      "alt": "Recycler",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Recycler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/auto-enchanter": {
+      "src": "/media/wiki/minefactory-reloaded-auto-enchanter.png",
+      "alt": "Auto-Enchanter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Auto-Enchanter.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/fertilizer": {
+      "src": "/media/wiki/minefactory-reloaded-fertilizer.png",
+      "alt": "Fertilizer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Fertilizer_(MineFactory_Reloaded).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/grinder": {
+      "src": "/media/wiki/minefactory-reloaded-grinder.png",
+      "alt": "Grinder",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Grinder_(MineFactory_Reloaded).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/harvester": {
+      "src": "/media/wiki/minefactory-reloaded-harvester.png",
+      "alt": "Harvester",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Harvester.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/planter": {
+      "src": "/media/wiki/minefactory-reloaded-planter.png",
+      "alt": "Planter",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Planter_(MineFactory_Reloaded).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/rancher": {
+      "src": "/media/wiki/minefactory-reloaded-rancher.png",
+      "alt": "Rancher",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Rancher.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "minefactory-reloaded/sludge-boiler": {
+      "src": "/media/wiki/minefactory-reloaded-sludge-boiler.png",
+      "alt": "Sludge Boiler",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Sludge_Boiler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-03-10",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "railcraft/rolling-machine": {
+      "src": "/media/wiki/railcraft-rolling-machine.png",
+      "alt": "Rolling Machine",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Rolling_Machine_(Railcraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-13",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "railcraft/steam-oven": {
+      "src": "/media/wiki/railcraft-steam-oven.png",
+      "alt": "Steam Oven",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Steam_Oven.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-04-21",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/project-table": {
+      "src": "/media/wiki/redpower2-project-table.png",
+      "alt": "Project Table",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Project_Table_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot; revision 2026-05-09",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/sorting-machine": {
+      "src": "/media/wiki/redpower2-sorting-machine.png",
+      "alt": "Sorting Machine",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Sorting_Machine_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot; revision 2026-05-09",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "redpower2/transposer": {
+      "src": "/media/wiki/redpower2-transposer.png",
+      "alt": "Transposer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Transposer_(RedPower_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot; revision 2026-05-09",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thaumcraft/arcane-worktable": {
+      "src": "/media/wiki/thaumcraft-arcane-worktable.png",
+      "alt": "Arcane Worktable",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Arcane_Worktable_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-11",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thaumcraft/crucible": {
+      "src": "/media/wiki/thaumcraft-crucible.png",
+      "alt": "Crucible",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Crucible.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-11",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Crucible.png"
+    },
+    "thaumcraft/infusion-altar": {
+      "src": "/media/wiki/thaumcraft-infusion-altar.png",
+      "alt": "Infusion Altar",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Infusion_Altar_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-04-05",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/liquid-transposer": {
+      "src": "/media/wiki/thermal-expansion-liquid-transposer.png",
+      "alt": "Liquid Transposer",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Liquid_Transposer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-13",
+      "license": "See source file page",
+      "licenseUrl": "https://ftbwiki.org/File:Block_Liquid_Transposer.png"
+    },
+    "thermal-expansion/liquiduct": {
+      "src": "/media/wiki/thermal-expansion-liquiduct.png",
+      "alt": "Liquiduct",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Liquiduct.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-23",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/magma-crucible": {
+      "src": "/media/wiki/thermal-expansion-magma-crucible.png",
+      "alt": "Magma Crucible",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Magma_Crucible.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-13",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/magmatic-engine": {
+      "src": "/media/wiki/thermal-expansion-magmatic-engine.png",
+      "alt": "Magmatic Engine",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Magmatic_Engine.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot; revision 2026-05-09",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/powered-furnace": {
+      "src": "/media/wiki/thermal-expansion-powered-furnace.png",
+      "alt": "Powered Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Powered_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot; revision 2026-05-09",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thermal-expansion/redstone-energy-cell": {
+      "src": "/media/wiki/thermal-expansion-redstone-energy-cell.png",
+      "alt": "Redstone Energy Cell",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Redstone_Energy_Cell.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0; revision 2013-02-13",
+      "license": "CC BY-NC-SA 3.0; underlying mod/game assets retain their original rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "gregtech/matter-fabricator": {
+      "src": "/media/wiki/extras/gregtech-matter-fabricator.png",
+      "alt": "Matter Fabricator",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Matter_Fabricator_(GregTech_4).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "License not specified on the file page; game and mod assets may have separate rights"
+    },
+    "gregtech/vacuum-freezer": {
+      "src": "/media/wiki/extras/gregtech-vacuum-freezer.png",
+      "alt": "Vacuum Freezer machine component",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Vacuum_Freezer_(GregTech_4_Machine).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "railcraft/blast-furnace": {
+      "src": "/media/wiki/extras/railcraft-blast-furnace.png",
+      "alt": "Railcraft Blast Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Blast_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "License not specified on the file page; game and mod assets may have separate rights"
+    },
+    "railcraft/coke-oven": {
+      "src": "/media/wiki/extras/railcraft-coke-oven.png",
+      "alt": "Railcraft Coke Oven",
+      "sourceUrl": "https://ftbwiki.org/File:Coke_Oven.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "License not specified on the file page; game and mod assets may have separate rights"
+    },
+    "railcraft/steam-boiler": {
+      "src": "/media/wiki/extras/railcraft-steam-boiler.png",
+      "alt": "Solid Fueled Firebox, a Steam Boiler component",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Solid_Fueled_Firebox.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thaumcraft/arcane-bellows": {
+      "src": "/media/wiki/extras/thaumcraft-arcane-bellows.png",
+      "alt": "Arcane Bellows",
+      "sourceUrl": "https://ftbwiki.org/File:Block_Arcane_Bellows_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by Antillar",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thaumcraft/infernal-furnace": {
+      "src": "/media/wiki/extras/thaumcraft-infernal-furnace.png",
+      "alt": "Thaumcraft 3 Infernal Furnace icon",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Infernal_Furnace_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by Antillar",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "thaumcraft/research-table": {
+      "src": "/media/wiki/extras/thaumcraft-research-table.png",
+      "alt": "Thaumcraft 3 Research Table icon",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Research_Table_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by Antillar",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    }
+  },
+  "items": {
+    "Stone": {
+      "src": "/media/wiki/items/item-001.png",
+      "alt": "Stone",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Stone.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Cobblestone": {
+      "src": "/media/wiki/items/item-002.png",
+      "alt": "Cobblestone",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Cobblestone.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Sand": {
+      "src": "/media/wiki/items/item-003.png",
+      "alt": "Sand",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Sand.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Piston": {
+      "src": "/media/wiki/items/item-004.png",
+      "alt": "Piston",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Piston.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Glass": {
+      "src": "/media/wiki/items/item-005.png",
+      "alt": "Glass",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Glass.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Electronic Circuit": {
+      "src": "/media/wiki/items/item-006.png",
+      "alt": "Electronic Circuit",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Electronic_Circuit.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Blaze Rod": {
+      "src": "/media/wiki/items/item-007.png",
+      "alt": "Blaze Rod",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Blaze_Rod.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Gold Ingot": {
+      "src": "/media/wiki/items/item-008.png",
+      "alt": "Gold Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Gold_Ingot.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Iron Ingot": {
+      "src": "/media/wiki/items/item-009.png",
+      "alt": "Iron Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Ingot.png",
+      "credit": "Feed The Beast Wiki, upload by ZL123",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Redstone": {
+      "src": "/media/wiki/items/item-010.png",
+      "alt": "Redstone",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Redstone.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Bricks": {
+      "src": "/media/wiki/items/item-011.png",
+      "alt": "Bricks",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Bricks.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Plastic Sheets": {
+      "src": "/media/wiki/items/item-012.png",
+      "alt": "Plastic Sheets",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Plastic_Sheets.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Factory Machine Block": {
+      "src": "/media/wiki/items/item-013.png",
+      "alt": "Factory Machine Block",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Factory_Machine_Block.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Chest": {
+      "src": "/media/wiki/items/item-014.png",
+      "alt": "Chest",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Chest.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Flint": {
+      "src": "/media/wiki/items/item-015.png",
+      "alt": "Flint",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Flint.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Treetap": {
+      "src": "/media/wiki/items/item-016.png",
+      "alt": "Treetap",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Treetap.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Wood Planks": {
+      "src": "/media/wiki/items/item-017.png",
+      "alt": "Wood Planks",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Wood_Planks.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Ender Pearl": {
+      "src": "/media/wiki/items/item-018.png",
+      "alt": "Ender Pearl",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Ender_Pearl.png",
+      "credit": "Feed The Beast Wiki, upload by ZL123",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Dirt": {
+      "src": "/media/wiki/items/item-019.png",
+      "alt": "Dirt",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Dirt.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Redstone Reception Coil": {
+      "src": "/media/wiki/items/item-020.png",
+      "alt": "Redstone Reception Coil",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Redstone_Reception_Coil.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Cable": {
+      "src": "/media/wiki/items/item-021.png",
+      "alt": "ME Cable",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Cable.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Crafting Table": {
+      "src": "/media/wiki/items/item-022.png",
+      "alt": "Crafting Table",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Crafting_Table.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Obsidian": {
+      "src": "/media/wiki/items/item-023.png",
+      "alt": "Obsidian",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Obsidian.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Bucket": {
+      "src": "/media/wiki/items/item-024.png",
+      "alt": "Bucket",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Bucket.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Furnace": {
+      "src": "/media/wiki/items/item-025.png",
+      "alt": "Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Book": {
+      "src": "/media/wiki/items/item-026.png",
+      "alt": "Book",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Book.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Brick": {
+      "src": "/media/wiki/items/item-027.png",
+      "alt": "Brick",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Brick.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Red-Doped Wafer": {
+      "src": "/media/wiki/items/item-028.png",
+      "alt": "Red-Doped Wafer",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Red-Doped_Wafer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Soul Sand": {
+      "src": "/media/wiki/items/item-029.png",
+      "alt": "Soul Sand",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Soul_Sand.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Conversion Matrix": {
+      "src": "/media/wiki/items/item-030.png",
+      "alt": "Conversion Matrix",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Conversion_Matrix.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Interface": {
+      "src": "/media/wiki/items/item-031.png",
+      "alt": "ME Interface",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Interface.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Shears": {
+      "src": "/media/wiki/items/item-032.png",
+      "alt": "Shears",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Shears.png",
+      "credit": "Feed The Beast Wiki, upload by Fooman",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Diamond": {
+      "src": "/media/wiki/items/item-033.png",
+      "alt": "Diamond",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Diamond.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Cactus": {
+      "src": "/media/wiki/items/item-034.png",
+      "alt": "Cactus",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Cactus.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Leather": {
+      "src": "/media/wiki/items/item-035.png",
+      "alt": "Leather",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Leather.png",
+      "credit": "Feed The Beast Wiki, upload by ZL123",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Induction Furnace": {
+      "src": "/media/wiki/items/item-036.png",
+      "alt": "Induction Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Induction_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Energy Cell Frame (Full)": {
+      "src": "/media/wiki/items/item-037.png",
+      "alt": "Energy Cell Frame (Full)",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Energy_Cell_Frame_(Full).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "MFE": {
+      "src": "/media/wiki/items/item-038.png",
+      "alt": "MFE",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_MFE.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Magma Cream": {
+      "src": "/media/wiki/items/item-039.png",
+      "alt": "Magma Cream",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Magma_Cream.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Flower Pot": {
+      "src": "/media/wiki/items/item-040.png",
+      "alt": "Flower Pot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Flower_Pot.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "ME Basic Processor": {
+      "src": "/media/wiki/items/item-041.png",
+      "alt": "ME Basic Processor",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Basic_Processor.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Storage Cell": {
+      "src": "/media/wiki/items/item-042.png",
+      "alt": "Storage Cell",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Storage_Cell.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Sticky Resin": {
+      "src": "/media/wiki/items/item-043.png",
+      "alt": "Sticky Resin",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Sticky_Resin.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Advanced Alloy": {
+      "src": "/media/wiki/items/item-044.png",
+      "alt": "Advanced Alloy",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Advanced_Alloy.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Macerator": {
+      "src": "/media/wiki/items/item-045.png",
+      "alt": "Macerator",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Macerator.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Glowstone Dust": {
+      "src": "/media/wiki/items/item-046.png",
+      "alt": "Glowstone Dust",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Glowstone_Dust.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "White Wool": {
+      "src": "/media/wiki/items/item-047.png",
+      "alt": "White Wool",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_White_Wool.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Raw Carbon Mesh": {
+      "src": "/media/wiki/items/item-048.png",
+      "alt": "Raw Carbon Mesh",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Raw_Carbon_Mesh.png",
+      "credit": "Feed The Beast Wiki, upload by Jadre",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Recycler": {
+      "src": "/media/wiki/items/item-049.png",
+      "alt": "Recycler",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Recycler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Cauldron": {
+      "src": "/media/wiki/items/item-050.png",
+      "alt": "Cauldron",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Cauldron.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "ME Access Terminal": {
+      "src": "/media/wiki/items/item-051.png",
+      "alt": "ME Access Terminal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Access_Terminal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Steam Oven": {
+      "src": "/media/wiki/items/item-052.png",
+      "alt": "Steam Oven",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Steam_Oven.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Blaze Powder": {
+      "src": "/media/wiki/items/item-053.png",
+      "alt": "Blaze Powder",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Blaze_Powder.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Insulated Copper Cable": {
+      "src": "/media/wiki/items/item-054.png",
+      "alt": "Insulated Copper Cable",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Insulated_Copper_Cable.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "BatBox": {
+      "src": "/media/wiki/items/item-055.png",
+      "alt": "BatBox",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_BatBox.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Reinforced Glass": {
+      "src": "/media/wiki/items/item-056.png",
+      "alt": "Reinforced Glass",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Reinforced_Glass.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Electrolyzer": {
+      "src": "/media/wiki/items/item-057.png",
+      "alt": "Electrolyzer",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Electrolyzer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Clay": {
+      "src": "/media/wiki/items/item-058.png",
+      "alt": "Clay",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Clay.png",
+      "credit": "Feed The Beast Wiki, upload by Artsja",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Electrolyzed Water Cell": {
+      "src": "/media/wiki/items/item-059.png",
+      "alt": "Electrolyzed Water Cell",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Electrolyzed_Water_Cell.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "10k Coolant Cell": {
+      "src": "/media/wiki/items/item-060.png",
+      "alt": "10k Coolant Cell",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_10k_Coolant_Cell.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "MFSU": {
+      "src": "/media/wiki/items/item-061.png",
+      "alt": "MFSU",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_MFSU.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Slimeball": {
+      "src": "/media/wiki/items/item-062.png",
+      "alt": "Slimeball",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Slimeball.png",
+      "credit": "Feed The Beast Wiki, upload by Embri",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Gravel": {
+      "src": "/media/wiki/items/item-063.png",
+      "alt": "Gravel",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Gravel.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Snowball": {
+      "src": "/media/wiki/items/item-064.png",
+      "alt": "Snowball",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Snowball.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Combustion Engine": {
+      "src": "/media/wiki/items/item-065.png",
+      "alt": "Combustion Engine",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Combustion_Engine.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Pulverizer": {
+      "src": "/media/wiki/items/item-066.png",
+      "alt": "Pulverizer",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Pulverizer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Magma Crucible": {
+      "src": "/media/wiki/items/item-067.png",
+      "alt": "Magma Crucible",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Magma_Crucible.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Energy Cell Frame (Empty)": {
+      "src": "/media/wiki/items/item-068.png",
+      "alt": "Energy Cell Frame (Empty)",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Energy_Cell_Frame_(Empty).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Hardened Glass": {
+      "src": "/media/wiki/items/item-069.png",
+      "alt": "Hardened Glass",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Hardened_Glass.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Redstone Conductance Coil": {
+      "src": "/media/wiki/items/item-070.png",
+      "alt": "Redstone Conductance Coil",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Redstone_Conductance_Coil.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Redstone Energy Cell": {
+      "src": "/media/wiki/items/item-071.png",
+      "alt": "Redstone Energy Cell",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Redstone_Energy_Cell.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Powered Furnace": {
+      "src": "/media/wiki/items/item-072.png",
+      "alt": "Powered Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Powered_Furnace.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Redstone Transmission Coil": {
+      "src": "/media/wiki/items/item-073.png",
+      "alt": "Redstone Transmission Coil",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Redstone_Transmission_Coil.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Induction Smelter": {
+      "src": "/media/wiki/items/item-074.png",
+      "alt": "Induction Smelter",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Induction_Smelter.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Magmatic Engine": {
+      "src": "/media/wiki/items/item-075.png",
+      "alt": "Magmatic Engine",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Magmatic_Engine.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Liquiduct": {
+      "src": "/media/wiki/items/item-076.png",
+      "alt": "Liquiduct",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Liquiduct.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Rich Slag": {
+      "src": "/media/wiki/items/item-077.png",
+      "alt": "Rich Slag",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Rich_Slag.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Mining Well": {
+      "src": "/media/wiki/items/item-078.png",
+      "alt": "Mining Well",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Mining_Well.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Diamond Drill": {
+      "src": "/media/wiki/items/item-079.png",
+      "alt": "Diamond Drill",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Diamond_Drill.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Quarry": {
+      "src": "/media/wiki/items/item-080.png",
+      "alt": "Quarry",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Quarry.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Glass Bottle": {
+      "src": "/media/wiki/items/item-081.png",
+      "alt": "Glass Bottle",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Glass_Bottle.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Egg": {
+      "src": "/media/wiki/items/item-082.png",
+      "alt": "Egg",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Egg.png",
+      "credit": "Feed The Beast Wiki, upload by TheBeekeeper",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Router": {
+      "src": "/media/wiki/items/item-083.png",
+      "alt": "Router",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Router.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Harvester": {
+      "src": "/media/wiki/items/item-084.png",
+      "alt": "Harvester",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Harvester.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Rancher": {
+      "src": "/media/wiki/items/item-085.png",
+      "alt": "Rancher",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Rancher.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Sludge Boiler": {
+      "src": "/media/wiki/items/item-086.png",
+      "alt": "Sludge Boiler",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Sludge_Boiler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Auto-Enchanter": {
+      "src": "/media/wiki/items/item-087.png",
+      "alt": "Auto-Enchanter",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Auto-Enchanter.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Golden Axe": {
+      "src": "/media/wiki/items/item-088.png",
+      "alt": "Golden Axe",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Golden_Axe.png",
+      "credit": "Feed The Beast Wiki, upload by Fooman",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Golden Sword": {
+      "src": "/media/wiki/items/item-089.png",
+      "alt": "Golden Sword",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Golden_Sword.png",
+      "credit": "Feed The Beast Wiki, upload by Fooman",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Sticky Piston": {
+      "src": "/media/wiki/items/item-090.png",
+      "alt": "Sticky Piston",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Sticky_Piston.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Iron Pickaxe": {
+      "src": "/media/wiki/items/item-091.png",
+      "alt": "Iron Pickaxe",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Pickaxe.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Ender Tank": {
+      "src": "/media/wiki/items/item-092.png",
+      "alt": "Ender Tank",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Ender_Tank.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Advanced Processor": {
+      "src": "/media/wiki/items/item-093.png",
+      "alt": "ME Advanced Processor",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Advanced_Processor.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Crafting Terminal": {
+      "src": "/media/wiki/items/item-094.png",
+      "alt": "ME Crafting Terminal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Crafting_Terminal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Storage Bus": {
+      "src": "/media/wiki/items/item-095.png",
+      "alt": "ME Storage Bus",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Storage_Bus.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "ME Drive": {
+      "src": "/media/wiki/items/item-096.png",
+      "alt": "ME Drive",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_ME_Drive.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Coal": {
+      "src": "/media/wiki/items/item-097.png",
+      "alt": "Coal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Coal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Diamond Pickaxe": {
+      "src": "/media/wiki/items/item-098.png",
+      "alt": "Diamond Pickaxe",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Diamond_Pickaxe.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Computer": {
+      "src": "/media/wiki/items/item-099.png",
+      "alt": "Computer",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Computer.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Alveary": {
+      "src": "/media/wiki/items/item-100.png",
+      "alt": "Alveary",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Alveary.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Copper Electron Tube": {
+      "src": "/media/wiki/items/item-101.png",
+      "alt": "Copper Electron Tube",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Copper_Electron_Tube.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Charcoal": {
+      "src": "/media/wiki/items/item-102.png",
+      "alt": "Charcoal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Charcoal.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Mining Turtle": {
+      "src": "/media/wiki/items/item-103.png",
+      "alt": "Mining Turtle",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Mining_Turtle.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Fruit Juice": {
+      "src": "/media/wiki/items/item-104.png",
+      "alt": "Fruit Juice",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Fruit_Juice.png",
+      "credit": "Feed The Beast Wiki, upload by Artsja",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Apple": {
+      "src": "/media/wiki/items/item-105.png",
+      "alt": "Apple",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Apple.png",
+      "credit": "Feed The Beast Wiki, upload by MadCrayolaz",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Wooden Planks": {
+      "src": "/media/wiki/items/item-017.png",
+      "alt": "Wooden Planks",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Wood_Planks.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Copper Ingot": {
+      "src": "/media/wiki/items/alias-001.png",
+      "alt": "Copper Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Copper_Ingot_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Advanced Circuit": {
+      "src": "/media/wiki/items/alias-002.png",
+      "alt": "Advanced Circuit",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Advanced_Circuit_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by MadCrayolaz",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Steel Plate": {
+      "src": "/media/wiki/items/alias-003.png",
+      "alt": "Steel Plate",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Steel_Plate_(Railcraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Wood Log": {
+      "src": "/media/wiki/items/alias-004.png",
+      "alt": "Oak log, a wood log",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Oak_Wood.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Scented Paneling": {
+      "src": "/media/wiki/items/alias-005.png",
+      "alt": "Scented Paneling",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Scented_Paneling.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Nether Brick": {
+      "src": "/media/wiki/items/alias-006.png",
+      "alt": "Nether Brick",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Nether_Brick_(Item).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Tin Ingot": {
+      "src": "/media/wiki/items/alias-007.png",
+      "alt": "Tin Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Tin_Ingot_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Lapotron Crystal": {
+      "src": "/media/wiki/items/alias-008.png",
+      "alt": "Lapotron Crystal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Lapotron_Crystal_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Bronze Ingot": {
+      "src": "/media/wiki/items/alias-009.png",
+      "alt": "Bronze Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Bronze_Ingot_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Sturdy Casing": {
+      "src": "/media/wiki/items/alias-010.png",
+      "alt": "Sturdy Casing",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Sturdy_Casing.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Refined Iron Ingot": {
+      "src": "/media/wiki/items/alias-011.png",
+      "alt": "Refined Iron Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Refined_Iron.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Machine Frame": {
+      "src": "/media/wiki/items/alias-012.png",
+      "alt": "Machine Frame",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Machine_Frame_(Thermal_Expansion).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Iron Gear": {
+      "src": "/media/wiki/items/alias-013.png",
+      "alt": "Iron Gear",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Gear_(BuildCraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "RE-Battery": {
+      "src": "/media/wiki/items/alias-014.png",
+      "alt": "RE-Battery",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_RE_Battery.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Machine Block": {
+      "src": "/media/wiki/items/alias-015.png",
+      "alt": "Machine Block",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Basic_Machine_Casing.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "2x Insulated Gold Cable": {
+      "src": "/media/wiki/items/alias-016.png",
+      "alt": "2x Insulated Gold Cable",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_2xIns._Gold_Cable.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Energy Crystal": {
+      "src": "/media/wiki/items/alias-017.png",
+      "alt": "Energy Crystal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Energy_Crystal_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Quartz Crystal": {
+      "src": "/media/wiki/items/alias-018.png",
+      "alt": "Quartz Crystal",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Certus_Quartz_(Applied_Energistics).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Bronze Gear": {
+      "src": "/media/wiki/items/alias-019.png",
+      "alt": "Bronze Gear",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Bronze_Gear_(Forestry).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Wooden Slab": {
+      "src": "/media/wiki/items/alias-020.png",
+      "alt": "Oak slab, a wooden slab",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Oak_Slab.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Wood Slab": {
+      "src": "/media/wiki/items/alias-021.png",
+      "alt": "Oak slab, a wooden slab",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Oak_Slab.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Iron Ore": {
+      "src": "/media/wiki/items/alias-022.png",
+      "alt": "Iron Ore",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Ore_(Minecraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Iron Bars": {
+      "src": "/media/wiki/items/alias-023.png",
+      "alt": "Iron Bars",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Bars.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "Copyright Mojang; file page identifies this as a Minecraft asset"
+    },
+    "Iron Furnace": {
+      "src": "/media/wiki/items/alias-024.png",
+      "alt": "Iron Furnace",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Furnace_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Gold Gear": {
+      "src": "/media/wiki/items/alias-025.png",
+      "alt": "Gold Gear",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Gold_Gear_(BuildCraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Diamond Gear": {
+      "src": "/media/wiki/items/alias-026.png",
+      "alt": "Diamond Gear",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Diamond_Gear_(BuildCraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Rubber": {
+      "src": "/media/wiki/items/alias-027.png",
+      "alt": "Rubber",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Rubber_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Mixed Metal Ingot": {
+      "src": "/media/wiki/items/alias-028.png",
+      "alt": "Mixed Metal Ingot",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Mixed_Metal_Ingot_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Carbon Plate": {
+      "src": "/media/wiki/items/alias-029.png",
+      "alt": "Carbon Plate",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Carbon_Plate_(IndustrialCraft_2).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Arcane Stone Block": {
+      "src": "/media/wiki/items/alias-030.png",
+      "alt": "Arcane Stone Block",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Arcane_Stone_Block_(Thaumcraft_3).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Arcane Wood Block": {
+      "src": "/media/wiki/items/alias-031.png",
+      "alt": "Arcane Wood Block",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Arcane_Wood_Block.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Beeswax": {
+      "src": "/media/wiki/items/alias-032.png",
+      "alt": "Beeswax",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Beeswax_(Forestry).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Iron Plate": {
+      "src": "/media/wiki/items/alias-033.png",
+      "alt": "Iron Plate",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Iron_Plate_(Railcraft).png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "High Pressure Boiler Tank": {
+      "src": "/media/wiki/items/alias-034.png",
+      "alt": "High Pressure Boiler Tank",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_High_Pressure_Boiler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Low Pressure Boiler Tank": {
+      "src": "/media/wiki/items/alias-035.png",
+      "alt": "Low Pressure Boiler Tank",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Low_Pressure_Boiler.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Solid Fueled Firebox": {
+      "src": "/media/wiki/items/alias-036.png",
+      "alt": "Solid Fueled Firebox",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Solid_Fueled_Firebox.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0Bot",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    },
+    "Impregnated Casing": {
+      "src": "/media/wiki/items/alias-037.png",
+      "alt": "Impregnated Casing",
+      "sourceUrl": "https://ftbwiki.org/File:Grid_Impregnated_Casing.png",
+      "credit": "Feed The Beast Wiki, upload by RZR0",
+      "license": "CC BY-NC-SA 3.0 as stated on the file page; underlying game assets may have separate rights",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    }
+  }
+}

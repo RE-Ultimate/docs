@@ -7,7 +7,7 @@ block:
   tags: [farming, growth]
 ---
 
-The Fertilizer helps a farm grow faster. It consumes a registered fertilizer when it successfully treats a supported plant. Check EMI for its recipe and the available fertilizer items.
+The Fertilizer helps a farm grow faster. It consumes a registered fertilizer when it successfully treats a supported plant.
 
 ## Setup
 

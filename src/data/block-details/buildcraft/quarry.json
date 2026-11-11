@@ -1,0 +1,80 @@
+{
+  "block": "buildcraft/quarry",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Gear",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Iron Gear",
+          "count": 1
+        },
+        {
+          "name": "Gold Gear",
+          "count": 1
+        },
+        {
+          "name": "Iron Gear",
+          "count": 1
+        },
+        {
+          "name": "Gold Gear",
+          "count": 1
+        },
+        {
+          "name": "Diamond Gear",
+          "count": 1
+        },
+        {
+          "name": "Diamond Drill",
+          "count": 1
+        },
+        {
+          "name": "Diamond Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Quarry",
+          "count": 1,
+          "href": "/docs/blocks/buildcraft/quarry/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "MJ",
+    "inputs": [
+      "MJ from a connected engine or power pipe"
+    ],
+    "outputs": [
+      "Mined items to adjacent inventory or item pipe"
+    ],
+    "tips": [
+      "Use landmarks to set a boundary before placing the quarry."
+    ]
+  },
+  "recipeNote": "GregTech replaces the default BuildCraft recipe. The circuit slot accepts the craftingCircuitTier04 ore-dictionary category."
+}

@@ -1,0 +1,61 @@
+{
+  "block": "factorization/barrel",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        {
+          "name": "Wood Slab",
+          "count": 1
+        },
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        {
+          "name": "Wood Log",
+          "count": 1
+        },
+        {
+          "name": "Wood Log",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Barrel",
+          "count": 1,
+          "href": "/docs/blocks/factorization/barrel/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "recipeNote": "The recipe uses registered wood logs and wood slabs."
+}

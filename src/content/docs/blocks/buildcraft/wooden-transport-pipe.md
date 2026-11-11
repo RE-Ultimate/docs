@@ -17,6 +17,8 @@ Connect the far end to a compatible inventory and make sure it has room. Test th
 
 Machines with sided inventories may expose different slots on different faces. If the pipe cannot extract the expected item, check the machine's output face and its side configuration. See EMI for the installed pipe recipe.
 
+One crafting operation makes eight pipes from two wooden planks and one glass.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

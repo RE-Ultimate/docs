@@ -1,0 +1,73 @@
+{
+  "block": "thermal-expansion/magmatic-engine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Invar Ingot",
+          "count": 1
+        },
+        {
+          "name": "Invar Ingot",
+          "count": 1
+        },
+        {
+          "name": "Invar Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Redstone Transmission Coil",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Invar Gear",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Invar Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Magmatic Engine",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/magmatic-engine/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Lava fuel",
+    "inputs": [
+      "Lava"
+    ],
+    "outputs": [
+      "MJ"
+    ],
+    "tips": [
+      "Supply lava and set the redstone control in the interface."
+    ]
+  }
+}

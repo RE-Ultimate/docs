@@ -15,7 +15,7 @@ Attach the bus to the inventory and connect it with ME Cable to a powered [ME Co
 
 The bus has configuration for allowed items and access. Use it to control what the network puts in the external inventory. A fuzzy variant supports broader item matching. Check those settings before relying on a particular item going into the chest.
 
-Unlike an [ME Import Bus](/docs/blocks/applied-energistics/me-import-bus/), the storage bus does not simply empty the inventory into cells. Removing or disconnecting the external inventory also removes that storage from the network view. If an item is missing, check the attachment, inventory side, access settings, and network power. Search EMI for the installed recipe.
+Unlike an [ME Import Bus](/docs/blocks/applied-energistics/me-import-bus/), the storage bus does not simply empty the inventory into cells. Removing or disconnecting the external inventory also removes that storage from the network view. If an item is missing, check the attachment, inventory side, access settings, and network power.
 
 ## Sources
 

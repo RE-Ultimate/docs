@@ -7,7 +7,7 @@ block:
   tags: [items, automation]
 ---
 
-The Factorization Router moves items between its buffer and a connected group of inventories. It can simplify a wall of machines or Barrels when each needs the same item operation. Check EMI for the installed recipe.
+The Factorization Router moves items between its buffer and a connected group of inventories. It can simplify a wall of machines or Barrels when each needs the same item operation.
 
 ## Setup
 

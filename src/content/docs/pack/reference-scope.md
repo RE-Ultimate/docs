@@ -32,7 +32,13 @@ The [pack manifests](https://github.com/RE-Ultimate/Re-Ultimate/tree/main/mods) 
 
 The entries use the installed legacy implementations, bundled in-game guides, pack configuration, and relevant archived documentation. The Sources section on each page identifies the applicable version and public references. Behavior was checked from these sources; it has not all been tested in the game.
 
-Where a construction layout was verified, the page gives that layout. Some Thaumcraft structures instead direct you to their construction diagram in the installed Thaumonomicon. Unverified recipe grids, rates, ranges, and numeric block IDs are omitted.
+Recipe diagrams identify their sources. "Verified in pack code" means the pinned implementation or pack configuration was inspected. "Legacy reference" means the recipe comes from documentation for the old mod version. These checks do not mean that every recipe was tested in the game.
+
+Where a construction layout was verified, the page gives that layout. Use the installed Thaumonomicon for research requirements and its construction diagrams. Unverified recipe grids, rates, ranges, and numeric block IDs are omitted.
+
+Recipe controls change the batch count. Reusable tools keep their original count, and chance outputs remain possible results. Processing examples show what a machine processes, separately from the recipe used to build it.
+
+Images link to their file pages and per-page credits. They retain their source licenses and are not covered by this site's MIT license. Some images show a multiblock component; their captions identify it.
 
 ## Avoid newer-version instructions
 

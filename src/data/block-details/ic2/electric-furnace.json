@@ -1,0 +1,52 @@
+{
+  "block": "ic2/electric-furnace",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Iron Furnace",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Electric Furnace",
+          "count": 1,
+          "href": "/docs/blocks/ic2/electric-furnace/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

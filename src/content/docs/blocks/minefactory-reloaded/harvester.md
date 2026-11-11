@@ -7,7 +7,7 @@ block:
   tags: [farming, crops, sludge]
 ---
 
-The Harvester collects supported crops and trees. Use it with a [Planter](/docs/blocks/minefactory-reloaded/planter/) for a farm that replaces what it harvests. Check EMI for the installed recipe.
+The Harvester collects supported crops and trees. Use it with a [Planter](/docs/blocks/minefactory-reloaded/planter/) for a farm that replaces what it harvests.
 
 ## Setup
 

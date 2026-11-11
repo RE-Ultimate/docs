@@ -13,6 +13,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"test:e2e": "playwright test",
+		"test:unit": "node --test \"src/lib/**/*.test.ts\"",
 		"screenshots": "CAPTURE=1 playwright test tests/capture.spec.ts"
 	},
 	"dependencies": {
@@ -25,6 +26,7 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.12",
 		"@playwright/test": "1.65.0",
+		"@types/node": "24.19.2",
 		"starlight-links-validator": "0.27.0",
 		"typescript": "6.0.3"
 	}

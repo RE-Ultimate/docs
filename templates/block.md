@@ -13,7 +13,8 @@ block:
   # registryId: "<id>:<meta>"
   # Optional. Short lowercase terms that help search and filtering.
   tags: []
-  # Optional. Put the picture next to this file. Use a 16x16 or 32x32 PNG texture or a game screenshot.
+  # Optional. Recipes, machine facts and credited pictures come from src/data (see templates/block-details.json
+  # and the authoring guide). This image is only a fallback when wiki-media.json has no entry for the block.
   # image:
   #   src: ./block-name.png
   #   alt: What the picture shows

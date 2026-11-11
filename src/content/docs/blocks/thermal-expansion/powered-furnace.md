@@ -17,6 +17,8 @@ For automation, assign the input and output faces in the machine's side configur
 
 This is the Thermal Expansion 2 MJ machine. Instructions for later RF versions do not describe its power system.
 
+For example, one cactus becomes one cactus green.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

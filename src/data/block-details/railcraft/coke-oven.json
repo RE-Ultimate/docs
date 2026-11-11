@@ -1,0 +1,162 @@
+{
+  "block": "railcraft/coke-oven",
+  "recipes": [
+    {
+      "id": "oven-block",
+      "type": "shaped",
+      "title": "Coke Oven Block",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Sand",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Sand",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Sand",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Sand",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Sand",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Coke Oven",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Coke Oven Structure",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Coke Oven",
+          "count": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Formed Coke Oven",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ],
+      "notes": [
+        "Build a hollow 3 × 3 × 3 cube."
+      ]
+    },
+    {
+      "id": "coal-coke",
+      "type": "machine",
+      "title": "Coal Coke",
+      "station": "Coke Oven",
+      "ingredients": [
+        {
+          "name": "Coal",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Coal Coke",
+          "count": 1
+        },
+        {
+          "name": "Creosote Oil",
+          "count": 500,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "charcoal",
+      "type": "machine",
+      "title": "Charcoal",
+      "station": "Coke Oven",
+      "ingredients": [
+        {
+          "name": "Wood Log",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Charcoal",
+          "count": 1
+        },
+        {
+          "name": "Creosote Oil",
+          "count": 250,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Coal or logs"
+    ],
+    "outputs": [
+      "Coal coke or charcoal",
+      "Creosote oil"
+    ],
+    "tips": [
+      "Clear both the item output and the liquid tank."
+    ]
+  }
+}

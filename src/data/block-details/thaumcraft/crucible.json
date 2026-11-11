@@ -1,0 +1,51 @@
+{
+  "block": "thaumcraft/crucible",
+  "recipes": [
+    {
+      "id": "construction",
+      "type": "construction",
+      "title": "Crucible",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Cauldron",
+          "count": 1
+        },
+        {
+          "name": "Wand",
+          "count": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Crucible",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Use a wand on a placed cauldron."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Water",
+      "Heat",
+      "Items containing aspects"
+    ],
+    "outputs": [
+      "Aspects for alchemy and infusion"
+    ],
+    "tips": [
+      "Extra aspects can escape as Flux."
+    ]
+  }
+}

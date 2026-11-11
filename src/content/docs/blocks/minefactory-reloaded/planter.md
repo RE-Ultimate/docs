@@ -7,7 +7,7 @@ block:
   tags: [farming, crops]
 ---
 
-The Planter automates planting when you supply compatible seeds or saplings. Pair it with a [Harvester](/docs/blocks/minefactory-reloaded/harvester/) to make a renewable farm. Check EMI for the installed recipe.
+The Planter automates planting when you supply compatible seeds or saplings. Pair it with a [Harvester](/docs/blocks/minefactory-reloaded/harvester/) to make a renewable farm.
 
 ## Setup
 

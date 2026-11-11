@@ -1,0 +1,66 @@
+{
+  "block": "ender-storage/ender-chest",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Blaze Rod",
+          "count": 1
+        },
+        {
+          "name": "White Wool",
+          "count": 1
+        },
+        {
+          "name": "Blaze Rod",
+          "count": 1
+        },
+        {
+          "name": "Obsidian",
+          "count": 1
+        },
+        {
+          "name": "Chest",
+          "count": 1
+        },
+        {
+          "name": "Obsidian",
+          "count": 1
+        },
+        {
+          "name": "Blaze Rod",
+          "count": 1
+        },
+        {
+          "name": "Ender Pearl",
+          "count": 1
+        },
+        {
+          "name": "Blaze Rod",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Ender Chest",
+          "count": 1,
+          "href": "/docs/blocks/ender-storage/ender-chest/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack artifact",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/ender-storage.pw.toml"
+        }
+      ],
+      "notes": [
+        "Any single wool color can be used; the three initial frequency markers match that color."
+      ]
+    }
+  ]
+}

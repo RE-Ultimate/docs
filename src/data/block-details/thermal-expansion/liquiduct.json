@@ -1,0 +1,49 @@
+{
+  "block": "thermal-expansion/liquiduct",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Hardened Glass",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Liquiduct",
+          "count": 4,
+          "href": "/docs/blocks/thermal-expansion/liquiduct/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ]
+}

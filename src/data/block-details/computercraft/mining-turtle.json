@@ -1,0 +1,102 @@
+{
+  "block": "computercraft/mining-turtle",
+  "recipes": [
+    {
+      "id": "turtle",
+      "type": "shaped",
+      "title": "Craft a Turtle",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Computer",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Chest",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Turtle",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack artifact",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/computercraft.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        null,
+        null,
+        {
+          "name": "Diamond Pickaxe",
+          "count": 1
+        },
+        {
+          "name": "Turtle",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Mining Turtle",
+          "count": 1,
+          "href": "/docs/blocks/computercraft/mining-turtle/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack artifact",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/computercraft.pw.toml"
+        }
+      ],
+      "notes": [
+        "Place the pickaxe beside the turtle in the same row."
+      ]
+    }
+  ]
+}

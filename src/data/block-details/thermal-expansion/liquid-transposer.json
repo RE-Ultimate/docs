@@ -1,0 +1,122 @@
+{
+  "block": "thermal-expansion/liquid-transposer",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Bucket",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Reception Coil",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Liquid Transposer",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/liquid-transposer/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "energy-frame",
+      "type": "machine",
+      "title": "Fill an energy cell frame",
+      "station": "Fill an energy cell frame",
+      "ingredients": [
+        {
+          "name": "Energy Cell Frame (Empty)",
+          "count": 1
+        },
+        {
+          "name": "Molten Redstone",
+          "count": 1000,
+          "unit": "mB"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Energy Cell Frame (Full)",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Configured item input face",
+        "role": "Insert containers or other recipe items."
+      },
+      {
+        "face": "Configured item output face",
+        "role": "Extract processed items."
+      },
+      {
+        "face": "Configured liquid face",
+        "role": "Supply or extract liquid as required by the selected mode."
+      }
+    ],
+    "power": "MJ",
+    "inputs": [
+      "Container and matching liquid in fill mode",
+      "Filled container in extract mode"
+    ],
+    "outputs": [
+      "Recipe products"
+    ],
+    "tips": [
+      "Use the side configuration tab to set item and liquid connections."
+    ]
+  }
+}

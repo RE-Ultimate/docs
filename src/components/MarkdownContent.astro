@@ -1,0 +1,61 @@
+---
+// Article body. Wraps Starlight's own component. On block pages it adds the data-driven sections
+// (src/data/block-details) around the Markdown, so no page needs MDX or imports:
+//   intro paragraph -> Crafting / Construction / Processing examples -> rest of the article
+//   -> Machine summary (before "Sources") -> Sources -> Image credits
+// src/routeData.ts adds the same sections to the table of contents.
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
+import { findBlock } from '../lib/blocks';
+import { getBlockDetails, planSections } from '../lib/block-details';
+import RecipeSection from './block/RecipeSection.astro';
+import MachineSummary from './block/MachineSummary.astro';
+import ImageCredits from './block/ImageCredits.astro';
+
+const block = await findBlock(Astro.locals.starlightRoute.entry.id);
+const view = block ? await getBlockDetails(block) : undefined;
+const plan = planSections(view);
+const hasExtras = plan.lead.length > 0 || plan.machine !== undefined || plan.credits !== undefined;
+
+// Split the rendered article at its first H2 and at its "Sources" H2.
+let intro = '';
+let middle = '';
+let rest = '';
+if (hasExtras) {
+	const html = await Astro.slots.render('default');
+	const headings = [...html.matchAll(/<div class="sl-heading-wrapper level-h2"[^>]*><h2 id="([^"]*)"/g)];
+	const first = headings[0]?.index ?? html.length;
+	const sources = Math.max(first, headings.find((heading) => heading[1] === 'sources')?.index ?? html.length);
+	intro = html.slice(0, first);
+	middle = html.slice(first, sources);
+	rest = html.slice(sources);
+}
+const sections = view?.sections ?? [];
+const showNoteSection = plan.lead.some((entry) => entry.id === 'recipe');
+---
+
+{
+	hasExtras && view ? (
+		<Default>
+			<Fragment set:html={intro} />
+			{showNoteSection && (
+				<section class="ru-recipes not-content">
+					<AnchorHeading level={2} id="recipe">Recipe</AnchorHeading>
+					<p class="ru-section-note">{view.recipeNote}</p>
+					<p class="ru-section-note ru-aside">No verified material list is recorded for this block.</p>
+				</section>
+			)}
+			{sections.map((section, index) => (
+				<RecipeSection section={section} note={index === 0 && !showNoteSection ? view.recipeNote : undefined} />
+			))}
+			<Fragment set:html={middle} />
+			{plan.machine && view.machine && <MachineSummary machine={view.machine} />}
+			<Fragment set:html={rest} />
+			{plan.credits && <ImageCredits credits={view.credits} />}
+		</Default>
+	) : (
+		<Default>
+			<slot />
+		</Default>
+	)
+}

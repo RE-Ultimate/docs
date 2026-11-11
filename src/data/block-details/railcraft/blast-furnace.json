@@ -1,0 +1,129 @@
+{
+  "block": "railcraft/blast-furnace",
+  "recipes": [
+    {
+      "id": "furnace-block",
+      "type": "shaped",
+      "title": "Blast Furnace Blocks",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Soul Sand",
+          "count": 1
+        },
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Soul Sand",
+          "count": 1
+        },
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Magma Cream",
+          "count": 1
+        },
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Soul Sand",
+          "count": 1
+        },
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Soul Sand",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Blast Furnace",
+          "count": 4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Blast Furnace Structure",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Blast Furnace",
+          "count": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Formed Blast Furnace",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ],
+      "notes": [
+        "Build solid 3 \u00d7 3 top and bottom layers with two hollow 3 \u00d7 3 layers between them."
+      ]
+    },
+    {
+      "id": "steel",
+      "type": "machine",
+      "title": "Steel Ingot",
+      "station": "Blast Furnace",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Steel Ingot",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ],
+      "notes": [
+        "Supply charcoal or coal coke as fuel. Fuel can support more than one operation."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Iron and charcoal or coal coke"
+    ],
+    "outputs": [
+      "Steel"
+    ],
+    "tips": [
+      "Ordinary coal is not valid fuel."
+    ]
+  }
+}

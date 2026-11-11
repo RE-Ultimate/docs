@@ -7,7 +7,9 @@ block:
   tags: [mining, automation, lua]
 ---
 
-A Mining Turtle is a programmable computer with a mining tool and an inventory. It can dig and move through an area without a fixed quarry frame. Use EMI to check the installed recipe.
+A Mining Turtle is a programmable computer with a mining tool and an inventory. It can dig and move through an area without a fixed quarry frame.
+
+Craft a Turtle first, then place a diamond pickaxe next to it in the crafting grid. The pickaxe becomes its mining tool.
 
 ## Start mining
 

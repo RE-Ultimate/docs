@@ -15,7 +15,7 @@ Connect a compatible power source, such as IC2 EU or BuildCraft MJ, to the contr
 
 Open the controller to inspect network devices and power use. The network draws power continuously, and adding devices increases its demand. If the controller reports low power, increase the supply or reduce the connected equipment.
 
-Use one controller per connected network. Multiple controllers on the same network cause a controller conflict. Search EMI for the installed recipe. This pack uses AE1, so AE2 channel limits and inscriber instructions do not apply.
+Use one controller per connected network. Multiple controllers on the same network cause a controller conflict. This pack uses AE1, so AE2 channel limits and inscriber instructions do not apply.
 
 ## Sources
 

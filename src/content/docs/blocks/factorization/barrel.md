@@ -7,7 +7,7 @@ block:
   tags: [bulk storage, items]
 ---
 
-The Barrel holds a large amount of one matching item type in a compact block. It is useful for cobblestone, crops and other bulk outputs. Check EMI for the installed recipe.
+The Barrel holds a large amount of one matching item type in a compact block. It is useful for cobblestone, crops and other bulk outputs.
 
 ## Use
 

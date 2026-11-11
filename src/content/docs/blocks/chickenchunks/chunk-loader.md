@@ -7,7 +7,7 @@ block:
   tags: [chunks, automation, world]
 ---
 
-A ChickenChunks Chunk Loader keeps a selected area of chunks loaded so machines can continue to work when players leave. It is useful for a remote quarry, pump, or processing area. Use EMI to find its installed recipe.
+A ChickenChunks Chunk Loader keeps a selected area of chunks loaded so machines can continue to work when players leave. It is useful for a remote quarry, pump, or processing area.
 
 ## Configure the area
 

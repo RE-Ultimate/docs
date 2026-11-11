@@ -17,7 +17,7 @@ Connect the interface to a powered [ME Controller](/docs/blocks/applied-energist
 
 An encoded processing pattern tells the network what a machine consumes and produces. Put the pattern in the interface and connect it to the machine. For example, a furnace can process sand into glass. Return the finished glass to the network, such as with an [ME Import Bus](/docs/blocks/applied-energistics/me-import-bus/), so the crafting job can receive its result.
 
-The interface is one part of an automatic crafting setup; it does not create processing recipes by itself. Search EMI for the installed recipe.
+The interface is one part of an automatic crafting setup; it does not create processing recipes by itself.
 
 ## Sources
 

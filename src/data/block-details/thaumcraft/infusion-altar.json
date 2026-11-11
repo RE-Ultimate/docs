@@ -1,0 +1,52 @@
+{
+  "block": "thaumcraft/infusion-altar",
+  "recipes": [
+    {
+      "id": "construction",
+      "type": "construction",
+      "title": "Infusion Altar",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Arcane Stone Block",
+          "count": 4
+        },
+        {
+          "name": "Wand",
+          "count": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Infusion Altar",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Arrange the blocks as shown in the Thaumonomicon and use a wand."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Recipe ingredients",
+      "Vis",
+      "Nearby aspects"
+    ],
+    "outputs": [
+      "Infused item"
+    ],
+    "tips": [
+      "Each required aspect must come from one source with enough of that aspect."
+    ],
+    "power": "Vis from wand"
+  }
+}

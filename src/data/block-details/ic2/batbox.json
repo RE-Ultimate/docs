@@ -1,0 +1,67 @@
+{
+  "block": "ic2/batbox",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Insulated Copper Cable",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "RE-Battery",
+          "count": 1
+        },
+        {
+          "name": "RE-Battery",
+          "count": 1
+        },
+        {
+          "name": "RE-Battery",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BatBox",
+          "count": 1,
+          "href": "/docs/blocks/ic2/batbox/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

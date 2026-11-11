@@ -1,0 +1,55 @@
+{
+  "block": "ic2/generator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "RE-Battery",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Refined Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Iron Furnace",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Generator",
+          "count": 1,
+          "href": "/docs/blocks/ic2/generator/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

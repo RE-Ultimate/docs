@@ -1,0 +1,254 @@
+---
+// One recipe: the picture (3x3 grid, shapeless row, or machine input and output slots), the material
+// and result tables, and the verification and source line. The server renders the 1-batch state with
+// the first option of every choice, so the recipe is complete without JavaScript. The script in
+// RecipeSection.astro only updates amounts and swaps hidden options. Styles: src/styles/block-details.css.
+import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
+import { chancePercent, formatAmount } from '../../lib/recipe-math.ts';
+import type { ViewCell, ViewOption, ViewRecipe } from '../../lib/block-details';
+import { withBase } from '../../lib/paths';
+import Slot from './Slot.astro';
+
+interface Props {
+	recipe: ViewRecipe;
+	/** Show the recipe title as a heading (when the section has several recipes or a distinct title). */
+	showTitle: boolean;
+}
+
+const { recipe, showTitle } = Astro.props;
+const isShaped = recipe.type === 'shaped';
+const isMachine = recipe.type === 'machine';
+const isConstruction = recipe.type === 'construction';
+const anchor = `recipe-${recipe.id}`;
+const cells = recipe.cells;
+const hasTool = recipe.groups.some((group) => group.options.some((option) => !option.consumed));
+const alignAt = (position: number, length: number, columns: number) =>
+	position % columns === 0 ? 'start' : position % columns === columns - 1 || position === length - 1 ? 'end' : 'center';
+
+const station = recipe.station;
+const facts = [
+	station ? { label: isMachine ? 'Machine' : 'Station', value: station } : undefined,
+	recipe.power ? { label: 'Power', value: recipe.power } : undefined,
+	recipe.time ? { label: 'Time', value: recipe.time } : undefined,
+].filter((fact): fact is { label: string; value: string } => fact !== undefined);
+
+const othersOf = (options: ViewOption[]) =>
+	options
+		.slice(1)
+		.map((option) => (option.count !== options[0]?.count ? `${formatAmount(option.count, option.unit)} ${option.name}` : option.name))
+		.join(', ');
+---
+
+<div class="ru-recipe not-content" data-kind={recipe.type}>
+	{
+		showTitle && (
+			<AnchorHeading level={3} id={anchor}>
+				{recipe.title}
+			</AnchorHeading>
+		)
+	}
+
+	<div class="ru-recipe-body">
+		{
+			!isConstruction && (
+				<div class="ru-diagram" role="group" aria-label={`${recipe.title}, ${isShaped ? '3 by 3 crafting grid' : 'slots'}`} data-pagefind-ignore>
+					<div class="ru-draw">
+					{
+						isShaped ? (
+							<div class="ru-grid">
+								{cells.map((cell, position) => (
+									<div class="ru-cell" data-g={cell?.group}>
+										{cell?.options.map((option, index) => (
+											<Slot option={option} index={index} choices={cell.options.length} align={alignAt(position, 9, 3)} />
+										))}
+									</div>
+								))}
+							</div>
+						) : (
+							<div class="ru-row">
+								{cells.map((cell: ViewCell | null, position) => (
+									<div class="ru-cell" data-g={cell?.group}>
+										{cell?.options.map((option, index) => (
+											<Slot option={option} index={index} choices={cell.options.length} align={alignAt(position, cells.length, 3)} />
+										))}
+									</div>
+								))}
+							</div>
+						)
+					}
+					<svg class="ru-arrow" viewBox="0 0 32 16" width="32" height="16" aria-hidden="true">
+						<path d="M1 8h27M21 2l7 6-7 6" fill="none" stroke="currentColor" stroke-width="2" />
+					</svg>
+					<div class="ru-row ru-outs">
+						{recipe.outputs.map((output, position) => (
+							<div class="ru-cell is-out">
+								<Slot option={output} align={position === recipe.outputs.length - 1 ? 'end' : 'center'} />
+							</div>
+						))}
+					</div>
+					</div>
+					{recipe.type === 'shapeless' && <p class="ru-legend">Shapeless: place the items in any arrangement.</p>}
+					{hasTool && !isConstruction && <p class="ru-legend">Dashed slot: reusable, not consumed.</p>}
+				</div>
+			)
+		}
+
+		<div class="ru-tables">
+			<table class="ru-table ru-mats">
+				<thead>
+					<tr>
+						<th scope="col">{isMachine ? 'Input' : 'Materials'}</th>
+						<th scope="col" class="ru-num">
+							<span class="sr-only">Amount needed</span>
+							<span aria-hidden="true">Needed</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						recipe.groups.map((group, position) => (
+							<tr data-g={position}>
+								<td>
+									{group.options.map((option, index) => (
+										<span data-opt={index} hidden={index > 0}>
+											{isConstruction && option.icon && (
+												<img class="ru-mini" src={option.icon.src} alt="" width={option.icon.width} height={option.icon.height} loading="lazy" decoding="async" />
+											)}
+											{option.link ? (
+												<a href={option.link.url} rel={option.link.external ? 'noopener' : undefined}>
+													{option.name}
+												</a>
+											) : (
+												option.name
+											)}
+											{!option.consumed && <span class="ru-aside">not consumed</span>}
+										</span>
+									))}
+									{group.options.length > 1 && (
+										<>
+											<span class="ru-aside ru-also" data-also>
+												or {othersOf(group.options)}
+											</span>
+											<select class="ru-alt" data-alt hidden aria-label={`Choose which item to use for ${group.options[0]?.name ?? 'this slot'}`}>
+												{group.options.map((option, index) => (
+													<option value={index}>{option.name}</option>
+												))}
+											</select>
+										</>
+									)}
+								</td>
+								<td class="ru-num">
+									{group.options.map((option, index) => (
+										<span
+											data-opt={index}
+											hidden={index > 0}
+											data-amount
+											data-base={group.slots * option.count}
+											data-scale={option.consumed ? 'batch' : 'fixed'}
+											data-unit={option.unit}
+										>
+											{formatAmount(group.slots * option.count, option.unit)}
+										</span>
+									))}
+								</td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
+
+			<table class="ru-table ru-yield">
+				<thead>
+					<tr>
+						<th scope="col">{isConstruction ? 'Builds' : isMachine ? 'Output' : 'Result'}</th>
+						<th scope="col" class="ru-num">
+							<span class="sr-only">Amount produced</span>
+							<span aria-hidden="true">Amount</span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						recipe.outputs.map((output) => {
+							const percent = chancePercent(output.chance);
+							return (
+								<tr>
+									<td>
+										{isConstruction && output.icon && (
+											<img class="ru-mini" src={output.icon.src} alt="" width={output.icon.width} height={output.icon.height} loading="lazy" decoding="async" />
+										)}
+										{output.link ? (
+											<a href={output.link.url} rel={output.link.external ? 'noopener' : undefined}>
+												{output.name}
+											</a>
+										) : (
+											output.name
+										)}
+										{percent !== undefined && <span class="ru-aside">{percent}% chance each</span>}
+									</td>
+									<td class="ru-num">
+										{percent !== undefined && (
+											<span data-upto hidden>
+												up to{' '}
+											</span>
+										)}
+										<span data-amount data-base={output.count} data-scale="batch" data-unit={output.unit}>
+											{formatAmount(output.count, output.unit)}
+										</span>
+									</td>
+								</tr>
+							);
+						})
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	{
+		facts.length > 0 && (
+			<dl class="ru-facts">
+				{facts.map((fact) => (
+					<div>
+						<dt>{fact.label}</dt>
+						<dd>{fact.value}</dd>
+					</div>
+				))}
+			</dl>
+		)
+	}
+
+	{
+		recipe.notes.length > 0 && (
+			<ul class="ru-notes">
+				{recipe.notes.map((note) => (
+					<li>{note}</li>
+				))}
+			</ul>
+		)
+	}
+
+	<p class="ru-meta">
+		{
+			recipe.verification === 'pack-code' ? (
+				<span class="ru-verify is-pack">Verified in pack code.</span>
+			) : (
+				<>
+					<span class="ru-verify is-legacy">Legacy reference.</span> Matches the original mod version, not fully checked against this
+					pack. See <a href={withBase('pack/reference-scope/')}>versions</a>.
+				</>
+			)
+		}
+		{' '}Sources:
+		{
+			recipe.sources.map((source, index) => (
+				<>
+					{index > 0 ? ', ' : ' '}
+					<a href={source.url} rel="noopener">
+						{source.title}
+					</a>
+				</>
+			))
+		}.
+	</p>
+</div>

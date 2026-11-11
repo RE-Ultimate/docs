@@ -1,0 +1,99 @@
+{
+  "block": "gregtech/vacuum-freezer",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Refined Iron Plate",
+          "count": 1
+        },
+        {
+          "name": "Pump",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron Plate",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Reinforced Glass",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron Plate",
+          "count": 1
+        },
+        {
+          "name": "Pump",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron Plate",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Vacuum Freezer",
+          "count": 1,
+          "href": "/docs/blocks/gregtech/vacuum-freezer/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ],
+      "notes": [
+        "This is one valid selection from the registered ingredient alternatives."
+      ]
+    },
+    {
+      "id": "coolant-cell",
+      "type": "machine",
+      "title": "Cool a coolant cell",
+      "station": "Vacuum Freezer",
+      "ingredients": [
+        {
+          "name": "Used 10k Coolant Cell",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "10k Coolant Cell",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ]
+}

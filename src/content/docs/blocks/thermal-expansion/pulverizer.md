@@ -17,6 +17,8 @@ Use the side configuration tab to assign item input and output faces. Connect st
 
 A [Powered Furnace](/docs/blocks/thermal-expansion/powered-furnace/) can smelt suitable dusts after grinding. The machine uses MJ, not the RF used by later Thermal Expansion versions.
 
+For example, one iron ore produces two iron dust, with a 10% chance of nickel dust. One cobblestone produces one sand, with a 10% chance of gravel.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

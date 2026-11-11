@@ -1,0 +1,103 @@
+{
+  "block": "forestry/alveary",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Alveary Block",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Impregnated Casing",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        },
+        {
+          "name": "Scented Paneling",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Alveary Block",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Plain Alveary",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Alveary",
+          "count": 27
+        },
+        {
+          "name": "Wooden Slab",
+          "count": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Formed Alveary",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ],
+      "notes": [
+        "Build a solid 3 × 3 × 3 cube and cover it with bottom-half slabs."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Princess and drone"
+    ],
+    "outputs": [
+      "Bee products and offspring"
+    ],
+    "tips": []
+  }
+}

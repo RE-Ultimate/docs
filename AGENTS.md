@@ -28,7 +28,7 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 
 - Target Minecraft 1.4.7 and the mod versions listed in `src/content/docs/pack/reference-scope.md`. Older FTB Ultimate and newer mod guides can differ from this pack.
 - Each block page needs a Sources section with inspected public references and a checked legacy version. Inspect the installed code and pack configuration before stating rates, voltage limits, machine layouts, or accepted inputs.
-- Source references may use the pack's pinned artifacts, manifests, and config. Write original summaries. Do not copy wiki prose, game textures, or decompiled code into the site.
+- Source references may use the pack's pinned artifacts, manifests, and config. Write original summaries. Do not publish copied wiki prose or decompiled code. The user authorized wiki images: check the legacy version, record each file's source and stated license in `wiki-media.json`, and keep its attribution visible.
 - Use EMI for exact installed recipes when configuration or integrations affect them. Use the installed Thaumonomicon for research and construction diagrams that have not been separately verified.
 - Local research evidence is under workspace `.work/docs-research/`. It records source locations, artifact checksums, and focused review results.
 - Re-check multiblock layouts against active structure patterns. Generic validators can support blocks that a particular pattern never uses.
@@ -37,7 +37,8 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 ## Architecture
 
 - Astro 7 with Starlight 0.42, fully static. Config: `astro.config.mjs` (`site` https://re-ultimate.github.io, `base` /docs/, trailing slashes).
-- Starlight overrides in `src/components/`: `SiteTitle` (typographic wordmark), `PageTitle` (breadcrumbs, H1, block spec), `Footer`, and `ThemeProvider`/`ThemeSelect` (dark only).
+- Starlight overrides in `src/components/`: `SiteTitle` (typographic wordmark), `PageTitle` (breadcrumbs, H1, block spec and picture), `MarkdownContent` (adds the data-driven block sections around the Markdown), `Footer`, and `ThemeProvider`/`ThemeSelect` (dark only).
+- Block details: `src/data/block-details/<mod>/<slug>.json` (recipes, machine facts) and `src/data/wiki-media.json` (images with credits). `src/lib/block-details-schema.ts` holds the schemas and types, `block-details-source.ts` reads and cross-checks the files, `block-details.ts` resolves them for rendering, and `recipe-math.ts` has the quantity rules shared with the browser script. Components are in `src/components/block/`, styles in `src/styles/block-details.css`, and `src/routeData.ts` adds the sections to the table of contents. A malformed file, a path that does not match its `block` field, a block without a page, a dead internal link, or a missing local image fails the build with the full list of problems.
 - Theme: `src/styles/theme.css` and `src/styles/fonts.css`. DESIGN.md records the design decisions.
 - Search: Starlight's built-in Pagefind, built locally by `pnpm build`. No external service.
 - `starlight-links-validator` fails the build on broken internal links and anchors.
@@ -51,6 +52,9 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 - Mod IDs: `src/data/mods.json` (content mods from the upstream list, plus `minecraft`). Categories: `src/lib/taxonomy.ts`.
 - Draft block pages stay out of the production catalog and count. Set `draft: true` in frontmatter while writing.
 - New block pages appear in the catalog, filters, home count, and search automatically. Articles need a sidebar entry in `astro.config.mjs`.
+- Recipes, machine facts and image credits come from the JSON files above, never from MDX. Do not add a Markdown heading with the anchor `crafting`, `construction`, `processing`, `recipe`, `machine` or `image-credits` on a block page: those are generated, and the build fails on a clash.
+- Do not publish recipes that were not checked. An empty `recipes` list is correct for blocks formed in the world, with the explanation in `recipeNote` and the article. Mark each recipe `pack-code` only when the pinned implementation or config was inspected, otherwise `legacy-reference`.
+- Images keep the license their source states (see `wiki-media.json`). Never describe them as MIT.
 - Templates live in `templates/` and are not published. Never commit demo or fixture block pages to `src/content/docs/blocks/`.
 
 ## Commands
@@ -58,6 +62,7 @@ The repository is https://github.com/RE-Ultimate/docs. GitHub Pages serves it at
 ```sh
 pnpm install
 pnpm check        # astro check: types and content schema
+pnpm test:unit    # schema, loader and quantity-rule tests (node:test, no browser)
 pnpm build        # dist/, Pagefind index, sitemap, link validation
 pnpm test:e2e     # Playwright against dist/ served at /docs/ by scripts/serve-dist.mjs
 pnpm screenshots  # writes artifacts/screenshots/ (gitignored)
@@ -68,6 +73,6 @@ Do not start a dev server unless asked.
 
 ## Deploy
 
-`.github/workflows/pages.yml` checks and builds on pull requests and pushes. Only pushes to `main` (and manual runs on `main`) deploy.
+`.github/workflows/pages.yml` checks types, runs unit tests, and builds on pull requests and pushes. Only pushes to `main` (and manual runs on `main`) deploy.
 The Pages artifact name is `github-pages-${{ github.run_id }}-${{ github.run_attempt }}` in both upload and deploy steps. Keep them identical.
 The repository's Pages source must be set to GitHub Actions.

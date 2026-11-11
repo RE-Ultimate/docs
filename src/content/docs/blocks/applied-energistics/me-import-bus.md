@@ -15,7 +15,7 @@ Attach the bus to the inventory face you want to extract from, and connect it by
 
 The basic bus imports available items. Precision and fuzzy versions let you select items and change transfer and redstone settings. A precision filter matches the specified item; a fuzzy filter offers broader matching. Select stack mode when you need faster transfer, and account for its higher power use.
 
-If items stay in the source, check its accessible face, the bus settings, network power, and free storage capacity. An [ME Storage Bus](/docs/blocks/applied-energistics/me-storage-bus/) instead exposes the attached inventory as storage. Search EMI for the installed bus recipes.
+If items stay in the source, check its accessible face, the bus settings, network power, and free storage capacity. An [ME Storage Bus](/docs/blocks/applied-energistics/me-storage-bus/) instead exposes the attached inventory as storage.
 
 ## Sources
 

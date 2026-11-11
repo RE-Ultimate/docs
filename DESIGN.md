@@ -48,6 +48,18 @@ Only one theme exists. `ThemeProvider` forces dark and `ThemeSelect` is empty.
 - The home page is a contents list with live status (the block count comes from the content collection) and a pack facts list.
 - Footer: previous and next links as plain ruled text, the edit link, and the license line.
 
+## Block detail sections
+
+Block pages gain data-driven sections from `src/data/block-details`. Order: intro, Crafting, Construction, Processing examples, the article, Machine summary (before Sources), Sources, Image credits.
+
+- The picture sits right of the lead (whole-number pixel scaling, 1px rule, no frame fill). Its caption links to the file page and credit table. An image description appears when it differs from the block name, so component images are identified. No image means no figure and no placeholder.
+- A recipe is a diagram plus two ruled tables (materials and result) that use the same white top rule as other tables. Slots are 3.5rem squares on `--ru-code-bg`, joined by 1px rules. The output slot has a lighter border. An item without an image shows its name as small text in the slot.
+- Count overlay bottom right, chance top left, reusable tools get a dashed inner outline with a legend line. Tooltips are plain text on black with a thin rule. They open on hover, focus and tap, and Escape closes them.
+- Recipe tabs reuse the sidebar marker: white bold text and a small yellow square. The batches control is a square outlined stepper. Nothing animates.
+- Verification text is colored with the game codes: green for `pack-code`, gold for `legacy-reference`, with one sentence of explanation for legacy data.
+- Processing examples carry a line saying they are not the recipe for building the block, and show the machine as the station.
+- Without JavaScript the toolbar is hidden and every recipe shows in full. With JavaScript the script only switches tabs, recalculates amounts, and swaps alternatives.
+
 ## Interaction
 
 - Focus: 2px yellow outline on every focusable element. The skip link is yellow with black text.

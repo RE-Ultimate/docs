@@ -1,0 +1,204 @@
+{
+  "block": "railcraft/steam-boiler",
+  "recipes": [
+    {
+      "id": "high-pressure-tank",
+      "type": "shaped",
+      "title": "High Pressure Boiler Tank",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        null,
+        null,
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "High Pressure Boiler Tank",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "low-pressure-tank",
+      "type": "shaped",
+      "title": "Low Pressure Boiler Tank",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Plate",
+          "count": 1
+        },
+        null,
+        null,
+        {
+          "name": "Iron Plate",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Low Pressure Boiler Tank",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "liquid-firebox",
+      "type": "shaped",
+      "title": "Liquid Fueled Firebox",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Bucket",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Fire Charge",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Furnace",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Liquid Fueled Firebox",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "solid-firebox",
+      "type": "shaped",
+      "title": "Solid Fueled Firebox",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Fire Charge",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        },
+        {
+          "name": "Furnace",
+          "count": 1
+        },
+        {
+          "name": "Brick",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Solid Fueled Firebox",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Water",
+      "Solid or liquid fuel for the matching firebox"
+    ],
+    "outputs": [
+      "Steam"
+    ],
+    "tips": [
+      "Never add water to an empty boiler at 300 °C or hotter."
+    ]
+  },
+  "recipeNote": "Build matching firebox and boiler tank blocks in the sizes described below."
+}

@@ -1,0 +1,66 @@
+{
+  "block": "applied-energistics/me-controller",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Quartz Crystal",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Quartz Crystal",
+          "count": 1
+        },
+        {
+          "name": "ME Advanced Processor",
+          "count": 1
+        },
+        {
+          "name": "Quartz Crystal",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Quartz Crystal",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "ME Controller",
+          "count": 1,
+          "href": "/docs/blocks/applied-energistics/me-controller/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack artifact",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/applied-energistics-1.pw.toml"
+        }
+      ],
+      "notes": [
+        "The recipe accepts items registered as ingotQuartz."
+      ]
+    }
+  ]
+}

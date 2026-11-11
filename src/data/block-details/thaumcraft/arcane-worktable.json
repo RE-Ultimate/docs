@@ -1,0 +1,49 @@
+{
+  "block": "thaumcraft/arcane-worktable",
+  "recipes": [
+    {
+      "id": "construction",
+      "type": "construction",
+      "title": "Arcane Worktable",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Table",
+          "count": 1
+        },
+        {
+          "name": "Wand",
+          "count": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Arcane Worktable",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Use a wand on a placed table."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Recipe ingredients",
+      "Charged wand"
+    ],
+    "outputs": [
+      "Crafted item"
+    ],
+    "tips": [],
+    "power": "Vis from wand"
+  }
+}

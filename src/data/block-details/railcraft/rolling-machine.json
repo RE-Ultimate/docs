@@ -1,0 +1,74 @@
+{
+  "block": "railcraft/rolling-machine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Rolling Machine",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Crafting Table",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Rolling Machine",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Ingredients in the recipe grid"
+    ],
+    "outputs": [
+      "Rolled items"
+    ],
+    "tips": [
+      "The machine can preserve the last set of ingredients as a pattern."
+    ],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

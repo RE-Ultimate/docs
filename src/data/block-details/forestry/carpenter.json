@@ -1,0 +1,106 @@
+{
+  "block": "forestry/carpenter",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Carpenter",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        },
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        },
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Bronze Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Carpenter",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "impregnated-casing",
+      "type": "machine",
+      "title": "Impregnated Casing",
+      "station": "Carpenter",
+      "ingredients": [
+        {
+          "name": "Wood Log",
+          "count": 8
+        },
+        {
+          "name": "Seed Oil",
+          "count": 250,
+          "unit": "mB"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Impregnated Casing",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ],
+      "notes": [
+        "Arrange the logs around an empty center in the crafting grid."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Ingredients and matching liquid",
+      "Optional recipe container"
+    ],
+    "outputs": [
+      "Crafted item"
+    ],
+    "tips": [],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

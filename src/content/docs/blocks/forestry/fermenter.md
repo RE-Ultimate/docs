@@ -17,6 +17,8 @@ The fermenter fuel is a separate input from the plant material and machine power
 
 Remove biomass from the product tank with a compatible container or liquid connection. Keep the output tank from filling, and replenish all three inputs. A machine with power alone cannot ferment without plant material, a suitable liquid and fermenter fuel. Check EMI for the available recipes and ingredients.
 
+The Fermenter also supports a mead process using honeydew and honey. This is a separate recipe from the plant-material biomass route.
+
 ## Sources
 
 Checked against Forestry 2.0.0.11. The [pack manifest](https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml) identifies the installed artifact.

@@ -11,7 +11,7 @@ The Infernal Furnace smelts items without conventional furnace fuel. It consumes
 
 ## Setup and use
 
-Research the furnace and follow the construction diagram in the Thaumonomicon. Its structure uses obsidian and nether brick. Check EMI for the materials available in this pack.
+Research the furnace and follow the construction diagram in the Thaumonomicon. Its structure uses obsidian and nether brick. After building it, use a casting wand on its obsidian, nether brick, or iron bars to form the furnace. This spends 100 base vis before wand discounts; the wand remains available. Check EMI for the materials available in this pack.
 
 Drop items to smelt into the top. The furnace ejects results from its front, so leave room to collect them. It uses local aura vis during smelting and sometimes releases Flux into the aura. A nearby [Arcane Bellows](/docs/blocks/thaumcraft/arcane-bellows/) can increase its speed, reduce Flux, and improve the chance of bonus output.
 

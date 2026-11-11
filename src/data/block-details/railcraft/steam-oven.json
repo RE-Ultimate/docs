@@ -1,0 +1,103 @@
+{
+  "block": "railcraft/steam-oven",
+  "recipes": [
+    {
+      "id": "oven-block",
+      "type": "shaped",
+      "title": "Steam Oven Blocks",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Furnace",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        },
+        {
+          "name": "Steel Plate",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Steam Oven",
+          "count": 4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Steam Oven Structure",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Steam Oven",
+          "count": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Formed Steam Oven",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/railcraft/railcraft.cfg"
+        }
+      ],
+      "notes": [
+        "Build a solid 2 × 2 × 2 cube."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Furnace inputs",
+      "Steam"
+    ],
+    "outputs": [
+      "Smelted products"
+    ],
+    "tips": [
+      "A cycle uses 8,000 mB of steam for up to nine items."
+    ],
+    "power": "Steam"
+  }
+}

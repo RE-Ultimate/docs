@@ -7,7 +7,7 @@ block:
   tags: [sludge, processing]
 ---
 
-The Sludge Boiler turns sludge from a [Harvester](/docs/blocks/minefactory-reloaded/harvester/) into random materials. Its registered outputs include sand, dirt, clay and soul sand. Check EMI for the machine recipe.
+The Sludge Boiler turns sludge from a [Harvester](/docs/blocks/minefactory-reloaded/harvester/) into random materials. Its registered outputs include sand, dirt, clay and soul sand.
 
 ## Setup
 

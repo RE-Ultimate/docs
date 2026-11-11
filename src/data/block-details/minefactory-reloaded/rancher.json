@@ -1,0 +1,69 @@
+{
+  "block": "minefactory-reloaded/rancher",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Shears",
+          "count": 1
+        },
+        {
+          "name": "Bucket",
+          "count": 1
+        },
+        {
+          "name": "Shears",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Factory Machine Block",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Rancher",
+          "count": 1,
+          "href": "/docs/blocks/minefactory-reloaded/rancher/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Supported animals in front"
+    ],
+    "outputs": [
+      "Products depend on animal"
+    ],
+    "tips": [
+      "Keep animals in the work area and collect the resulting products."
+    ],
+    "power": "BuildCraft MJ or IC2 EU"
+  }
+}

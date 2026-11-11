@@ -1,0 +1,74 @@
+{
+  "block": "thermal-expansion/redstone-energy-cell",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        {
+          "name": "Energy Cell Frame (Full)",
+          "count": 1
+        },
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        {
+          "name": "Lead Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Conductance Coil",
+          "count": 1
+        },
+        {
+          "name": "Lead Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Redstone Energy Cell",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/redstone-energy-cell/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "MJ",
+    "inputs": [
+      "MJ from adjacent power sources"
+    ],
+    "outputs": [
+      "MJ to adjacent compatible machines"
+    ],
+    "tips": [
+      "Adjust input and output limits and redstone control in the interface."
+    ]
+  },
+  "recipeNote": "Fill an empty cell frame with 1,000 mB of Molten Redstone in a Liquid Transposer first."
+}

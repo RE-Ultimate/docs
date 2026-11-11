@@ -1,0 +1,62 @@
+---
+// Credit and license for every image shown on the page, from src/data/wiki-media.json.
+// Images keep the license their source states. They are not covered by this site's MIT license.
+import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
+import type { CreditRow } from '../../lib/block-details';
+import { SECTION_TITLES } from '../../lib/block-details';
+
+interface Props {
+	credits: CreditRow[];
+}
+
+const { credits } = Astro.props;
+---
+
+<section class="ru-credits not-content">
+	<AnchorHeading level={2} id="image-credits">{SECTION_TITLES['image-credits']}</AnchorHeading>
+	<p class="ru-section-note">
+		Images keep the license of their source. They are not covered by this site's MIT license.
+	</p>
+	<table class="ru-table ru-credit-table">
+		<thead>
+			<tr>
+				<th scope="col">Image</th>
+				<th scope="col">Credit</th>
+				<th scope="col">License</th>
+				<th scope="col">Source</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				credits.map((row) => (
+					<tr>
+						<th scope="row">{row.subjects.join(', ')}</th>
+						{row.meta ? (
+							<>
+								<td>{row.meta.credit}</td>
+								<td>
+									{row.meta.licenseUrl ? (
+										<a href={row.meta.licenseUrl} rel="noopener">
+											{row.meta.license}
+										</a>
+									) : (
+										row.meta.license
+									)}
+								</td>
+								<td>
+									<a href={row.meta.sourceUrl} rel="noopener">
+										File page
+									</a>
+								</td>
+							</>
+						) : (
+							<td colspan="3" class="ru-aside">
+								Credit not recorded for this file.
+							</td>
+						)}
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</section>

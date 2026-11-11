@@ -15,7 +15,7 @@ Supply the chest with compatible power and insert a storage cell in its cell slo
 
 Items can be inserted into the chest by external equipment. For access to several cells through one screen, use an [ME Drive](/docs/blocks/applied-energistics/me-drive/) and an [ME Access Terminal](/docs/blocks/applied-energistics/me-access-terminal/). The chest holds only one cell, and the cell has limits on both item types and total contents.
 
-If the chest does not work, check its power and confirm that a cell is installed. Search EMI for the installed chest and cell recipes.
+If the chest does not work, check its power and confirm that a cell is installed.
 
 ## Sources
 

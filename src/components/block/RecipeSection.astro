@@ -1,0 +1,217 @@
+---
+// A recipe section ("Crafting", "Construction" or "Processing examples"): heading, optional note, a toolbar
+// with recipe tabs and the batches control, and one panel per recipe.
+// Without JavaScript the toolbar stays hidden and every recipe shows one below the other.
+// With JavaScript the script below turns the toolbar on, shows one recipe at a time, recalculates
+// amounts for the batch count, and swaps ingredient alternatives. Quantity rules: src/lib/recipe-math.ts.
+import AnchorHeading from '@astrojs/starlight/components/AnchorHeading.astro';
+import { MAX_BATCHES, MIN_BATCHES } from '../../lib/recipe-math.ts';
+import type { RecipeSectionView } from '../../lib/block-details';
+import RecipeView from './RecipeView.astro';
+
+interface Props {
+	section: RecipeSectionView;
+	/** The block's recipeNote, shown above the recipes when this is the first section. */
+	note?: string | undefined;
+}
+
+const { section, note } = Astro.props;
+const { recipes, unit } = section;
+const tabbed = recipes.length > 1;
+const batchId = `batches-${section.id}`;
+const unitLabel = unit.plural.charAt(0).toUpperCase() + unit.plural.slice(1);
+---
+
+<section class="ru-recipes not-content" data-recipes data-unit-singular={unit.singular} data-unit-plural={unit.plural}>
+	<AnchorHeading level={2} id={section.id}>{section.title}</AnchorHeading>
+	{note && <p class="ru-section-note">{note}</p>}
+	{
+		section.id === 'processing' && (
+			<p class="ru-section-note">Examples of what this machine makes. They are not the recipe for building it.</p>
+		)
+	}
+
+	<div class="ru-toolbar" data-toolbar hidden>
+		{
+			tabbed && (
+				<div class="ru-tabs" role="tablist" aria-label={`${section.title} recipes`}>
+					{recipes.map((recipe, index) => (
+						<button
+							type="button"
+							role="tab"
+							id={`tab-${recipe.id}`}
+							aria-controls={`panel-${recipe.id}`}
+							aria-selected={index === 0 ? 'true' : 'false'}
+							tabindex={index === 0 ? 0 : -1}
+						>
+							{recipe.title}
+						</button>
+					))}
+				</div>
+			)
+		}
+		<div class="ru-batch" role="group" aria-label={`Number of ${unit.plural}`}>
+			<label for={batchId}>{unitLabel}</label>
+			<button type="button" data-step="-1" aria-label={`Fewer ${unit.plural}`} aria-controls={batchId}>-</button>
+			<input id={batchId} type="number" inputmode="numeric" min={MIN_BATCHES} max={MAX_BATCHES} step="1" value={MIN_BATCHES} data-batches />
+			<button type="button" data-step="1" aria-label={`More ${unit.plural}`} aria-controls={batchId}>+</button>
+		</div>
+	</div>
+	<p class="sr-only" role="status" data-status></p>
+
+	{
+		recipes.map((recipe) => (
+			<div
+				class="ru-panel"
+				id={`panel-${recipe.id}`}
+				data-recipe-id={recipe.id}
+				role={tabbed ? 'tabpanel' : undefined}
+				aria-labelledby={tabbed ? `tab-${recipe.id}` : undefined}
+			>
+				<RecipeView recipe={recipe} showTitle={tabbed || recipe.title.toLowerCase() !== section.title.toLowerCase()} />
+			</div>
+		))
+	}
+</section>
+
+<script>
+	import { MAX_BATCHES, MIN_BATCHES, clampBatches, formatAmount, ingredientAmount } from '../../lib/recipe-math.ts';
+
+	/** Finds an element or fails loudly, so a markup change breaks tests instead of silently doing nothing. */
+	const need = <T extends Element>(root: ParentNode, selector: string): T => {
+		const found = root.querySelector<T>(selector);
+		if (!found) throw new Error(`Recipe markup is missing ${selector}`);
+		return found;
+	};
+
+	const enhance = (section: HTMLElement): void => {
+		const toolbar = need<HTMLElement>(section, '[data-toolbar]');
+		const input = need<HTMLInputElement>(section, '[data-batches]');
+		const status = need<HTMLElement>(section, '[data-status]');
+		const panels = [...section.querySelectorAll<HTMLElement>('.ru-panel')];
+		const tabs = [...section.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+		const plural = section.dataset['unitPlural'] ?? 'batches';
+		const singular = section.dataset['unitSingular'] ?? 'batch';
+		let batches = MIN_BATCHES;
+
+		section.dataset['enhanced'] = '';
+		toolbar.hidden = false;
+
+		// ---- batches: every [data-amount] holds its 1-batch value in data-base ----
+		const renderAmounts = (announce: boolean): void => {
+			for (const amount of section.querySelectorAll<HTMLElement>('[data-amount]')) {
+				const count = Number(amount.dataset['base']);
+				const value = ingredientAmount({ count, consumed: amount.dataset['scale'] !== 'fixed' }, batches);
+				amount.textContent = formatAmount(value, amount.dataset['unit']);
+			}
+			for (const upto of section.querySelectorAll<HTMLElement>('[data-upto]')) upto.hidden = batches === MIN_BATCHES;
+			for (const button of section.querySelectorAll<HTMLButtonElement>('[data-step]')) {
+				const step = Number(button.dataset['step']);
+				button.disabled = (step < 0 && batches <= MIN_BATCHES) || (step > 0 && batches >= MAX_BATCHES);
+			}
+			if (announce) status.textContent = `Showing amounts for ${batches} ${batches === 1 ? singular : plural}.`;
+		};
+		const setBatches = (value: number): void => {
+			batches = clampBatches(value);
+			input.value = String(batches);
+			renderAmounts(true);
+		};
+		for (const button of section.querySelectorAll<HTMLButtonElement>('[data-step]')) {
+			button.addEventListener('click', () => setBatches(batches + Number(button.dataset['step'])));
+		}
+		// While typing, update the amounts but leave the field alone. It is corrected when focus leaves.
+		input.addEventListener('input', () => {
+			if (input.value === '') return;
+			batches = clampBatches(Number(input.value));
+			renderAmounts(true);
+		});
+		input.addEventListener('change', () => setBatches(Number(input.value)));
+
+		// ---- recipe tabs ----
+		const show = (index: number, focus = false): void => {
+			panels.forEach((panel, position) => {
+				panel.hidden = position !== index;
+			});
+			tabs.forEach((tab, position) => {
+				tab.setAttribute('aria-selected', String(position === index));
+				tab.tabIndex = position === index ? 0 : -1;
+			});
+			if (focus) tabs[index]?.focus();
+		};
+		if (tabs.length > 0) {
+			tabs.forEach((tab, index) => tab.addEventListener('click', () => show(index)));
+			need<HTMLElement>(section, '[role="tablist"]').addEventListener('keydown', (event) => {
+				const current = tabs.findIndex((tab) => tab === document.activeElement);
+				if (current < 0) return;
+				const target =
+					event.key === 'ArrowRight' || event.key === 'ArrowDown'
+						? (current + 1) % tabs.length
+						: event.key === 'ArrowLeft' || event.key === 'ArrowUp'
+							? (current - 1 + tabs.length) % tabs.length
+							: event.key === 'Home'
+								? 0
+								: event.key === 'End'
+									? tabs.length - 1
+									: -1;
+				if (target < 0) return;
+				event.preventDefault();
+				show(target, true);
+			});
+			// A link such as #recipe-iron-ore opens that recipe's tab.
+			const openFromHash = (): void => {
+				const id = decodeURIComponent(location.hash.slice(1));
+				const index = panels.findIndex((panel) => `recipe-${panel.dataset['recipeId']}` === id);
+				if (index < 0) return;
+				show(index);
+				toolbar.scrollIntoView();
+			};
+			show(0);
+			openFromHash();
+			addEventListener('hashchange', openFromHash);
+		}
+
+		// ---- ingredient alternatives: the select replaces the name and applies to every slot of that choice ----
+		for (const select of section.querySelectorAll<HTMLSelectElement>('[data-alt]')) {
+			const row = select.closest<HTMLElement>('[data-g]');
+			const panel = select.closest<HTMLElement>('.ru-panel');
+			if (!row || !panel) continue;
+			const group = row.dataset['g'] ?? '';
+			select.hidden = false;
+			for (const also of row.querySelectorAll<HTMLElement>('[data-also]')) also.hidden = true;
+			for (const label of row.querySelectorAll<HTMLElement>('td:first-child > [data-opt]')) label.hidden = true;
+			select.addEventListener('change', () => {
+				for (const holder of panel.querySelectorAll<HTMLElement>(`[data-g="${group}"]`)) {
+					for (const option of holder.querySelectorAll<HTMLElement>('[data-opt]')) {
+						if (option.parentElement?.matches('td:first-child')) continue;
+						option.hidden = option.dataset['opt'] !== select.value;
+					}
+				}
+			});
+		}
+
+		renderAmounts(false);
+	};
+
+	for (const section of document.querySelectorAll<HTMLElement>('[data-recipes]')) enhance(section);
+
+	// ---- tooltips: a tap on a slot pins its tooltip, Escape dismisses it ----
+	const slots = [...document.querySelectorAll<HTMLElement>('.ru-slot')];
+	document.addEventListener('click', (event) => {
+		const target = event.target instanceof Element ? event.target : null;
+		const slot = target?.closest<HTMLElement>('.ru-slot') ?? null;
+		const onButton = target?.closest('button.ru-face') != null;
+		for (const other of slots) if (other !== slot) other.classList.remove('is-pinned');
+		if (slot && onButton) slot.classList.toggle('is-pinned');
+	});
+	document.addEventListener('keydown', (event) => {
+		if (event.key !== 'Escape') return;
+		for (const slot of slots) {
+			slot.classList.remove('is-pinned');
+			if (slot.matches(':hover, :focus-within')) slot.dataset['dismissed'] = '';
+		}
+	});
+	for (const slot of slots) {
+		slot.addEventListener('pointerleave', () => delete slot.dataset['dismissed']);
+		slot.addEventListener('focusout', () => delete slot.dataset['dismissed']);
+	}
+</script>

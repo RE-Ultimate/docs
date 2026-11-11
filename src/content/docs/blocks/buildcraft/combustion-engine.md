@@ -17,6 +17,8 @@ The engine heats up while it burns fuel. If cooling is inadequate, it can reach 
 
 A [Pump](/docs/blocks/buildcraft/pump/) can help supply water. Use EMI for the installed engine recipe and check fuel availability before building a large installation.
 
+Its crafting recipe uses iron ingots, glass, iron gears, and a piston.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

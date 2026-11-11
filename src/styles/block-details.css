@@ -1,0 +1,577 @@
+/*
+ * Block detail sections: recipes, machine summary, image credits, and the block figure.
+ * Markup: src/components/block/. Tokens come from theme.css. Same rules as the rest of the site:
+ * true black, thin rules, no cards, no pills, no motion. See DESIGN.md "Block detail sections".
+ * Everything here works without JavaScript. The script only reveals [data-toolbar] and swaps [hidden] options.
+ */
+
+.ru-recipes,
+.ru-machine,
+.ru-credits {
+	--ru-slot: 3.5rem;
+	--ru-slot-bg: var(--ru-code-bg);
+	--ru-slot-hover: #1a1a1a;
+}
+
+.ru-recipes [hidden],
+.ru-machine [hidden],
+.ru-credits [hidden] {
+	display: none !important;
+}
+
+.ru-recipes a,
+.ru-machine a,
+.ru-credits a,
+.ru-figure a {
+	color: var(--ru-text);
+	text-decoration: underline;
+	text-decoration-color: var(--ru-text-3);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.22em;
+}
+.ru-recipes a:hover,
+.ru-machine a:hover,
+.ru-credits a:hover,
+.ru-figure a:hover {
+	text-decoration-color: var(--ru-accent);
+}
+
+.ru-section-note {
+	max-width: 68ch;
+	margin: 0.75rem 0 0;
+	color: var(--ru-text);
+}
+.ru-section-note.ru-aside,
+.ru-aside {
+	color: var(--ru-text-2);
+}
+.ru-aside {
+	margin-inline-start: 0.5rem;
+	font-size: var(--sl-text-xs);
+}
+.ru-section-note.ru-aside {
+	margin-inline-start: 0;
+	font-size: var(--sl-text-sm);
+}
+
+/* ---------- Toolbar: recipe tabs and the batches control ---------- */
+
+.ru-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0 1.5rem;
+	margin-top: 1rem;
+	border-top: 1px solid var(--ru-rule);
+	border-bottom: 1px solid var(--ru-rule);
+}
+.ru-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 1.25rem;
+}
+.ru-tabs button {
+	position: relative;
+	min-height: 2.75rem;
+	padding: 0.5rem 0 0.5rem 1rem;
+	border: 0;
+	background: none;
+	color: var(--ru-text-2);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+	text-align: start;
+	cursor: pointer;
+}
+.ru-tabs button:hover {
+	color: var(--ru-text);
+}
+.ru-tabs button[aria-selected='true'] {
+	color: var(--ru-text);
+	font-weight: 650;
+}
+/* Current recipe: the same small accent square as the current page in the sidebar. */
+.ru-tabs button[aria-selected='true']::before {
+	content: '';
+	position: absolute;
+	inset-inline-start: 0;
+	top: calc(50% - 0.1875rem);
+	width: 0.375rem;
+	height: 0.375rem;
+	background: var(--ru-accent);
+}
+.ru-tabs button:focus-visible {
+	outline-offset: -2px;
+}
+
+.ru-batch {
+	display: flex;
+	align-items: center;
+	margin-inline-start: auto;
+	padding-block: 0.375rem;
+	font-size: var(--sl-text-sm);
+}
+.ru-batch label {
+	margin-inline-end: 0.625rem;
+	color: var(--ru-text-2);
+}
+.ru-batch button,
+.ru-batch input {
+	box-sizing: border-box;
+	height: 2.25rem;
+	margin: 0;
+	border: 1px solid var(--ru-rule-strong);
+	border-radius: 0;
+	background: #000;
+	color: var(--ru-text);
+	font: inherit;
+	font-variant-numeric: tabular-nums;
+}
+.ru-batch button {
+	width: 2.25rem;
+	padding: 0;
+	font-size: 1.125rem;
+	line-height: 1;
+	cursor: pointer;
+}
+.ru-batch button:hover:not(:disabled) {
+	border-color: var(--ru-text-2);
+	background: var(--ru-slot-hover);
+}
+.ru-batch button:disabled {
+	color: var(--ru-text-3);
+	cursor: not-allowed;
+}
+.ru-batch input {
+	width: 3.75rem;
+	margin-inline: -1px;
+	padding: 0 0.25rem;
+	text-align: center;
+	appearance: textfield;
+	-moz-appearance: textfield;
+}
+.ru-batch input::-webkit-inner-spin-button,
+.ru-batch input::-webkit-outer-spin-button {
+	appearance: none;
+	margin: 0;
+}
+.ru-batch :is(button, input):focus-visible {
+	position: relative;
+	z-index: 1;
+}
+
+/* With tabs on, the tab names the recipe, so the panel heading is redundant. */
+.ru-recipes[data-enhanced] .ru-panel[role='tabpanel'] .sl-heading-wrapper {
+	display: none;
+}
+
+/* ---------- Recipe ---------- */
+
+.ru-panel {
+	margin-top: 1.25rem;
+}
+.ru-panel .sl-heading-wrapper.level-h3 {
+	margin-top: 0;
+}
+.ru-recipe {
+	container-type: inline-size;
+}
+.ru-recipe-body {
+	display: grid;
+	gap: 1.25rem 2.25rem;
+	align-items: start;
+}
+@container (min-width: 36rem) {
+	.ru-recipe-body:has(.ru-diagram) {
+		grid-template-columns: max-content minmax(0, 1fr);
+	}
+}
+
+.ru-diagram {
+	min-width: 0;
+}
+.ru-draw {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+}
+.ru-arrow {
+	flex: none;
+	color: var(--ru-text-3);
+}
+.ru-legend {
+	margin: 0.625rem 0 0;
+	font-size: var(--sl-text-xs);
+	color: var(--ru-text-2);
+}
+
+.ru-grid {
+	display: grid;
+	grid-template-columns: repeat(3, var(--ru-slot));
+	gap: 1px;
+	border: 1px solid var(--ru-rule-strong);
+	background: var(--ru-rule-strong);
+}
+.ru-grid .ru-cell {
+	border: 0;
+}
+.ru-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+.ru-cell {
+	position: relative;
+	box-sizing: border-box;
+	width: var(--ru-slot);
+	height: var(--ru-slot);
+	border: 1px solid var(--ru-rule-strong);
+	background: var(--ru-slot-bg);
+}
+.ru-cell.is-out {
+	border-color: var(--ru-text-2);
+}
+
+/* ---------- Slot ---------- */
+
+.ru-slot {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.ru-face {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: var(--ru-text);
+	font: inherit;
+	text-decoration: none;
+	cursor: default;
+}
+a.ru-face {
+	cursor: pointer;
+}
+.ru-face:hover {
+	background: var(--ru-slot-hover);
+}
+.ru-face:focus-visible {
+	outline-offset: -2px;
+}
+.ru-slot .ru-icon {
+	width: 2rem;
+	height: 2rem;
+	border: 0;
+	object-fit: contain;
+	image-rendering: pixelated;
+}
+.ru-slot .ru-icon.is-smooth {
+	image-rendering: auto;
+}
+/* No image on file: the name stands in for the icon. */
+.ru-name {
+	display: block;
+	max-height: 100%;
+	padding: 0.1875rem;
+	overflow: hidden;
+	font-size: 0.625rem;
+	line-height: 1.15;
+	text-align: center;
+	overflow-wrap: break-word;
+	hyphens: auto;
+	color: var(--ru-text-2);
+}
+.ru-count,
+.ru-chance {
+	position: absolute;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	line-height: 1;
+	pointer-events: none;
+	text-shadow:
+		1px 0 0 #000,
+		-1px 0 0 #000,
+		0 1px 0 #000,
+		0 -1px 0 #000;
+}
+.ru-count {
+	right: 0.1875rem;
+	bottom: 0.125rem;
+	font-size: 0.8125rem;
+}
+.ru-count small {
+	margin-inline-start: 0.0625rem;
+	font-size: 0.625rem;
+	font-weight: 600;
+	color: var(--ru-text-2);
+}
+.ru-chance {
+	left: 0.1875rem;
+	top: 0.1875rem;
+	font-size: 0.6875rem;
+	color: var(--ru-text-2);
+}
+/* Reusable tool: a dashed inner outline. The legend under the recipe explains it. */
+.ru-slot.is-tool .ru-face::after {
+	content: '';
+	position: absolute;
+	inset: 0.1875rem;
+	border: 1px dashed var(--ru-text-3);
+	pointer-events: none;
+}
+
+.ru-tip {
+	display: none;
+	position: absolute;
+	bottom: calc(100% + 0.375rem);
+	left: 50%;
+	z-index: 20;
+	width: max-content;
+	max-width: min(16rem, 80vw);
+	padding: 0.5rem 0.625rem;
+	transform: translateX(-50%);
+	border: 1px solid var(--ru-rule-strong);
+	background: #000;
+	font-size: var(--sl-text-xs);
+	font-weight: 400;
+	line-height: 1.45;
+	text-align: start;
+	color: var(--ru-text-2);
+	pointer-events: none;
+}
+.ru-tip strong {
+	display: block;
+	font-size: var(--sl-text-sm);
+	font-weight: 700;
+	color: var(--ru-text);
+}
+.ru-tip span {
+	display: block;
+}
+.ru-slot[data-align='start'] .ru-tip {
+	left: 0;
+	transform: none;
+}
+.ru-slot[data-align='end'] .ru-tip {
+	left: auto;
+	right: 0;
+	transform: none;
+}
+.ru-slot:focus-within .ru-tip,
+.ru-slot.is-pinned .ru-tip {
+	display: block;
+}
+@media (hover: hover) {
+	.ru-slot:hover .ru-tip {
+		display: block;
+	}
+}
+.ru-slot[data-dismissed] .ru-tip {
+	display: none;
+}
+
+/* ---------- Tables ---------- */
+
+.ru-tables {
+	min-width: 0;
+}
+.ru-table {
+	display: table;
+	width: 100%;
+	margin: 0;
+	border-collapse: collapse;
+	font-size: var(--sl-text-sm);
+	font-variant-numeric: tabular-nums;
+}
+.ru-table :is(th, td) {
+	padding: 0.5rem 1rem 0.5rem 0;
+	border: 0;
+	border-bottom: 1px solid var(--ru-rule);
+	background: transparent;
+	font-weight: 400;
+	text-align: start;
+	vertical-align: baseline;
+	color: var(--ru-text);
+}
+.ru-table thead th {
+	border-top: 1px solid var(--ru-text);
+	border-bottom-color: var(--ru-rule-strong);
+	font-weight: 650;
+}
+.ru-table .ru-num {
+	padding-inline-end: 0;
+	text-align: end;
+	white-space: nowrap;
+}
+.ru-table td:first-child {
+	color: var(--ru-text);
+	white-space: normal;
+}
+.ru-yield {
+	margin-top: 1.25rem;
+}
+.ru-mini {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-inline-end: 0.5rem;
+	border: 0;
+	vertical-align: middle;
+	object-fit: contain;
+	image-rendering: pixelated;
+}
+.ru-alt {
+	max-width: 100%;
+	padding: 0.125rem 0.25rem;
+	border: 1px solid var(--ru-rule-strong);
+	border-radius: 0;
+	background: #000;
+	color: var(--ru-text);
+	font: inherit;
+	font-size: var(--sl-text-sm);
+}
+.ru-alt:hover {
+	border-color: var(--ru-text-2);
+}
+
+.ru-facts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 2rem;
+	margin: 1rem 0 0;
+	font-size: var(--sl-text-sm);
+}
+.ru-facts > div {
+	display: flex;
+	gap: 0.5rem;
+}
+.ru-facts dt {
+	color: var(--ru-text-2);
+}
+.ru-facts dd {
+	margin: 0;
+	font-weight: 600;
+}
+
+.ru-notes,
+.ru-tips,
+.ru-io ul {
+	margin: 0.75rem 0 0;
+	padding-inline-start: 1.25rem;
+	list-style: disc;
+	font-size: var(--sl-text-sm);
+}
+.ru-notes li::marker,
+.ru-tips li::marker,
+.ru-io li::marker {
+	color: var(--ru-text-3);
+}
+
+.ru-meta {
+	max-width: none;
+	margin: 0.875rem 0 0;
+	font-size: var(--sl-text-sm);
+	color: var(--ru-text-2);
+}
+.ru-verify {
+	font-weight: 650;
+}
+.ru-verify.is-pack {
+	color: var(--ru-green);
+}
+.ru-verify.is-legacy {
+	color: var(--ru-gold);
+}
+
+/* ---------- Machine summary and credits ---------- */
+
+.ru-machine h3 {
+	margin: 1.5rem 0 0;
+	font-size: var(--sl-text-h4);
+	font-weight: 700;
+}
+.ru-io {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+	gap: 0 2rem;
+}
+.ru-machine h3 + :is(ul, table) {
+	margin-top: 0.5rem;
+}
+.ru-faces th[scope='row'] {
+	width: 11rem;
+	font-weight: 600;
+}
+.ru-credit-table {
+	display: block;
+	max-width: 100%;
+	margin-top: 0.75rem;
+	overflow-x: auto;
+}
+.ru-credit-table tbody th {
+	font-weight: 600;
+}
+
+/* ---------- Block figure (beside the page intro) ---------- */
+
+.ru-figure {
+	width: max-content;
+	max-width: 10rem;
+	margin: 0;
+}
+.ru-figure img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid var(--ru-rule);
+	background: #000;
+}
+.ru-figure.is-pixel img {
+	image-rendering: pixelated;
+}
+.ru-figure figcaption {
+	margin-top: 0.375rem;
+	font-size: 0.6875rem;
+	line-height: 1.4;
+	color: var(--ru-text-2);
+	overflow-wrap: anywhere;
+}
+.ru-figure a {
+	color: var(--ru-text-2);
+}
+.ru-image-subject {
+	display: block;
+	margin-bottom: 0.25rem;
+}
+
+@media (max-width: 30rem) {
+	.ru-recipes,
+	.ru-machine,
+	.ru-credits {
+		--ru-slot: 3rem;
+	}
+	.ru-batch {
+		margin-inline-start: 0;
+		width: 100%;
+	}
+	.ru-faces th[scope='row'] {
+		width: 7rem;
+	}
+}
+
+@media print {
+	.ru-toolbar {
+		display: none !important;
+	}
+	.ru-recipes [hidden] {
+		display: revert !important;
+	}
+}

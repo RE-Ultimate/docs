@@ -1,0 +1,74 @@
+---
+// One inventory slot: icon (or the item name when no image exists), count overlay, and a tooltip with
+// the details. The face is a link when the stack has a page, otherwise a button so touch and keyboard
+// users can open the tooltip. Styles: src/styles/block-details.css.
+import { chancePercent, compactAmount, formatAmount } from '../../lib/recipe-math.ts';
+import type { ViewOption } from '../../lib/block-details';
+
+interface Props {
+	option: ViewOption;
+	/** Position in the option list of its cell. Options after the first start hidden. */
+	index?: number;
+	/** How many options the cell has. More than one adds a hint to the tooltip. */
+	choices?: number;
+	/** Which edge the tooltip aligns to, so it stays on the page. */
+	align?: 'start' | 'center' | 'end';
+}
+
+const { option, index = 0, choices = 1, align = 'center' } = Astro.props;
+const percent = chancePercent(option.chance);
+const showCount = option.count !== 1 || option.unit !== undefined;
+
+// One accessible name that carries everything the tooltip shows.
+const facts = [
+	`Amount: ${formatAmount(option.count, option.unit)}`,
+	percent !== undefined ? `Chance: ${percent}%` : undefined,
+	option.consumed ? undefined : 'Reusable, not consumed',
+	choices > 1 ? 'Interchangeable, choose in the material list' : undefined,
+].filter((fact): fact is string => fact !== undefined);
+
+const Face = option.link ? 'a' : 'button';
+const faceProps = option.link
+	? { href: option.link.url, ...(option.link.external ? { rel: 'noopener' } : {}) }
+	: { type: 'button' as const };
+const icon = option.icon;
+---
+
+<div class:list={['ru-slot', { 'is-tool': !option.consumed }]} data-opt={index} data-align={align} hidden={index > 0}>
+	<Face class="ru-face" aria-label={`${option.name}. ${facts.join('. ')}`} {...faceProps}>
+		{
+			icon ? (
+				<img
+					class:list={['ru-icon', { 'is-smooth': (icon.width ?? 0) > 64 }]}
+					src={icon.src}
+					alt=""
+					width={icon.width}
+					height={icon.height}
+					loading="lazy"
+					decoding="async"
+				/>
+			) : (
+				<span class="ru-name">{option.name}</span>
+			)
+		}
+		{
+			showCount && (
+				<span class="ru-count" aria-hidden="true">
+					{compactAmount(option.count)}
+					{option.unit && <small>{option.unit}</small>}
+				</span>
+			)
+		}
+		{
+			percent !== undefined && (
+				<span class="ru-chance" aria-hidden="true">
+					{percent}%
+				</span>
+			)
+		}
+	</Face>
+	<span class="ru-tip" aria-hidden="true">
+		<strong>{option.name}</strong>
+		{facts.map((fact) => <span>{fact}</span>)}
+	</span>
+</div>

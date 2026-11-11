@@ -1,0 +1,110 @@
+{
+  "block": "forestry/thermionic-fabricator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Thermionic Fabricator",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Gold Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Gold Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Gold Ingot",
+          "count": 1
+        },
+        {
+          "name": "Chest",
+          "count": 1
+        },
+        {
+          "name": "Gold Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Thermionic Fabricator",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "copper-tubes",
+      "type": "machine",
+      "title": "Copper Electron Tubes",
+      "station": "Thermionic Fabricator",
+      "ingredients": [
+        {
+          "name": "Copper Ingot",
+          "count": 5
+        },
+        {
+          "name": "Redstone",
+          "count": 2
+        },
+        {
+          "name": "Molten Glass",
+          "count": 500,
+          "unit": "mB"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Copper Electron Tube",
+          "count": 4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ],
+      "notes": [
+        "Arrange the copper as a T with a filled bottom row; put redstone at the sides of the middle row."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Glass, panes or sand",
+      "Recipe ingredients"
+    ],
+    "outputs": [
+      "Electron tubes and other crafted items"
+    ],
+    "tips": [],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

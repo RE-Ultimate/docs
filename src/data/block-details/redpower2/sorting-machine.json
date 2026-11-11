@@ -1,0 +1,75 @@
+{
+  "block": "redpower2/sorting-machine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Red-Doped Wafer",
+          "count": 1
+        },
+        {
+          "name": "Filter",
+          "count": 1
+        },
+        {
+          "name": "Red-Doped Wafer",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Blue Alloy Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Sorting Machine",
+          "count": 1,
+          "href": "/docs/blocks/redpower2/sorting-machine/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Items and filter samples"
+    ],
+    "outputs": [
+      "Items routed into colored tubes"
+    ],
+    "tips": [
+      "Supply blutricity and configure item groups."
+    ],
+    "power": "Blutricity"
+  }
+}

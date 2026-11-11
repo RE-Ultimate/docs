@@ -1,0 +1,48 @@
+{
+  "block": "thaumcraft/research-table",
+  "recipes": [
+    {
+      "id": "construction",
+      "type": "construction",
+      "title": "Research Table",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Table",
+          "count": 2
+        },
+        {
+          "name": "Scribing Tools",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Research Table",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Place two tables next to each other and use the tools on them.",
+        "Forming the table consumes the Scribing Tools used on it."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Paper",
+      "Items to study"
+    ],
+    "outputs": [
+      "Research discoveries"
+    ],
+    "tips": []
+  }
+}

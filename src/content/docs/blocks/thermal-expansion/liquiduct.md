@@ -17,6 +17,8 @@ To pull from a tank, configure the connection with a wrench and supply a redston
 
 A connected network carries one liquid at a time. Empty a line before changing to an incompatible liquid, and use separate lines where liquids must remain separate. Check EMI for the installed recipe.
 
+The crafting recipe makes four liquiducts from two copper ingots and one hardened glass.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

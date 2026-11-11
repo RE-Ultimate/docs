@@ -1,0 +1,145 @@
+{
+  "block": "forestry/squeezer",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Squeezer",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Squeezer",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "apple-juice",
+      "type": "machine",
+      "title": "Apple Juice",
+      "station": "Squeezer",
+      "ingredients": [
+        {
+          "name": "Apple",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Fruit Juice",
+          "count": 200,
+          "unit": "mB"
+        },
+        {
+          "name": "Mulch",
+          "count": 1,
+          "chance": 0.4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "cactus-water",
+      "type": "machine",
+      "title": "Cactus",
+      "station": "Squeezer",
+      "ingredients": [
+        {
+          "name": "Cactus",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Water",
+          "count": 500,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Horizontal sides",
+        "role": "Access the ingredient slots."
+      },
+      {
+        "face": "Top",
+        "role": "Access the solid byproduct slot."
+      },
+      {
+        "face": "Bottom",
+        "role": "Access the empty and filled container slots."
+      }
+    ],
+    "inputs": [
+      "Seeds, apples or other supported items"
+    ],
+    "outputs": [
+      "Liquid and possible solid remnants"
+    ],
+    "tips": [
+      "Empty the tank before changing to a different output liquid."
+    ],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

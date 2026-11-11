@@ -15,7 +15,7 @@ Connect the drive to a powered [ME Controller](/docs/blocks/applied-energistics/
 
 Each cell has limits on both total storage and item types. A cell can have space for more items of existing types while it cannot accept a new type. Add another cell or reorganize its contents when this happens. The drive and cells need a working network to provide storage. Check the controller and its power if the terminal cannot see them.
 
-Search EMI for the installed drive and cell recipes.
+
 
 ## Sources
 

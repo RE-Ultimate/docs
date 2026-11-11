@@ -1,0 +1,99 @@
+{
+  "block": "forestry/still",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Still",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Still",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "biofuel",
+      "type": "machine",
+      "title": "Distill Biomass",
+      "station": "Still",
+      "ingredients": [
+        {
+          "name": "Biomass",
+          "count": 10,
+          "unit": "mB"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Biofuel",
+          "count": 3,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Biomass"
+    ],
+    "outputs": [
+      "Biofuel"
+    ],
+    "tips": [],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

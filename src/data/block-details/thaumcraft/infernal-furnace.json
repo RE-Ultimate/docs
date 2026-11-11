@@ -1,0 +1,64 @@
+{
+  "block": "thaumcraft/infernal-furnace",
+  "recipes": [
+    {
+      "id": "structure",
+      "type": "construction",
+      "title": "Infernal Furnace",
+      "station": "World",
+      "ingredients": [
+        {
+          "name": "Nether Brick",
+          "count": 12
+        },
+        {
+          "name": "Obsidian",
+          "count": 12
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Lava",
+          "count": 1
+        },
+        {
+          "name": "Casting Wand",
+          "count": 1,
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Infernal Furnace",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack upstream notes",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Follow the 3 \u00d7 3 \u00d7 3 diagram in the Thaumonomicon. The top center is empty; the middle center contains lava and the middle front has iron bars.",
+        "After completing the research, use a casting wand on the structure\u2019s obsidian, nether brick, or iron bars. Activation spends 100 base vis before wand discounts."
+      ],
+      "power": "100 base vis from the wand before discounts"
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Smeltable items",
+      "Local vis"
+    ],
+    "outputs": [
+      "Smelted items and possible bonus materials"
+    ],
+    "tips": [],
+    "power": "Local vis"
+  },
+  "recipeNote": "Follow the Thaumonomicon construction diagram after research."
+}

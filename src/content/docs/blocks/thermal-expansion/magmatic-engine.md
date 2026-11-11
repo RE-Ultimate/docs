@@ -17,6 +17,8 @@ A [Pump](/docs/blocks/buildcraft/pump/) and liquid transport can supply lava fro
 
 This is a Thermal Expansion 2 engine: its output is MJ. Do not plan around the RF values or controls of a later version.
 
+The crafting recipe uses invar ingots, invar gears, a piston, and a Redstone Transmission Coil.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

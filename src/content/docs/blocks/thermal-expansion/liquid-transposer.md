@@ -17,6 +17,8 @@ Take finished items from the output slot. For automation, configure the machine 
 
 If an operation does not start, verify the selected mode, the liquid type and amount, free output space, and the MJ supply. An incompatible liquid in the tank can prevent a new recipe.
 
+Fill an empty Energy Cell Frame with 1,000 mB of Molten Redstone to make a full frame for the Redstone Energy Cell.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

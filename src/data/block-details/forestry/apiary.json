@@ -1,0 +1,74 @@
+{
+  "block": "forestry/apiary",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Apiary",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Wooden Slab",
+          "count": 1
+        },
+        {
+          "name": "Wooden Slab",
+          "count": 1
+        },
+        {
+          "name": "Wooden Slab",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Impregnated Casing",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Apiary",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Princess and drone",
+      "Optional frames"
+    ],
+    "outputs": [
+      "Bee products and offspring"
+    ],
+    "tips": [
+      "Check the bee’s climate and flower requirements."
+    ]
+  }
+}

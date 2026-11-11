@@ -1,0 +1,96 @@
+{
+  "block": "gregtech/matter-fabricator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Teleporter",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Highly Advanced Machineblock",
+          "count": 1
+        },
+        {
+          "name": "Lapotronic Energy Orb",
+          "count": 1
+        },
+        {
+          "name": "Highly Advanced Machineblock",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        },
+        {
+          "name": "Teleporter",
+          "count": 1
+        },
+        {
+          "name": "Energy Flow Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Matter Fabricator",
+          "count": 1,
+          "href": "/docs/blocks/gregtech/matter-fabricator/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned GregTech dependency",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "GregTech configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/GregTech.cfg"
+        },
+        {
+          "title": "GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "recipeNote": "Supply amplifier material as well as EU. A redstone signal stops the machine.",
+  "machine": {
+    "power": "EU, up to 8192 EU per packet",
+    "inputs": [
+      "Scrap or another registered matter amplifier",
+      "EU"
+    ],
+    "outputs": [
+      "UU-Matter"
+    ],
+    "automation": [
+      {
+        "face": "Top and bottom",
+        "role": "Amplifier input"
+      },
+      {
+        "face": "Horizontal sides",
+        "role": "UU-Matter output"
+      }
+    ],
+    "tips": [
+      "A redstone signal stops processing.",
+      "The configured progress threshold is 16,666,666 EU per UU-Matter. Amplifier credit is also required."
+    ]
+  }
+}

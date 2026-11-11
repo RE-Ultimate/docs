@@ -1,0 +1,75 @@
+{
+  "block": "redpower2/transposer",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Cobblestone",
+          "count": 1
+        },
+        {
+          "name": "Cobblestone",
+          "count": 1
+        },
+        {
+          "name": "Cobblestone",
+          "count": 1
+        },
+        {
+          "name": "Wood Planks",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Wood Planks",
+          "count": 1
+        },
+        {
+          "name": "Cobblestone",
+          "count": 1
+        },
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        {
+          "name": "Cobblestone",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Transposer",
+          "count": 1,
+          "href": "/docs/blocks/redpower2/transposer/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Adjacent inventory or dropped items"
+    ],
+    "outputs": [
+      "Items sent into tubes"
+    ],
+    "tips": [
+      "A new redstone pulse triggers each extraction."
+    ]
+  },
+  "recipeNote": "The recipe accepts registered wood planks."
+}

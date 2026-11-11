@@ -1,0 +1,112 @@
+{
+  "block": "thermal-expansion/powered-furnace",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Redstone",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Reception Coil",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Powered Furnace",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/powered-furnace/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "cactus",
+      "type": "machine",
+      "title": "Cook cactus",
+      "station": "Cook cactus",
+      "ingredients": [
+        {
+          "name": "Cactus",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Cactus Green",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Configured item input face",
+        "role": "Insert smelting ingredients."
+      },
+      {
+        "face": "Configured item output face",
+        "role": "Extract products or eject them into an adjacent inventory."
+      }
+    ],
+    "power": "MJ",
+    "inputs": [
+      "Items in the input slot"
+    ],
+    "outputs": [
+      "Recipe products"
+    ],
+    "tips": [
+      "Use the side configuration tab to set item and liquid connections."
+    ]
+  }
+}

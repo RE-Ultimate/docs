@@ -1,0 +1,29 @@
+{
+  "_comment": "Copy to src/data/block-details/<mod>/<block-name>.json, remove this key, and replace every value. Delete what you cannot verify. Never publish a guessed recipe.",
+  "block": "<mod>/<block-name>",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        { "name": "Item A", "count": 1 }, null, { "name": "Item A", "count": 1 },
+        null, { "name": "Item B", "count": 1, "consumed": false }, null,
+        { "name": "Item A", "count": 1 }, null, { "name": "Item A", "count": 1 }
+      ],
+      "outputs": [{ "name": "Block name", "count": 1 }],
+      "verification": "legacy-reference",
+      "sources": [{ "title": "Where you checked", "url": "https://example.com/" }],
+      "notes": []
+    }
+  ],
+  "machine": {
+    "power": "Source-verified power type",
+    "inputs": ["What the machine accepts"],
+    "outputs": ["What it produces"],
+    "automation": [{ "face": "Top", "role": "Item input" }],
+    "tips": ["One concise operating detail."]
+  },
+  "recipeNote": "Only when a construction or condition needs explaining."
+}

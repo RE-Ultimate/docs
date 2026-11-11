@@ -1,0 +1,41 @@
+---
+// The block's picture beside the page intro, with a compact credit line that links to the full table. Small textures are scaled up by
+// a whole factor without smoothing. Nothing renders when the block has no image.
+import type { ViewImage } from '../../lib/block-details';
+
+interface Props {
+	image: ViewImage;
+	title: string;
+}
+
+const { image, title } = Astro.props;
+const { width, height, meta } = image;
+
+// Pixel art (64px or less) scales to about 8rem by a whole factor. Bigger images show at their own size, capped by CSS.
+const pixelArt = width !== undefined && height !== undefined && width <= 64;
+const factor = pixelArt ? Math.max(1, Math.floor(128 / Math.max(width, height))) : 1;
+---
+
+<figure class:list={['ru-figure', { 'is-pixel': pixelArt }]}>
+	<img
+		src={image.src}
+		alt={image.alt}
+		width={width !== undefined ? width * factor : undefined}
+		height={height !== undefined ? height * factor : undefined}
+		decoding="async"
+	/>
+	<figcaption>
+		{image.alt !== title && <span class="ru-image-subject">{image.alt}</span>}
+		{
+			meta ? (
+				<>
+					<a href={meta.sourceUrl} rel="noopener">File page</a>
+					{' · '}
+					<a href="#image-credits">Credit and license</a>
+				</>
+			) : (
+				<a href="#image-credits">Credit not recorded</a>
+			)
+		}
+	</figcaption>
+</figure>

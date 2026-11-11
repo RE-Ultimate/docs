@@ -11,7 +11,7 @@ The Research Table turns items and paper into discoveries. Use it early to unloc
 
 ## Setup and research
 
-Place two Tables next to each other and use Scribing Tools on them. Open the completed table, put paper in the lower middle slot, and place objects to study in the slots on the left. Select the magnifying glass to start research. The displayed aspects come from those objects.
+Place two Tables next to each other and use Scribing Tools on them. Forming the table consumes those Scribing Tools. Open the completed table, put paper in the lower middle slot, and place objects to study in the slots on the left. Select the magnifying glass to start research. The displayed aspects come from those objects.
 
 Cursory research has a lower chance of consuming the item, but also a lower chance of progress. Thorough research is more likely to make progress and more likely to consume the item. Items that share an aspect do not add their values together: the highest value is used.
 

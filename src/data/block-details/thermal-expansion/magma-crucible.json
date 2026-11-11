@@ -1,0 +1,143 @@
+{
+  "block": "thermal-expansion/magma-crucible",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Bucket",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Nether Brick",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Reception Coil",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Magma Crucible",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/magma-crucible/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "snow",
+      "type": "machine",
+      "title": "Melt snowballs",
+      "station": "Melt snowballs",
+      "ingredients": [
+        {
+          "name": "Snowball",
+          "count": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Water",
+          "count": 500,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "redstone",
+      "type": "machine",
+      "title": "Melt redstone",
+      "station": "Melt redstone",
+      "ingredients": [
+        {
+          "name": "Redstone",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Molten Redstone",
+          "count": 25,
+          "unit": "mB"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Configured item input face",
+        "role": "Insert melting ingredients."
+      },
+      {
+        "face": "Configured liquid output face",
+        "role": "Connect a compatible liquid pipe or tank."
+      }
+    ],
+    "power": "MJ",
+    "inputs": [
+      "Items in the input slot"
+    ],
+    "outputs": [
+      "Recipe products"
+    ],
+    "tips": [
+      "Use the side configuration tab to set item and liquid connections."
+    ]
+  }
+}

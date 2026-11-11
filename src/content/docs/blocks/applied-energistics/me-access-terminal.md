@@ -15,7 +15,7 @@ Connect the terminal to a powered [ME Controller](/docs/blocks/applied-energisti
 
 The display can show stored items, craftable items, or both. A craftable entry is a recipe the network knows, not necessarily an item already in storage. Automated crafting needs its own configured equipment and materials.
 
-If the list is empty, check power, cable connections, and the cells in the drive. A terminal does not add storage capacity by itself. For a crafting grid in the same screen, use an [ME Crafting Terminal](/docs/blocks/applied-energistics/me-crafting-terminal/). Search EMI for the installed recipe.
+If the list is empty, check power, cable connections, and the cells in the drive. A terminal does not add storage capacity by itself. For a crafting grid in the same screen, use an [ME Crafting Terminal](/docs/blocks/applied-energistics/me-crafting-terminal/).
 
 ## Sources
 

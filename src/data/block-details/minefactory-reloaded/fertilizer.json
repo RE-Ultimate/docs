@@ -1,0 +1,76 @@
+{
+  "block": "minefactory-reloaded/fertilizer",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Plastic Sheets",
+          "count": 1
+        },
+        {
+          "name": "Leather",
+          "count": 1
+        },
+        {
+          "name": "Glass Bottle",
+          "count": 1
+        },
+        {
+          "name": "Leather",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Factory Machine Block",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Fertilizer",
+          "count": 1,
+          "href": "/docs/blocks/minefactory-reloaded/fertilizer/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Any face",
+        "role": "Access the nine fertilizer inventory slots."
+      }
+    ],
+    "inputs": [
+      "MineFactory Reloaded Fertilizer",
+      "Supported growing plants"
+    ],
+    "outputs": [
+      "Accelerated plant growth"
+    ],
+    "tips": [
+      "The pack disables direct bone meal use."
+    ],
+    "power": "BuildCraft MJ or IC2 EU"
+  }
+}

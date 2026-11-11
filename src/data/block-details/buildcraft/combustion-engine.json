@@ -1,0 +1,74 @@
+{
+  "block": "buildcraft/combustion-engine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Iron Gear",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Iron Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Combustion Engine",
+          "count": 1,
+          "href": "/docs/blocks/buildcraft/combustion-engine/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/buildcraft/main.conf"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Liquid fuel",
+    "inputs": [
+      "Fuel or oil",
+      "Water for cooling"
+    ],
+    "outputs": [
+      "MJ"
+    ],
+    "tips": [
+      "Use a redstone signal to run the engine. Keep its cooling water supplied."
+    ]
+  }
+}

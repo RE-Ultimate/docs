@@ -7,7 +7,9 @@ block:
   tags: [liquids, wireless, tank]
 ---
 
-Ender Tanks share liquid storage across locations. For example, feed a tank from a pump and draw the liquid from a matching tank at your base. Check EMI for the installed recipe.
+Ender Tanks share liquid storage across locations. For example, feed a tank from a pump and draw the liquid from a matching tank at your base.
+
+The wool color in the recipe sets all three markers on the new tank.
 
 ## Set up a connection
 

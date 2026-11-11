@@ -11,7 +11,7 @@ The Alloy Furnace makes alloys from multiple ingredients. It is useful early in 
 
 ## Use
 
-Put the ingredients in the input grid and furnace fuel in the fuel slot. Take the finished alloy from the output slot. Look up the installed recipe in EMI, including the required ingredient quantities. The furnace will only start when it finds a valid combination and the output can accept the result.
+Put the ingredients in the input grid and furnace fuel in the fuel slot. For brass, combine three copper ingots with one tin ingot to make four brass ingots. Take the finished alloy from the output slot. The furnace will only start when it finds a valid combination and the output can accept the result.
 
 This furnace burns fuel; it does not need blutricity. Keep fuel available and clear the output when it fills. For automation, the top exposes the ingredient slots. The fuel and output slots are exposed on opposing horizontal sides, so check the machine orientation before connecting transport.
 

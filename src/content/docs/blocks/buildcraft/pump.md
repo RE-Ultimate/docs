@@ -17,6 +17,8 @@ For lava, plan a safe route and monitor the source: removed lava does not automa
 
 If flow stops, check power, the path below the Pump, and the destination tank. A full or incompatible destination prevents the Pump from clearing its internal tank. See EMI for the recipe.
 
+With mining enabled in this pack, craft the pump from a tank above a mining well.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

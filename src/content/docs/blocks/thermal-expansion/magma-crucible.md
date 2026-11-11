@@ -17,6 +17,8 @@ Set item and liquid faces in the side configuration tab before automating the ma
 
 If the machine stops, check the MJ supply, the selected input recipe, and the liquid in the output tank. Melting material requires energy, so account for that cost when planning fuel production.
 
+Four snowballs make 500 mB of water. One redstone makes 25 mB of Molten Redstone.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

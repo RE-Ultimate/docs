@@ -17,6 +17,8 @@ Connect an inventory or item transport to collect the mined items. Provide enoug
 
 The Quarry changes a large area and can encounter caves and liquids. Inspect the site and its surroundings before starting, especially near builds. Use EMI to check the installed crafting recipe. This legacy BuildCraft machine uses MJ rather than RF.
 
+The pack enables GregTech’s quarry recipe change. It uses an advanced circuit and a diamond drill with BuildCraft gears.
+
 ## Sources
 
 - [Re:Ultimate upstream pack notes](https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/docs/UPSTREAM.md)

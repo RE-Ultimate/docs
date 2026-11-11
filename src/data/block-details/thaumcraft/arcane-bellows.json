@@ -1,0 +1,63 @@
+{
+  "block": "thaumcraft/arcane-bellows",
+  "recipes": [
+    {
+      "id": "infusion",
+      "type": "machine",
+      "title": "Arcane Bellows",
+      "station": "Infusion Altar",
+      "ingredients": [
+        {
+          "name": "Arcane Wood Block",
+          "count": 4
+        },
+        {
+          "name": "Leather",
+          "count": 1
+        },
+        {
+          "name": "Air Shard",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Motus",
+          "count": 16
+        },
+        {
+          "name": "Aer",
+          "count": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Arcane Bellows",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack upstream notes",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/docs/UPSTREAM.md"
+        }
+      ],
+      "notes": [
+        "Requires the Arcane Bellows research and 50 vis. In the altar grid, place the wood in the first two columns of the top and bottom rows. Place leather, air shard and iron ingot across the middle row."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "No fuel required"
+    ],
+    "outputs": [
+      "Air for a compatible adjacent block"
+    ],
+    "tips": []
+  },
+  "recipeNote": "Research and craft the bellows at an Infusion Altar; see the Thaumonomicon for its recipe."
+}

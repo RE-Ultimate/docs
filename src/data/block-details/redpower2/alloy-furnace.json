@@ -1,0 +1,104 @@
+{
+  "block": "redpower2/alloy-furnace",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        },
+        {
+          "name": "Bricks",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Alloy Furnace",
+          "count": 1,
+          "href": "/docs/blocks/redpower2/alloy-furnace/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "brass",
+      "type": "machine",
+      "title": "Brass",
+      "station": "Alloy Furnace",
+      "ingredients": [
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Brass Ingot",
+          "count": 4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependency list",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "The recipe accepts the registered tin and copper ingot ore-dictionary entries."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Alloy ingredients",
+      "Furnace fuel"
+    ],
+    "outputs": [
+      "Alloy recipe result"
+    ],
+    "tips": [
+      "The input grid must contain a valid combination."
+    ]
+  }
+}

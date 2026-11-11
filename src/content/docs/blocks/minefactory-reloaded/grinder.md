@@ -7,7 +7,7 @@ block:
   tags: [mobs, essence]
 ---
 
-The Grinder automates mob processing and produces mob essence. It is useful at the end of a controlled mob farm. Check EMI for the installed recipe.
+The Grinder automates mob processing and produces mob essence. It is useful at the end of a controlled mob farm.
 
 ## Setup
 

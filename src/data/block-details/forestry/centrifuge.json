@@ -1,0 +1,114 @@
+{
+  "block": "forestry/centrifuge",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Centrifuge",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Sturdy Casing",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Centrifuge",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed pack reference",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    },
+    {
+      "id": "honey-comb",
+      "type": "machine",
+      "title": "Honey Comb",
+      "station": "Centrifuge",
+      "ingredients": [
+        {
+          "name": "Honey Comb",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Beeswax",
+          "count": 1
+        },
+        {
+          "name": "Honey Drop",
+          "count": 1,
+          "chance": 0.9
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Installed Forestry artifact",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/forestry.pw.toml"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "automation": [
+      {
+        "face": "Top and bottom",
+        "role": "Access the ingredient slot."
+      },
+      {
+        "face": "Horizontal sides",
+        "role": "Access the product slots."
+      }
+    ],
+    "inputs": [
+      "Supported combs and other materials"
+    ],
+    "outputs": [
+      "Recipe-dependent products"
+    ],
+    "tips": [
+      "Some comb products are random."
+    ],
+    "power": "BuildCraft-compatible MJ"
+  }
+}

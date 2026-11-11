@@ -40,16 +40,42 @@ The category list is in `src/lib/taxonomy.ts`. To add a category, add one entry 
 
 ### Block images
 
-Put the picture next to the Markdown file and point to it with a relative path:
+The block picture and the item icons in recipes come from `src/data/wiki-media.json`. Each entry records where the file came from and under which license, and the page lists them under Image credits.
 
-```yaml
-block:
-  image:
-    src: ./block-name.png
-    alt: Front face of the block
+```json
+{
+  "blocks": { "<mod>/<slug>": { "src": "/media/wiki/<file>.png", "alt": "What it shows", "sourceUrl": "https://...", "credit": "Author or site", "license": "License as the source states it", "licenseUrl": "https://..." } },
+  "items": { "Item Name": { "src": "/media/wiki/items/<file>.png", "alt": "Item Name", "sourceUrl": "https://...", "credit": "...", "license": "..." } }
+}
 ```
 
-Use a PNG. A texture of 64 pixels or less is shown enlarged without smoothing. A larger image, such as a game screenshot, is shown at its own size up to the page width. Use only images that you made or that you can share under the original license.
+- Put the file in `public/media/wiki/`. Write `src` without the `/docs/` prefix. The site adds it.
+- Item icons are matched to ingredient names without regard to case or punctuation.
+- Record the license of each file as its source states it. Images are not covered by this site's MIT license.
+- A texture of 64 pixels or less is shown enlarged without smoothing. A larger image shows at its own size, up to a limit.
+- A block with no entry shows no picture. A `block.image` in the Markdown front matter is used only when `wiki-media.json` has no entry for the block.
+
+### Recipes and machine facts
+
+Optional file `src/data/block-details/<mod>/<name>.json`, next to the Markdown page of the same name. It adds a recipe diagram with a material list, processing examples, a machine summary, and the table of contents entries. No Markdown change is needed. Start from `templates/block-details.json`.
+
+| Field | Value |
+| --- | --- |
+| `block` | `<mod>/<name>`, equal to the file path |
+| `recipes[].id` | Unique in the file. Used for the tab and the anchor `#recipe-<id>` |
+| `recipes[].type` | `shaped` (exactly 9 entries, `null` for empty slots), `shapeless`, `construction` (a material list, no grid), or `machine` (a processing example) |
+| `recipes[].ingredients`, `outputs` | Stacks: `name`, `count`, and optional `unit` (for example `mB`), `icon`, `href`. Ingredients may add `consumed: false` for a reusable tool and `alternatives` for interchangeable items. Outputs may add `chance` (0 to 1) |
+| `recipes[].verification` | `pack-code` only when the pinned implementation or config was inspected. Otherwise `legacy-reference` |
+| `recipes[].sources` | At least one `{ title, url }` |
+| `recipes[].station`, `power`, `time`, `notes` | Optional. Add `power` and `time` only when verified |
+| `machine` | Optional `power`, `inputs`, `outputs`, `automation` (`face` and `role`), `tips` |
+| `recipeNote` | Optional. Explains construction or conditions. Shown as its own "Recipe" section when the file has no crafting or construction recipe |
+
+Use an empty `recipes` list when a block is formed in the world or the recipe is not verified. Do not publish a guessed grid. A processing example (`machine`) is never the recipe for the block itself, and the page says so.
+
+Readers can change the number of crafts, builds or runs. Consumed amounts scale, reusable tools and chance values do not. Item names link to the block page with the same title unless you set `href` (a `/docs/...` route or a public link).
+
+The build checks every file and lists all problems: wrong grid size, bad counts, duplicate IDs, links to pages that do not exist, missing image files, and detail files for pages that do not exist. Do not use `crafting`, `construction`, `processing`, `recipe`, `machine` or `image-credits` as Markdown heading anchors on a block page. The sections use them.
 
 ## Add an article
 
@@ -79,7 +105,8 @@ Install [pnpm](https://pnpm.io/), then run these commands in the repository:
 ```sh
 pnpm install
 pnpm dev     # local preview at http://localhost:4321/docs/
-pnpm check   # types and content metadata
+pnpm check      # types and content metadata
+pnpm test:unit  # schema and quantity tests
 pnpm build   # full site, search index, and link check
 ```
 

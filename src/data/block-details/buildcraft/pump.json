@@ -1,0 +1,58 @@
+{
+  "block": "buildcraft/pump",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Tank",
+          "count": 1
+        },
+        null,
+        null,
+        {
+          "name": "Mining Well",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Pump",
+          "count": 1,
+          "href": "/docs/blocks/buildcraft/pump/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/buildcraft/main.conf"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "MJ",
+    "inputs": [
+      "Liquid source blocks below the pump"
+    ],
+    "outputs": [
+      "Liquid to a connected pipe or tank"
+    ],
+    "tips": [
+      "Supply MJ and provide a connected liquid destination."
+    ]
+  }
+}

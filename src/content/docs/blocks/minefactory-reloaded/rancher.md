@@ -7,7 +7,7 @@ block:
   tags: [animals, milk, wool]
 ---
 
-The Rancher gathers products from supported animals. It is useful for a steady supply from a contained herd. Check EMI for the installed recipe.
+The Rancher gathers products from supported animals. It is useful for a steady supply from a contained herd.
 
 ## Setup
 

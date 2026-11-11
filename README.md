@@ -5,12 +5,13 @@ The site is static. It uses [Astro](https://astro.build) and [Starlight](https:/
 
 ## Commands
 
-Install Node.js 22 or newer and pnpm (the version is pinned in `package.json`).
+Use Node.js 24 and pnpm (the version is pinned in `package.json`).
 
 ```sh
 pnpm install
 pnpm dev          # local preview at http://localhost:4321/docs/
 pnpm check        # TypeScript and content metadata
+pnpm test:unit    # recipe quantities, schemas, and data loading
 pnpm build        # static site in dist/, search index, sitemap, internal link check
 pnpm test:e2e     # browser tests against dist/ at /docs/ (run pnpm build first)
 pnpm screenshots  # review screenshots in artifacts/screenshots/
@@ -28,6 +29,11 @@ or set `PW_CHANNEL=chrome` to use an installed Google Chrome.
 
 The block reference table, its filters, and search update automatically. There is no index to edit.
 The build stops with a message when a block file is in the wrong folder, names an unknown mod, or has invalid metadata.
+
+To add recipes and machine facts, copy `templates/block-details.json` to `src/data/block-details/<mod>/<block-name>.json`.
+Record recipe sources and verification levels. The page adds recipe diagrams, batch controls, material lists, and machine facts automatically.
+Add credited block images and ingredient icons to `src/data/wiki-media.json`, with files in `public/media/`.
+Media paths start with `/media/`; the site adds the `/docs/` base path.
 
 ```yaml
 ---
@@ -61,6 +67,8 @@ The full guide for writers is on the site: [Authoring guide](https://re-ultimate
 | `src/content/docs/` | Pages. The folder path is the URL |
 | `src/content.config.ts` | Metadata schema for pages and block pages |
 | `src/data/mods.json` | Mod IDs and names for block pages |
+| `src/data/block-details/` | Source-backed recipes and machine facts |
+| `src/data/wiki-media.json` | Block images, ingredient icons, and their credits |
 | `src/lib/taxonomy.ts` | Block categories |
 | `src/lib/blocks.ts` | Reads and checks block pages for the catalog |
 | `src/components/` | Starlight overrides and the catalog |
@@ -71,7 +79,7 @@ The full guide for writers is on the site: [Authoring guide](https://re-ultimate
 
 ## Deploy
 
-`.github/workflows/pages.yml` runs `pnpm check` and `pnpm build` for every pull request and push.
+`.github/workflows/pages.yml` runs `pnpm check`, `pnpm test:unit`, and `pnpm build` for every pull request and push.
 Pushes to `main` also upload `dist/` and deploy it to GitHub Pages. Pull requests do not deploy.
 In the repository settings, Pages must use **GitHub Actions** as its source.
 
@@ -79,5 +87,6 @@ In the repository settings, Pages must use **GitHub Actions** as its source.
 
 The site code and documentation are MIT licensed. See [LICENSE](LICENSE).
 Bundled fonts and site dependencies retain their [original notices](public/third-party-notices.txt).
+Wiki images retain the licenses recorded in `src/data/wiki-media.json`; each block page lists its image credits.
 Mods, textures, and other game content keep their original licenses. See the pack's
 [THIRD_PARTY.md](https://github.com/RE-Ultimate/Re-Ultimate/blob/main/THIRD_PARTY.md).
