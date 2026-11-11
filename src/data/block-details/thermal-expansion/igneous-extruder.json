@@ -1,0 +1,131 @@
+{
+  "block": "thermal-expansion/igneous-extruder",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Pneumatic Servo",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Igneous Extruder",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/igneous-extruder/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "cobblestone",
+      "type": "machine",
+      "title": "Cobblestone",
+      "station": "Igneous Extruder",
+      "ingredients": [
+        {
+          "name": "Lava",
+          "count": 1000,
+          "unit": "mB",
+          "consumed": false
+        },
+        {
+          "name": "Water",
+          "count": 1000,
+          "unit": "mB",
+          "consumed": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Cobblestone",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "Both tanks must hold at least 1,000 mB; this mode does not consume either liquid."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "No MJ required",
+    "inputs": [
+      "Water and lava"
+    ],
+    "outputs": [
+      "Cobblestone, stone, or obsidian"
+    ],
+    "automation": [
+      {
+        "face": "Configured liquid input face",
+        "role": "Supply water and lava."
+      },
+      {
+        "face": "Configured item output face",
+        "role": "Extract the selected block."
+      }
+    ],
+    "tips": [
+      "Keep at least 1,000 mB of each liquid in the tanks."
+    ]
+  }
+}

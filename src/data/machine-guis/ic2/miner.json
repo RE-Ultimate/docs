@@ -1,0 +1,60 @@
+{
+  "block": "ic2/miner",
+  "title": "Miner",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 81,
+      "y": 59,
+      "role": "battery",
+      "label": "Battery"
+    },
+    {
+      "x": 117,
+      "y": 22,
+      "role": "tool",
+      "label": "Scanner"
+    },
+    {
+      "x": 81,
+      "y": 22,
+      "role": "input",
+      "label": "Mining Pipe"
+    },
+    {
+      "x": 45,
+      "y": 22,
+      "role": "tool",
+      "label": "Drill"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 81,
+      "y": 41,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pack GregTech recipe settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+    }
+  ],
+  "notes": [
+    "Classes: ic2.core.block.machine.ContainerMiner and ic2.core.block.machine.gui.GuiMiner."
+  ]
+}

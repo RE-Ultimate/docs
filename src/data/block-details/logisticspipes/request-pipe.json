@@ -1,0 +1,91 @@
+{
+  "block": "logisticspipes/request-pipe",
+  "recipes": [
+    {
+      "id": "gear",
+      "type": "shaped",
+      "title": "Request Logistics Pipe (Gold Gear)",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Gold Gear",
+          "count": 1
+        },
+        {
+          "name": "Basic Logistics Pipe",
+          "count": 1
+        },
+        {
+          "name": "Gold Gear",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Request Logistics Pipe",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Logistics Pipes pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/LogisticsPipes.jar"
+        },
+        {
+          "title": "Pack dependency list",
+          "url": "https://github.com/RE-Ultimate/retroEMI/blob/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "chipset",
+      "type": "shaped",
+      "title": "Request Logistics Pipe (Redstone Golden Chipset)",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Redstone Golden Chipset",
+          "count": 1
+        },
+        {
+          "name": "Basic Logistics Pipe",
+          "count": 1
+        },
+        {
+          "name": "Redstone Golden Chipset",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Request Logistics Pipe",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Logistics Pipes pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/LogisticsPipes.jar"
+        },
+        {
+          "title": "Pack dependency list",
+          "url": "https://github.com/RE-Ultimate/retroEMI/blob/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ]
+}

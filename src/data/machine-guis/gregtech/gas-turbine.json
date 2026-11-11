@@ -1,0 +1,44 @@
+{
+  "block": "gregtech/gas-turbine",
+  "title": "Gas Turbine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 80,
+      "y": 17,
+      "role": "container",
+      "label": "Fuel container"
+    },
+    {
+      "x": 80,
+      "y": 53,
+      "role": "container",
+      "label": "Returned container"
+    },
+    {
+      "x": 59,
+      "y": 42,
+      "role": "other",
+      "label": "Stored fluid display"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_BasicTank, gregtechmod.common.gui.GT_GUIContainer_GasTurbine. The stored fluid display is a hologram slot."
+  ]
+}

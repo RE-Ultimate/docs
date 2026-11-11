@@ -1,0 +1,75 @@
+{
+  "block": "mystcraft/writing-desk",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Glass Bottle",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Feather",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Writing Desk",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/mystcraft-uni-1.4.7-0.10.1.00.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/config/mystcraft_config.txt"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "None.",
+    "inputs": [
+      "Book or notebook",
+      "Paper",
+      "Ink container"
+    ],
+    "outputs": [
+      "Written symbols",
+      "Empty ink container"
+    ],
+    "tips": [
+      "The desk holds notebooks in the left column."
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "block": "ic2/water-mill",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Stick",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Stick",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Generator",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Stick",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Stick",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Water Mill",
+          "count": 2,
+          "href": "/docs/blocks/ic2/water-mill/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Produces EU from water",
+    "inputs": [
+      "Nearby water or filled water containers"
+    ],
+    "outputs": [
+      "EU"
+    ]
+  }
+}

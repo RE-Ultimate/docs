@@ -1,0 +1,72 @@
+{
+  "block": "soul-shards/soul-cage",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        },
+        {
+          "name": "Iron Bars",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Soul Cage",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/SoulShards.zip"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "None.",
+    "inputs": [
+      "Charged Soul Shard with a mob type and tier 1 or higher"
+    ],
+    "outputs": [
+      "Mobs of the stored type"
+    ],
+    "tips": [
+      "The cage pauses if too many matching mobs remain nearby.",
+      "A redstone signal stops a tier 5 cage."
+    ]
+  }
+}

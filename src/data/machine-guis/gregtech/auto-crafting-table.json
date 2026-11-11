@@ -1,0 +1,212 @@
+{
+  "block": "gregtech/auto-crafting-table",
+  "title": "Electric Craftingtable",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 8,
+      "y": 5,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 26,
+      "y": 5,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 44,
+      "y": 5,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 8,
+      "y": 23,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 26,
+      "y": 23,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 44,
+      "y": 23,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 8,
+      "y": 41,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 26,
+      "y": 41,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 44,
+      "y": 41,
+      "role": "input",
+      "label": "Ingredient"
+    },
+    {
+      "x": 8,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 26,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 44,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 62,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 80,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 98,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 116,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 134,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 152,
+      "y": 60,
+      "role": "storage",
+      "label": "Output storage"
+    },
+    {
+      "x": 152,
+      "y": 41,
+      "role": "output",
+      "label": "Result"
+    },
+    {
+      "x": 64,
+      "y": 6,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 81,
+      "y": 6,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 98,
+      "y": 6,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 64,
+      "y": 23,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 81,
+      "y": 23,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 98,
+      "y": 23,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 64,
+      "y": 40,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 81,
+      "y": 40,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 98,
+      "y": 40,
+      "role": "pattern",
+      "label": "Recipe pattern"
+    },
+    {
+      "x": 152,
+      "y": 5,
+      "role": "other",
+      "label": "Result preview"
+    },
+    {
+      "x": 121,
+      "y": 41,
+      "role": "other",
+      "label": "Mode"
+    },
+    {
+      "x": 121,
+      "y": 5,
+      "role": "other",
+      "label": "Throughput"
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_ElectricAutoWorkbench, gregtechmod.common.gui.GT_GUIContainer_ElectricAutoWorkbench. Pattern, result preview and controls use hologram slots."
+  ]
+}

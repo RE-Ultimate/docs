@@ -1,0 +1,94 @@
+{
+  "block": "gregtech/thermal-generator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Aluminium Plate",
+          "count": 1
+        },
+        {
+          "name": "Aluminium Plate",
+          "count": 1
+        },
+        {
+          "name": "Aluminium Plate",
+          "count": 1
+        },
+        {
+          "name": "Aluminium Plate",
+          "count": 1
+        },
+        {
+          "name": "Reinforced Glass",
+          "count": 1
+        },
+        {
+          "name": "Aluminium Plate",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Geothermal Generator",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Thermal Generator",
+          "count": 1,
+          "href": "/docs/blocks/gregtech/thermal-generator/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/GregTech.cfg"
+        }
+      ],
+      "notes": [
+        "This is one valid selection from the registered ingredient alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Generates EU, maximum 24 EU per output packet.",
+    "inputs": [
+      "hot fuels, such as lava"
+    ],
+    "outputs": [
+      "EU",
+      "Returned containers"
+    ],
+    "automation": [
+      {
+        "face": "All sides",
+        "role": "EU output"
+      }
+    ],
+    "tips": [
+      "The tank holds up to 10,000 mB of one liquid type.",
+      "Keep the returned-container slot clear."
+    ]
+  }
+}

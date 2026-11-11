@@ -1,0 +1,78 @@
+{
+  "block": "ic2/teleporter",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Frequency Transmitter",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Glass Fibre Cable",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Glass Fibre Cable",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Diamond",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Teleporter",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Draws EU from adjacent compatible energy storage",
+    "inputs": [
+      "Redstone signal and a linked destination"
+    ],
+    "outputs": [
+      "Teleports nearby entities"
+    ],
+    "tips": [
+      "Energy cost depends on distance and entity weight."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "block": "gregtech/lapotronic-energy-storage-unit",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "LV-Transformer",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "LESU-Block",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        null,
+        {
+          "name": "MV-Transformer",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Lapotronic Energy Storage Unit",
+          "count": 1,
+          "href": "/docs/blocks/gregtech/lapotronic-energy-storage-unit/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack GregTech artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        },
+        {
+          "title": "Pack GregTech settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/GregTech.cfg"
+        }
+      ],
+      "notes": [
+        "This is one selection from registered ingredient alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Expandable EU storage; maximum output 512 EU per packet.",
+    "inputs": [
+      "EU and compatible charged items."
+    ],
+    "outputs": [
+      "EU and charged items."
+    ],
+    "tips": [
+      "Connect LESU-Blocks through shared faces and keep one controller per group."
+    ]
+  }
+}

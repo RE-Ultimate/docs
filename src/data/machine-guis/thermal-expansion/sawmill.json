@@ -1,0 +1,86 @@
+{
+  "block": "thermal-expansion/sawmill",
+  "title": "Sawmill",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 26,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 116,
+      "y": 26,
+      "role": "output",
+      "label": "Primary output",
+      "index": 0
+    },
+    {
+      "x": 134,
+      "y": 26,
+      "role": "output",
+      "label": "Primary output overflow"
+    },
+    {
+      "x": 116,
+      "y": 53,
+      "role": "output",
+      "label": "Secondary output",
+      "index": 1
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 56,
+      "y": 44,
+      "w": 16,
+      "h": 16,
+      "direction": "up",
+      "label": "Speed"
+    },
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 24,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 42,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    },
+    {
+      "title": "CoFH Core artifact",
+      "url": "https://github.com/RE-Ultimate/Re-Ultimate/blob/main/mods/CoFHCore.zip"
+    }
+  ],
+  "notes": [
+    "Classes: thermalexpansion.factory.gui.ContainerSawmill, thermalexpansion.factory.gui.GuiSawmill, thermalexpansion.factory.tileentity.TileSawmill, cofh.gui.GuiAdv."
+  ]
+}

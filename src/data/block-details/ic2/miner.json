@@ -1,0 +1,68 @@
+{
+  "block": "ic2/miner",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        {
+          "name": "Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Electronic Circuit",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Mining Pipe",
+          "count": 1
+        },
+        null,
+        null,
+        {
+          "name": "Mining Pipe",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Miner",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU, up to 32 EU per packet",
+    "inputs": [
+      "Mining Drill or Diamond Drill",
+      "Mining Pipes",
+      "Optional scanner"
+    ],
+    "outputs": [
+      "Mined block drops"
+    ],
+    "tips": [
+      "Remove the drill while powered to retract the pipes."
+    ]
+  }
+}

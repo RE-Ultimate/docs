@@ -1,0 +1,112 @@
+{
+  "block": "thermal-expansion/sawmill",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Iron Axe",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Reception Coil",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Sawmill",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/sawmill/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "chest",
+      "type": "machine",
+      "title": "Recover planks from a chest",
+      "station": "Sawmill",
+      "ingredients": [
+        {
+          "name": "Chest",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Wooden Planks",
+          "count": 8
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "MJ",
+    "inputs": [
+      "Supported wooden items"
+    ],
+    "outputs": [
+      "Planks and other recipe products"
+    ],
+    "automation": [
+      {
+        "face": "Configured item input face",
+        "role": "Insert items."
+      },
+      {
+        "face": "Configured item output face",
+        "role": "Extract products or eject them into an adjacent inventory."
+      }
+    ],
+    "tips": [
+      "Set the redstone control and side configuration in the machine window."
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "block": "advanced-machines/centrifuge-extractor",
+  "title": "Centrifuge Extractor",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 56,
+      "y": 53,
+      "role": "battery",
+      "label": "Battery"
+    },
+    {
+      "x": 56,
+      "y": 17,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 115,
+      "y": 17,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 115,
+      "y": 35,
+      "role": "output",
+      "label": "Output"
+    },
+    {
+      "x": 115,
+      "y": 53,
+      "role": "output",
+      "label": "Output"
+    },
+    {
+      "x": 152,
+      "y": 6,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 24,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 42,
+      "role": "upgrade",
+      "label": "Upgrade"
+    },
+    {
+      "x": 152,
+      "y": 60,
+      "role": "upgrade",
+      "label": "Upgrade"
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 79,
+      "y": 34,
+      "w": 25,
+      "h": 16,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 56,
+      "y": 36,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Advanced Machines pack artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+    },
+    {
+      "title": "Pack GregTech recipe settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Container and GUI classes from AdvancedMachines.zip. Output slots share space for one result."
+  ]
+}

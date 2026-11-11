@@ -1,0 +1,70 @@
+{
+  "block": "buildcraft/redstone-engine",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        {
+          "name": "Wooden Planks",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Wood Gear",
+          "count": 1
+        },
+        {
+          "name": "Piston",
+          "count": 1
+        },
+        {
+          "name": "Wood Gear",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Redstone Engine",
+          "count": 1,
+          "href": "/docs/blocks/buildcraft/redstone-engine/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/buildcraft-A-1.4.7-3.4.5%2Bupsilon1.jar"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Redstone signal",
+    "inputs": [],
+    "outputs": [
+      "MJ for a connected receiver"
+    ],
+    "automation": [],
+    "tips": []
+  }
+}

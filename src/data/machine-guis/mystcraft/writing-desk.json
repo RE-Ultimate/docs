@@ -1,0 +1,79 @@
+{
+  "block": "mystcraft/writing-desk",
+  "title": "Writing Desk",
+  "width": 409,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 37,
+      "y": 14,
+      "role": "storage",
+      "label": "Notebook"
+    },
+    {
+      "x": 37,
+      "y": 51,
+      "role": "storage",
+      "label": "Notebook"
+    },
+    {
+      "x": 37,
+      "y": 88,
+      "role": "storage",
+      "label": "Notebook"
+    },
+    {
+      "x": 37,
+      "y": 125,
+      "role": "storage",
+      "label": "Notebook"
+    },
+    {
+      "x": 241,
+      "y": 60,
+      "role": "input",
+      "label": "Book"
+    },
+    {
+      "x": 241,
+      "y": 8,
+      "role": "input",
+      "label": "Paper"
+    },
+    {
+      "x": 385,
+      "y": 8,
+      "role": "container",
+      "label": "Ink container"
+    },
+    {
+      "x": 385,
+      "y": 60,
+      "role": "output",
+      "label": "Empty container"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "fluid",
+      "x": 365,
+      "y": 7,
+      "w": 16,
+      "h": 70,
+      "direction": "up",
+      "label": "Ink"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/mystcraft-uni-1.4.7-0.10.1.00.zip"
+    }
+  ],
+  "notes": [
+    "The notebook column scrolls through stored books."
+  ]
+}

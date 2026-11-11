@@ -1,0 +1,108 @@
+{
+  "block": "ic2/induction-furnace",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Electric Furnace",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Induction Furnace",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    },
+    {
+      "id": "iron-ore",
+      "type": "machine",
+      "title": "Iron ore",
+      "station": "Induction Furnace",
+      "ingredients": [
+        {
+          "name": "Iron Ore",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU, up to 128 EU per packet",
+    "inputs": [
+      "Two furnace recipe inputs",
+      "Charged compatible power item"
+    ],
+    "outputs": [
+      "Two separate smelted outputs"
+    ],
+    "tips": [
+      "A redstone signal keeps the powered furnace heated while idle."
+    ]
+  }
+}

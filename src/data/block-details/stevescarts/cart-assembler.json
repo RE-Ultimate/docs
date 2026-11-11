@@ -1,0 +1,79 @@
+{
+  "block": "stevescarts/cart-assembler",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Stone",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Stone",
+          "count": 1
+        },
+        {
+          "name": "Iron Ingot",
+          "count": 1
+        },
+        {
+          "name": "Stone",
+          "count": 1
+        },
+        {
+          "name": "Simple PCB",
+          "count": 1
+        },
+        {
+          "name": "Stone",
+          "count": 1
+        },
+        {
+          "name": "Simple PCB",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Cart assembler",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/StevesCarts.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Solid fuel in the assembler fuel slot.",
+    "inputs": [
+      "Cart hull and compatible modules",
+      "Assembler fuel"
+    ],
+    "outputs": [
+      "Assembled cart"
+    ],
+    "tips": [
+      "The hull sets the available module slots and design limits."
+    ]
+  }
+}

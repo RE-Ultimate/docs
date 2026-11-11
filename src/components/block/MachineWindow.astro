@@ -22,10 +22,6 @@ const bottoms = [
 	...gui.progress.map((item) => item.y + item.h),
 	...gui.gauges.map((item) => item.y + item.h),
 ];
-// Above the content, keep 18px for the title; anything more is empty space to crop.
-const tops = [...gui.slots.map((slot) => slot.y - (slot.large ? 5 : 1)), ...gui.progress.map((item) => item.y), ...gui.gauges.map((item) => item.y - 1)];
-const cropTop = Math.min(...tops) - 18 > 24 ? Math.min(...tops) - 18 : 0;
-const height = Math.min(gui.height, Math.max(...bottoms) + 7) - cropTop;
 // Sideways, keep only the drawn part too: a window whose player inventory sat beside the machine
 // (the Mining Turtle) would otherwise be mostly empty. Small margins are kept as in the game.
 const lefts = [...gui.slots.map((slot) => slot.x - (slot.large ? 5 : 1)), ...gui.progress.map((item) => item.x), ...gui.gauges.map((item) => item.x - 1)];
@@ -33,6 +29,23 @@ const rights = [...gui.slots.map((slot) => slot.x + (slot.large ? 21 : 17)), ...
 const cropLeft = Math.min(...lefts) - 7 > 24 ? Math.min(...lefts) - 7 : 0;
 const cropRight = gui.width - Math.max(...rights) - 7 > 24 ? Math.max(...rights) + 7 : gui.width;
 const width = cropRight - cropLeft;
+
+// The title sits top-left as in most windows; when a slot or gauge uses that corner, it is centred.
+// When both places are taken (the Diamond Chest has no title row in game), the window gets a title row.
+const titleWidth = 8 + gui.title.length * 6;
+const frames = [
+	...gui.slots.map((slot) => ({ x: slot.x - (slot.large ? 5 : 1), y: slot.y - (slot.large ? 5 : 1), w: slot.large ? 26 : 18 })),
+	...gui.progress,
+	...gui.gauges.map((item) => ({ x: item.x - 1, y: item.y - 1, w: item.w + 2 })),
+];
+const minTop = Math.min(...frames.map((item) => item.y));
+// Above the content, keep 18px for the title; anything more is empty space to crop.
+const roomAbove = minTop - 18 > 24;
+const inTitleRow = (from: number, to: number) => !roomAbove && frames.some((item) => item.y < 15 && item.x < to && item.x + item.w > from);
+const cornerTaken = inTitleRow(cropLeft, cropLeft + titleWidth);
+const centreTaken = inTitleRow(cropLeft + (width - titleWidth) / 2, cropLeft + (width + titleWidth) / 2);
+const cropTop = roomAbove || (cornerTaken && centreTaken) ? minTop - 18 : 0;
+const height = Math.min(gui.height, Math.max(...bottoms) + 7) - cropTop;
 const pct = (value: number, of: number) => `${((value / of) * 100).toFixed(4)}%`;
 const box = (x: number, y: number, w: number, h: number) =>
 	`left:${pct(x - cropLeft, width)};top:${pct(y - cropTop, height)};width:${pct(w, width)};height:${pct(h, height)}`;
@@ -48,12 +61,7 @@ const contents = new Map<number, ViewOption>();
 ordered('input').forEach((position, i) => fill?.inputs[i] && contents.set(position, fill.inputs[i]));
 ordered('output').forEach((position, i) => fill?.outputs[i] && contents.set(position, fill.outputs[i]));
 
-// The title sits top-left as in most windows; when a gauge or slot already uses that corner, centre it.
-const titleWidth = 8 + gui.title.length * 6;
-const cornerTaken = [...gui.slots.map((slot) => ({ x: slot.x - 1, y: slot.y - 1 })), ...gui.progress, ...gui.gauges].some(
-	(item) => item.y - cropTop < 15 && item.x - cropLeft < titleWidth,
-);
-const titleStyle = cornerTaken ? `left:50%;top:${pct(5, height)};transform:translateX(-50%)` : `left:${pct(8, width)};top:${pct(5, height)}`;
+const titleStyle = cornerTaken && cropTop >= 0 ? `left:50%;top:${pct(5, height)};transform:translateX(-50%)` : `left:${pct(8, width)};top:${pct(5, height)}`;
 
 // Legend entries: neighbouring slots with the same label share one line ("1–18 Storage").
 const legendRuns: { from: number; to: number; label: string }[] = [];

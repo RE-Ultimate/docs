@@ -1,0 +1,71 @@
+{
+  "block": "gregtech/fusion-reactor",
+  "title": "Fusion Control Computer",
+  "width": 176,
+  "height": 166,
+  "playerInventory": false,
+  "slots": [
+    {
+      "x": 155,
+      "y": 23,
+      "role": "other",
+      "label": "Structure display 1"
+    },
+    {
+      "x": 155,
+      "y": 41,
+      "role": "other",
+      "label": "Structure display 2"
+    },
+    {
+      "x": 155,
+      "y": 59,
+      "role": "other",
+      "label": "Structure display 3"
+    },
+    {
+      "x": 155,
+      "y": 77,
+      "role": "other",
+      "label": "Structure display 4"
+    },
+    {
+      "x": 155,
+      "y": 95,
+      "role": "other",
+      "label": "Structure display 5"
+    },
+    {
+      "x": 155,
+      "y": 113,
+      "role": "other",
+      "label": "Structure display 6"
+    }
+  ],
+  "progress": [],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 5,
+      "y": 156,
+      "w": 147,
+      "h": 5,
+      "direction": "right",
+      "label": "Stored EU"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack GregTech artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "GT_Container_FusionComputer and GT_GUIContainer_FusionComputer. Display slots are holograms."
+  ]
+}

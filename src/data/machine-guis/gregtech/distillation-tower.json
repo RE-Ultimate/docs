@@ -1,0 +1,78 @@
+{
+  "block": "gregtech/distillation-tower",
+  "title": "Distillation Tower",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 62,
+      "y": 41,
+      "role": "input",
+      "label": "Input",
+      "index": 0
+    },
+    {
+      "x": 62,
+      "y": 59,
+      "role": "input",
+      "label": "Input",
+      "index": 1
+    },
+    {
+      "x": 98,
+      "y": 5,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 98,
+      "y": 23,
+      "role": "output",
+      "label": "Output",
+      "index": 1
+    },
+    {
+      "x": 98,
+      "y": 41,
+      "role": "output",
+      "label": "Output",
+      "index": 2
+    },
+    {
+      "x": 98,
+      "y": 59,
+      "role": "output",
+      "label": "Output",
+      "index": 3
+    }
+  ],
+  "progress": [
+    {
+      "kind": "bar",
+      "x": 80,
+      "y": 4,
+      "w": 16,
+      "h": 72,
+      "direction": "up",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+    },
+    {
+      "title": "Pinned mod dependencies",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+    }
+  ],
+  "notes": [
+    "Classes: gregtechmod.common.containers.GT_Container_DistillationTower, gregtechmod.common.gui.GT_GUIContainer_DistillationTower."
+  ]
+}

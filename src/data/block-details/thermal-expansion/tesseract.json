@@ -1,0 +1,183 @@
+{
+  "block": "thermal-expansion/tesseract",
+  "recipes": [
+    {
+      "id": "energy",
+      "type": "shaped",
+      "title": "Energy Tesseract",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Unattuned Tesseract",
+          "count": 1
+        },
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Lead Ingot",
+          "count": 1
+        },
+        {
+          "name": "Redstone Conductance Coil",
+          "count": 1
+        },
+        {
+          "name": "Lead Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Energy Tesseract",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "liquid",
+      "type": "shaped",
+      "title": "Liquid Tesseract",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Copper Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Unattuned Tesseract",
+          "count": 1
+        },
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Pneumatic Servo",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Liquid Tesseract",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "item",
+      "type": "shaped",
+      "title": "Item Tesseract",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Unattuned Tesseract",
+          "count": 1
+        },
+        {
+          "name": "Silver Ingot",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Pneumatic Servo",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Item Tesseract",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "recipeNote": "The three tesseracts have separate recipes and transfer types."
+}

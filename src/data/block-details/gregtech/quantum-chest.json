@@ -1,0 +1,82 @@
+{
+  "block": "gregtech/quantum-chest",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Data Orb",
+          "count": 1
+        },
+        {
+          "name": "Computer Monitor",
+          "count": 1
+        },
+        {
+          "name": "Data Orb",
+          "count": 1
+        },
+        {
+          "name": "Highly Advanced Machineblock",
+          "count": 1
+        },
+        {
+          "name": "Teleporter",
+          "count": 1
+        },
+        {
+          "name": "Highly Advanced Machineblock",
+          "count": 1
+        },
+        {
+          "name": "Data Orb",
+          "count": 1
+        },
+        {
+          "name": "Digital Chest",
+          "count": 1
+        },
+        {
+          "name": "Data Orb",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Quantum Chest",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/GregTech.zip"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ],
+      "notes": [
+        "One valid selection from the registered ingredient alternatives. The pack enables the Digital Chest."
+      ]
+    }
+  ],
+  "machine": {
+    "power": "None",
+    "inputs": [
+      "One item type without tag data"
+    ],
+    "outputs": [
+      "Stored items"
+    ],
+    "automation": [],
+    "tips": [
+      "Select an item type before using inventory automation."
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "block": "modular-powersuits/tinker-table",
+  "recipes": [
+    {
+      "id": "tinker-table",
+      "type": "shaped",
+      "title": "Power Armor Tinker Table",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Computer Monitor",
+          "count": 1
+        },
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Emerald",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Refined Iron",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Power Armor Tinker Table",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack recipe script",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/scripts/powersuits.zs"
+        },
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ModularPowersuits.jar"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/mmmPowersuits.cfg"
+        }
+      ],
+      "notes": [
+        "Circuit, monitor, refined iron, and machine component positions use ore dictionary entries. Check EMI for accepted alternatives."
+      ]
+    }
+  ],
+  "machine": {
+    "inputs": [
+      "Modular Powersuits equipment and module components in the player inventory"
+    ],
+    "outputs": [
+      "Configured equipment"
+    ],
+    "tips": [
+      "Select equipment and a module to view installation costs."
+    ]
+  }
+}

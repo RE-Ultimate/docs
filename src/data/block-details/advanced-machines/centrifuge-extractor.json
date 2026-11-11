@@ -1,0 +1,131 @@
+{
+  "block": "advanced-machines/centrifuge-extractor",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Extractor",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        },
+        {
+          "name": "Advanced Machine Block",
+          "count": 1
+        },
+        {
+          "name": "Electrolyzed Water Cell",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Centrifuge Extractor",
+          "count": 1,
+          "href": "/docs/blocks/advanced-machines/centrifuge-extractor/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Advanced Machines pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "resin",
+      "type": "machine",
+      "title": "Rubber",
+      "station": "Centrifuge Extractor",
+      "ingredients": [
+        {
+          "name": "Sticky Resin",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Rubber",
+          "count": 3
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Advanced Machines pack artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/AdvancedMachines.zip"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "EU; up to 32 EU per packet without transformer upgrades",
+    "inputs": [
+      "IC2 extractor recipes",
+      "Charged compatible battery"
+    ],
+    "outputs": [
+      "Processed items"
+    ],
+    "automation": [
+      {
+        "face": "Top",
+        "role": "Recipe input"
+      },
+      {
+        "face": "Sides",
+        "role": "Product output"
+      },
+      {
+        "face": "Bottom",
+        "role": "Battery slot"
+      }
+    ],
+    "tips": [
+      "A redstone signal keeps the machine spinning while it has energy."
+    ]
+  }
+}

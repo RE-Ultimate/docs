@@ -1,0 +1,92 @@
+{
+  "block": "ee3/minium-stone",
+  "title": "Crafting",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 30,
+      "y": 17,
+      "role": "input",
+      "label": "Crafting grid 1",
+      "index": 0
+    },
+    {
+      "x": 48,
+      "y": 17,
+      "role": "input",
+      "label": "Crafting grid 2",
+      "index": 1
+    },
+    {
+      "x": 66,
+      "y": 17,
+      "role": "input",
+      "label": "Crafting grid 3",
+      "index": 2
+    },
+    {
+      "x": 30,
+      "y": 35,
+      "role": "input",
+      "label": "Crafting grid 4",
+      "index": 3
+    },
+    {
+      "x": 48,
+      "y": 35,
+      "role": "input",
+      "label": "Crafting grid 5",
+      "index": 4
+    },
+    {
+      "x": 66,
+      "y": 35,
+      "role": "input",
+      "label": "Crafting grid 6",
+      "index": 5
+    },
+    {
+      "x": 30,
+      "y": 53,
+      "role": "input",
+      "label": "Crafting grid 7",
+      "index": 6
+    },
+    {
+      "x": 48,
+      "y": 53,
+      "role": "input",
+      "label": "Crafting grid 8",
+      "index": 7
+    },
+    {
+      "x": 66,
+      "y": 53,
+      "role": "input",
+      "label": "Crafting grid 9",
+      "index": 8
+    },
+    {
+      "x": 124,
+      "y": 35,
+      "role": "output",
+      "label": "Result",
+      "index": 0
+    }
+  ],
+  "progress": [],
+  "gauges": [],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "EE3 pack artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/EE3.jar"
+    }
+  ],
+  "notes": [
+    "The portable window uses the standard Minecraft crafting container."
+  ]
+}

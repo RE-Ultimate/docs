@@ -1,0 +1,73 @@
+{
+  "block": "ic2/canning-machine",
+  "title": "Canning Machine",
+  "width": 176,
+  "height": 166,
+  "playerInventory": true,
+  "playerInventoryY": 84,
+  "slots": [
+    {
+      "x": 69,
+      "y": 17,
+      "role": "input",
+      "label": "Material",
+      "index": 0
+    },
+    {
+      "x": 30,
+      "y": 45,
+      "role": "battery",
+      "label": "Battery"
+    },
+    {
+      "x": 119,
+      "y": 35,
+      "role": "output",
+      "label": "Output",
+      "index": 0
+    },
+    {
+      "x": 69,
+      "y": 53,
+      "role": "input",
+      "label": "Container",
+      "index": 1
+    }
+  ],
+  "progress": [
+    {
+      "kind": "arrow",
+      "x": 74,
+      "y": 36,
+      "w": 34,
+      "h": 13,
+      "direction": "right",
+      "label": "Progress"
+    }
+  ],
+  "gauges": [
+    {
+      "kind": "energy",
+      "x": 31,
+      "y": 27,
+      "w": 14,
+      "h": 14,
+      "direction": "up",
+      "label": "Energy"
+    }
+  ],
+  "verification": "pack-code",
+  "sources": [
+    {
+      "title": "Pack mod artifact",
+      "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+    },
+    {
+      "title": "Pack GregTech recipe settings",
+      "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+    }
+  ],
+  "notes": [
+    "Classes: ic2.core.block.machine.ContainerCanner and ic2.core.block.machine.gui.GuiCanner."
+  ]
+}

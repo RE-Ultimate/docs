@@ -1,0 +1,83 @@
+{
+  "block": "thermal-expansion/aqueous-accumulator",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Bucket",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Machine Frame",
+          "count": 1
+        },
+        {
+          "name": "Glass",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        },
+        {
+          "name": "Pneumatic Servo",
+          "count": 1
+        },
+        {
+          "name": "Tin Ingot",
+          "count": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Aqueous Accumulator",
+          "count": 1,
+          "href": "/docs/blocks/thermal-expansion/aqueous-accumulator/"
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "No MJ required",
+    "inputs": [
+      "Adjacent water source blocks improve production"
+    ],
+    "outputs": [
+      "Water"
+    ],
+    "automation": [
+      {
+        "face": "Configured liquid output face",
+        "role": "Send water to an adjacent tank or liquid pipe."
+      }
+    ],
+    "tips": [
+      "Water on two horizontal sides increases production."
+    ]
+  }
+}

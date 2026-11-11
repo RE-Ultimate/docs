@@ -1,0 +1,91 @@
+{
+  "block": "thermal-expansion/redstone-energy-conduit",
+  "recipes": [
+    {
+      "id": "empty",
+      "type": "shaped",
+      "title": "Empty conduits",
+      "station": "Crafting Table",
+      "ingredients": [
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        {
+          "name": "Hardened Glass",
+          "count": 1
+        },
+        {
+          "name": "Electrum Ingot",
+          "count": 1
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Energy Conduit (Empty)",
+          "count": 4
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    },
+    {
+      "id": "fill",
+      "type": "machine",
+      "title": "Fill a conduit",
+      "station": "Liquid Transposer",
+      "ingredients": [
+        {
+          "name": "Energy Conduit (Empty)",
+          "count": 1
+        },
+        {
+          "name": "Molten Redstone",
+          "count": 50,
+          "unit": "mB"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Redstone Energy Conduit",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/ThermalExpansion.zip"
+        },
+        {
+          "title": "Pack configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/cofh/thermalexpansion.cfg"
+        },
+        {
+          "title": "Pinned mod dependencies",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/retroEMI/main/tools/dependencies.json"
+        }
+      ]
+    }
+  ],
+  "recipeNote": "Fill the empty conduit in a powered Liquid Transposer."
+}

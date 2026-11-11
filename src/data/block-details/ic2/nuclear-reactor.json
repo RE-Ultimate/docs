@@ -1,0 +1,71 @@
+{
+  "block": "ic2/nuclear-reactor",
+  "recipes": [
+    {
+      "id": "crafting",
+      "type": "shaped",
+      "title": "Crafting",
+      "station": "Crafting Table",
+      "ingredients": [
+        null,
+        {
+          "name": "Advanced Circuit",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Reactor Chamber",
+          "count": 1
+        },
+        {
+          "name": "Reactor Chamber",
+          "count": 1
+        },
+        {
+          "name": "Reactor Chamber",
+          "count": 1
+        },
+        null,
+        {
+          "name": "Generator",
+          "count": 1
+        },
+        null
+      ],
+      "outputs": [
+        {
+          "name": "Nuclear Reactor",
+          "count": 1
+        }
+      ],
+      "verification": "pack-code",
+      "sources": [
+        {
+          "title": "Pack mod artifact",
+          "url": "https://re-ultimate.github.io/Re-Ultimate/mods/IC2.jar"
+        },
+        {
+          "title": "Pack IC2 configuration",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/IC2.cfg"
+        },
+        {
+          "title": "Pack GregTech recipe settings",
+          "url": "https://raw.githubusercontent.com/RE-Ultimate/Re-Ultimate/main/config/GregTech/Recipes.cfg"
+        }
+      ]
+    }
+  ],
+  "machine": {
+    "power": "Produces EU from reactor fuel",
+    "inputs": [
+      "Reactor fuel and heat-management components"
+    ],
+    "outputs": [
+      "EU and spent reactor components"
+    ],
+    "tips": [
+      "Attached Reactor Chambers increase the component grid size.",
+      "An overheating reactor can explode."
+    ]
+  }
+}
